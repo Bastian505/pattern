@@ -221,6 +221,72 @@ h3{font-size:15px;font-weight:600;margin:0 0 5px}
 .vacio{color:var(--tinta-suave);font-size:14px}
 .omitidos{font-size:12.5px;color:var(--tinta-suave);margin-top:10px}
 
+
+/* ---------- ficha de resumen ---------- */
+.ficha{display:grid;gap:14px;margin-bottom:34px}
+.bloque{border-radius:14px;padding:20px 22px}
+.bloque h4{
+  display:flex;align-items:center;gap:10px;
+  margin:0 0 14px;font-size:15px;font-weight:600;
+}
+.bloque h4 .num{
+  width:23px;height:23px;border-radius:50%;flex-shrink:0;
+  display:grid;place-items:center;font-size:12.5px;color:var(--blanco);
+}
+.bloque ul{margin:0;padding-left:19px}
+.bloque li{margin-bottom:7px;font-size:14.5px}
+.bloque li:last-child{margin-bottom:0}
+.bloque .clave{
+  margin-top:14px;padding:11px 14px;border-radius:8px;
+  background:var(--blanco);font-size:14px;
+}
+
+.b-concepto{background:var(--celeste-tenue)}
+.b-concepto h4 .num{background:var(--celeste)}
+.b-estructura{background:#EEF1F8}
+.b-estructura h4 .num{background:#3D5A99}
+.b-ejemplos{background:var(--agua-tenue)}
+.b-ejemplos h4 .num{background:var(--agua)}
+.b-ojo{background:var(--coral-tenue)}
+.b-ojo h4 .num{background:var(--coral)}
+
+.formula{display:grid;gap:8px;margin-bottom:14px}
+.formula-fila{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  background:var(--blanco);border-radius:8px;padding:9px 12px;
+}
+.formula-fila .et{font-size:12.5px;font-weight:600;min-width:82px;color:#3D5A99}
+.formula-fila .fo{font-family:var(--lectura);font-size:16px}
+
+.par{display:grid;gap:3px;padding:11px 0;border-bottom:1px solid rgba(15,166,138,.22)}
+.par:last-child{border-bottom:0}
+.par .en{font-family:var(--lectura);font-size:18px}
+.par .es{font-size:13.5px;color:var(--tinta-suave)}
+
+.contraste{display:grid;gap:8px;margin-top:14px}
+.contraste div{
+  background:var(--blanco);border-radius:8px;padding:9px 13px;
+  font-family:var(--lectura);font-size:16px;
+}
+.contraste .mal{color:var(--coral)}
+.contraste .mal::before{content:"✕  ";font-family:var(--ui);font-size:12px}
+.contraste .bien{color:var(--agua)}
+.contraste .bien::before{content:"✓  ";font-family:var(--ui);font-size:12px}
+
+.original{margin-top:8px}
+.original summary{
+  cursor:pointer;font-size:13.5px;color:var(--tinta-suave);
+  padding:10px 0;list-style:none;
+}
+.original summary::-webkit-details-marker{display:none}
+.original summary::before{content:"▸ ";font-size:11px}
+.original[open] summary::before{content:"▾ "}
+.generar{
+  background:var(--nieve);border-radius:var(--r);padding:26px 22px;
+  text-align:center;margin-bottom:28px;
+}
+.generar p{margin:0 0 16px;color:var(--tinta-suave);font-size:14px}
+
 /* ---------- portada ---------- */
 #portada{max-width:440px;margin:0 auto;padding:16vh 24px}
 #portada h1{font-size:44px;font-weight:600;margin:0 0 6px;letter-spacing:-.035em}
@@ -759,7 +825,7 @@ function pintarUnidad(){
     (a.total ? " · " + a.hechos + "/" + a.total + " resueltas" : "") + "</div>" +
     rejillaHTML(u) + "</div>" +
     '<div class="pestanas">' +
-      tab("explicacion","Explicación",u.explicaciones.length) +
+      tab("explicacion","Explicación", P[claveResumen(u)] ? 0 : u.explicaciones.length) +
       tab("practicar","Practicar",nEj) +
       tab("vocabulario","Vocabulario",u.vocabulario.length) +
     '</div><div id="panel"></div>';
@@ -1064,30 +1130,143 @@ async function revisarProduccionIA(ej, idx, boton, refrescar){
   }
 }
 
+
+/* ================= ficha de resumen ================= */
+function claveResumen(u){ return "resumen:u" + u.numero; }
+
+async function generarResumen(u, boton){
+  boton.disabled = true;
+  boton.textContent = "Generando...";
+  const cont = boton.parentElement;
+  try {
+    const r = await fetch("/api/resumen", {
+      method:"POST", headers:{"content-type":"application/json"},
+      body: JSON.stringify({
+        titulo: u.titulo,
+        explicaciones: u.explicaciones.map(e => ({titulo:e.titulo, texto:e.texto})),
+        ejemplos: u.explicaciones.flatMap(e => (e.ejemplos||[]).map(x => x.en)).filter(Boolean),
+        vocabulario: u.vocabulario.map(v => v.en)
+      })
+    });
+    const j = await r.json();
+    if(j.error){
+      cont.querySelector("p").textContent = "No se pudo generar: " + j.error;
+      boton.disabled = false; boton.textContent = "Reintentar";
+      return;
+    }
+    const reg = registro(claveResumen(u), "resumen");
+    reg.datos = j;
+    reg.ok = true;
+    await subir(claveResumen(u));
+    pintarUnidad();
+  } catch(e){
+    cont.querySelector("p").textContent = "No se pudo conectar. Esto funciona con la app publicada en Vercel.";
+    boton.disabled = false; boton.textContent = "Reintentar";
+  }
+}
+
+function li(arr){ return (arr||[]).map(t => "<li>" + esc(t) + "</li>").join(""); }
+
+function fichaHTML(f){
+  let h = '<div class="ficha">';
+
+  if(f.concepto){
+    h += '<div class="bloque b-concepto"><h4><span class="num">1</span>De qué se trata</h4>' +
+         "<ul>" + li(f.concepto.puntos) + "</ul>" +
+         (f.concepto.clave ? '<div class="clave">' + esc(f.concepto.clave) + "</div>" : "") +
+         "</div>";
+  }
+
+  if(f.estructura){
+    h += '<div class="bloque b-estructura"><h4><span class="num">2</span>Cómo se arma</h4>';
+    const filas = f.estructura.filas || [];
+    if(filas.length){
+      h += '<div class="formula">' + filas.map(x =>
+        '<div class="formula-fila"><span class="et">' + esc(x.etiqueta || "") +
+        '</span><span class="fo">' + esc(x.formula || "") + "</span></div>").join("") + "</div>";
+    }
+    if((f.estructura.notas || []).length) h += "<ul>" + li(f.estructura.notas) + "</ul>";
+    h += "</div>";
+  }
+
+  if((f.ejemplos || []).length){
+    h += '<div class="bloque b-ejemplos"><h4><span class="num">3</span>Ejemplos</h4>' +
+         f.ejemplos.map(x =>
+           '<div class="par"><span class="en">' + esc(x.en || "") +
+           '</span><span class="es">' + esc(x.es || "") + "</span></div>").join("") +
+         "</div>";
+  }
+
+  if(f.ojo){
+    h += '<div class="bloque b-ojo"><h4><span class="num">4</span>Ojo con esto</h4>' +
+         "<ul>" + li(f.ojo.puntos) + "</ul>";
+    if(f.ojo.mal || f.ojo.bien){
+      h += '<div class="contraste">' +
+           (f.ojo.mal ? '<div class="mal">' + esc(f.ojo.mal) + "</div>" : "") +
+           (f.ojo.bien ? '<div class="bien">' + esc(f.ojo.bien) + "</div>" : "") +
+           "</div>";
+    }
+    h += "</div>";
+  }
+
+  return h + "</div>";
+}
+
 /* ================= explicación ================= */
 function panelExplicacion(panel, u){
-  if(!u.explicaciones.length){
-    panel.innerHTML = '<p class="vacio">Esta unidad no trae bloques de explicación. ' +
-      "Pasa a practicar o al vocabulario.</p>";
-  }
-  u.explicaciones.forEach(e => {
-    const d = document.createElement("div"); d.className = "explicacion";
-    let h = "";
-    if(e.titulo) h += "<h3>" + (e.seccion ? '<span class="seccion-num">'+esc(e.seccion)+"</span>" : "") + esc(e.titulo) + "</h3>";
-    if(e.texto) h += "<p>" + esc(e.texto) + "</p>";
-    (e.ejemplos || []).forEach(x => {
-      h += '<p class="ejemplo">' + esc(x.en || "") +
-           (x.nota ? '<span class="nota">' + esc(x.nota) + "</span>" : "") + "</p>";
-    });
-    d.innerHTML = h;
+  const reg = P[claveResumen(u)];
+  const ficha = reg && reg.datos;
+
+  if(ficha){
+    const d = document.createElement("div");
+    d.innerHTML = fichaHTML(ficha);
     panel.appendChild(d);
-  });
+  } else {
+    const g = document.createElement("div");
+    g.className = "generar";
+    g.innerHTML = "<p>Arma un resumen en español de esta unidad: de qué se trata, " +
+                  "cómo se construye, ejemplos traducidos y los errores típicos.</p>";
+    const b = document.createElement("button");
+    b.className = "btn";
+    b.textContent = "Generar resumen";
+    b.onclick = () => generarResumen(u, b);
+    g.appendChild(b);
+    panel.appendChild(g);
+  }
+
+  // el texto original del libro queda disponible, plegado
+  if(u.explicaciones.length){
+    const det = document.createElement("details");
+    det.className = "original";
+    det.innerHTML = "<summary>Ver el texto original del libro, en inglés</summary>";
+    u.explicaciones.forEach(e => {
+      const d = document.createElement("div"); d.className = "explicacion";
+      let h = "";
+      if(e.titulo) h += "<h3>" + (e.seccion ? '<span class="seccion-num">'+esc(e.seccion)+"</span>" : "") + esc(e.titulo) + "</h3>";
+      if(e.texto) h += "<p>" + esc(e.texto) + "</p>";
+      (e.ejemplos || []).forEach(x => {
+        h += '<p class="ejemplo">' + esc(x.en || "") +
+             (x.nota ? '<span class="nota">' + esc(x.nota) + "</span>" : "") + "</p>";
+      });
+      d.innerHTML = h;
+      det.appendChild(d);
+    });
+    panel.appendChild(det);
+  } else if(ficha){
+    // nada mas que mostrar
+  } else {
+    const p = document.createElement("p");
+    p.className = "vacio";
+    p.textContent = "Esta unidad no trae explicación en el libro, pero igual puedes generar un resumen.";
+    panel.appendChild(p);
+  }
+
   if(u.checklist && u.checklist.length){
-    const s = document.createElement("section");
-    s.innerHTML = "<h3>Al terminar esta unidad deberías poder</h3>";
+    const sec = document.createElement("section");
+    sec.innerHTML = "<h3>Al terminar esta unidad deberías poder</h3>";
     const ul = document.createElement("ul"); ul.className = "checklist";
-    u.checklist.forEach(c => { const li = document.createElement("li"); li.textContent = c; ul.appendChild(li); });
-    s.appendChild(ul); panel.appendChild(s);
+    u.checklist.forEach(c => { const l = document.createElement("li"); l.textContent = c; ul.appendChild(l); });
+    sec.appendChild(ul); panel.appendChild(sec);
   }
 }
 
