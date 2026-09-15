@@ -275,6 +275,19 @@ function programar(clave, tipo, acerto){
 }
 
 /* ================= arranque ================= */
+let yaInicio = false;
+
+async function cargarLibroDelServidor(){
+  try {
+    const r = await fetch("EFE_app.json", {cache:"no-cache"});
+    if(!r.ok) return false;
+    const j = await r.json();
+    if(!j.unidades) return false;
+    LIBRO = j;
+    return true;
+  } catch(e){ return false; }
+}
+
 $("#archivo").addEventListener("change", e => {
   const f = e.target.files[0];
   if(!f) return;
@@ -285,7 +298,7 @@ $("#archivo").addEventListener("change", e => {
       if(!j.unidades) throw new Error();
       LIBRO = j;
       try { localStorage.setItem("efe-libro", r.result); } catch(e){}
-      trasCargarLibro();
+      decidirPortada();
     } catch(err){
       $("#error-libro").textContent = "Ese archivo no es el EFE_app.json.";
     }
@@ -293,40 +306,67 @@ $("#archivo").addEventListener("change", e => {
   r.readAsText(f, "utf-8");
 });
 
-function trasCargarLibro(){
+/* Con libro y sin sesion: pide login. Con libro y sesion: entra. Sin libro: pide archivo. */
+function decidirPortada(){
+  if(!LIBRO){
+    $("#paso-libro").hidden = false;
+    $("#portada-texto").textContent = "Carga el archivo del libro para empezar.";
+    return;
+  }
   $("#paso-libro").hidden = true;
   $("#portada-texto").textContent = "Libro cargado: " + LIBRO.unidades.length + " unidades.";
-  if(HAY_NUBE) $("#paso-login").hidden = false;
-  else iniciar();
+  if(HAY_NUBE && !usuario){ $("#paso-login").hidden = false; return; }
+  iniciar();
 }
 
 $("#btn-enviar").onclick = async () => {
   const email = $("#email").value.trim();
   if(!email || !sb) return;
   $("#error-login").textContent = ""; $("#ok-login").textContent = "Enviando...";
-  const {error} = await sb.auth.signInWithOtp({ email, options:{ emailRedirectTo: window.location.href }});
+  const {error} = await sb.auth.signInWithOtp({
+    email, options:{ emailRedirectTo: window.location.origin }
+  });
   if(error){ $("#ok-login").textContent = ""; $("#error-login").textContent = error.message; }
-  else $("#ok-login").textContent = "Revisa tu correo y abre el enlace en este mismo dispositivo.";
+  else $("#ok-login").textContent = "Te llegó un enlace al correo. Ábrelo en este mismo dispositivo. Si no aparece, mira en spam.";
 };
-$("#btn-sin-cuenta").onclick = () => iniciar();
+$("#btn-sin-cuenta").onclick = () => { if(LIBRO) iniciar(); };
 $("#btn-salir").onclick = async () => { if(sb) await sb.auth.signOut(); location.reload(); };
 
 (async function(){
   cargarLocal();
-  const g = localStorage.getItem("efe-libro");
-  if(g){ try { LIBRO = JSON.parse(g); } catch(e){} }
+
+  // el libro vive en el servidor: se baja solo en cualquier dispositivo
+  const hay = await cargarLibroDelServidor();
+  if(!hay){
+    const g = localStorage.getItem("efe-libro");
+    if(g){ try { LIBRO = JSON.parse(g); } catch(e){} }
+  }
+
   if(HAY_NUBE && sb){
+    // el token del enlace del correo se procesa de forma asincrona:
+    // hay que escuchar el cambio de sesion, no preguntar una sola vez
+    sb.auth.onAuthStateChange(async (evento, sesion) => {
+      if(sesion && sesion.user && !yaInicio){
+        usuario = sesion.user;
+        await bajar();
+        if(location.hash.includes("access_token")){
+          history.replaceState(null, "", location.pathname);
+        }
+        decidirPortada();
+      }
+    });
     const {data} = await sb.auth.getSession();
     if(data && data.session){
       usuario = data.session.user;
       await bajar();
-      if(LIBRO){ iniciar(); return; }
     }
   }
-  if(LIBRO) trasCargarLibro();
+  decidirPortada();
 })();
 
 function iniciar(){
+  if(yaInicio) return;
+  yaInicio = true;
   $("#portada").hidden = true;
   $("#app").hidden = false;
   $("#quien").textContent = usuario ? usuario.email : "sin cuenta, solo este navegador";
