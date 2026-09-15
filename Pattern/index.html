@@ -3,143 +3,279 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>English for Everyone — estudio</title>
+<meta name="theme-color" content="#0E2B2E">
+<title>Pattern</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
 <style>
 :root{
-  --papel:#F7F8F6; --tinta:#1A1D1A; --suave:#6B7168; --linea:#DDE0D9;
-  --azul:#1B4D8F; --azul-claro:#E8EFF7;
-  --ok:#2F7A4E; --ok-fondo:#EAF3EC;
-  --mal:#A63D2F; --mal-fondo:#F7EAE7;
-  --ambar:#8A6A1F; --ambar-fondo:#F7F1E0;
-  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
-  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --blanco:#FFFFFF;
+  --nieve:#F4F8F9;
+  --borde:#DCE7E9;
+  --borde-fuerte:#C3D6D9;
+  --tinta:#0E2B2E;
+  --tinta-suave:#5B7376;
+  --celeste:#1E9BD1;
+  --celeste-tenue:#E4F2FA;
+  --agua:#0FA68A;
+  --agua-tenue:#E1F4F0;
+  --coral:#B3455A;
+  --coral-tenue:#FBEAED;
+  --ambar:#B07B1E;
+  --ambar-tenue:#FBF2DF;
+  --ui:"Bricolage Grotesque",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --lectura:"Newsreader",Georgia,"Times New Roman",serif;
+  --r:10px;
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
-body{background:var(--papel);color:var(--tinta);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
-button{font-family:inherit;font-size:inherit;cursor:pointer}
-input{font-family:inherit;font-size:inherit}
+body{
+  background:var(--blanco);color:var(--tinta);
+  font-family:var(--ui);font-size:16px;line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+button{font-family:inherit;font-size:inherit;cursor:pointer;color:inherit}
+input{font-family:inherit;font-size:inherit;color:inherit}
 
-#app{display:grid;grid-template-columns:280px 1fr;min-height:100vh}
-#lateral{border-right:1px solid var(--linea);padding:28px 0 40px;overflow-y:auto;max-height:100vh;position:sticky;top:0}
-#principal{padding:40px 48px 96px;max-width:760px}
+/* ---------- armazón ---------- */
+#app{display:grid;grid-template-columns:272px 1fr;min-height:100vh}
+#lateral{
+  background:var(--nieve);border-right:1px solid var(--borde);
+  padding:26px 0 40px;overflow-y:auto;max-height:100vh;position:sticky;top:0;
+}
+#principal{padding:44px 56px 120px;max-width:720px}
 
-.marca{padding:0 24px 16px;border-bottom:1px solid var(--linea);margin-bottom:8px}
-.marca h1{font-family:var(--serif);font-size:20px;font-weight:600;margin:0;letter-spacing:-.01em}
-.marca p{margin:4px 0 0;font-size:13px;color:var(--suave)}
-.marca .cuenta{margin-top:8px;font-size:12px;color:var(--suave);display:flex;justify-content:space-between;align-items:center;gap:8px}
-.marca .cuenta button{background:none;border:0;color:var(--azul);font-size:12px;padding:0;text-decoration:underline}
+.marca{padding:0 20px 18px}
+.marca h1{
+  font-family:var(--ui);font-size:23px;font-weight:600;margin:0;
+  letter-spacing:-.025em;
+}
+.marca .fuente{font-size:12.5px;color:var(--tinta-suave);margin-top:2px}
+.marca .avance{font-size:12.5px;color:var(--tinta-suave);margin-top:14px;font-variant-numeric:tabular-nums}
+.cuenta{font-size:11.5px;color:var(--tinta-suave);margin-top:6px;display:flex;justify-content:space-between;gap:8px;align-items:center}
+.cuenta button{background:none;border:0;color:var(--celeste);font-size:11.5px;padding:0;text-decoration:underline}
 
-.repaso-btn{display:block;width:calc(100% - 32px);margin:0 16px 14px;text-align:left;background:var(--ambar-fondo);border:1px solid #E5D9B8;border-radius:4px;padding:10px 14px;color:var(--tinta)}
-.repaso-btn.activa{border-color:var(--ambar)}
+.repaso-btn{
+  display:block;width:calc(100% - 32px);margin:2px 16px 18px;text-align:left;
+  background:var(--ambar-tenue);border:1px solid transparent;border-radius:var(--r);
+  padding:11px 14px;
+}
 .repaso-btn b{display:block;font-size:14px;font-weight:600}
-.repaso-btn span{font-size:12px;color:var(--suave)}
-.repaso-btn.vacia{background:none;border-color:var(--linea);opacity:.7}
+.repaso-btn span{font-size:12px;color:var(--tinta-suave)}
+.repaso-btn.activa{border-color:var(--ambar)}
+.repaso-btn.vacia{background:var(--blanco);border-color:var(--borde);opacity:.75}
 
-.u-item{display:block;width:100%;text-align:left;background:none;border:0;padding:9px 24px;color:var(--tinta);border-left:3px solid transparent}
-.u-item:hover{background:#EFF1ED}
-.u-item.activa{border-left-color:var(--azul);background:var(--azul-claro)}
-.u-item .n{color:var(--suave);font-variant-numeric:tabular-nums;font-size:13px;margin-right:8px}
+.u-item{
+  display:block;width:100%;text-align:left;background:none;border:0;
+  padding:9px 20px 9px 17px;border-left:3px solid transparent;
+}
+.u-item:hover{background:var(--blanco)}
+.u-item.activa{border-left-color:var(--celeste);background:var(--blanco)}
+.u-item .n{color:var(--tinta-suave);font-variant-numeric:tabular-nums;font-size:12.5px;margin-right:8px}
 .u-item .t{font-size:14px}
-.u-item .barra{height:2px;background:var(--linea);margin-top:6px;border-radius:1px}
-.u-item .barra i{display:block;height:100%;background:var(--ok);border-radius:1px}
-.u-item.completa .t{color:var(--suave)}
+.u-item .barra{height:3px;background:var(--borde);margin-top:7px;border-radius:2px;overflow:hidden}
+.u-item .barra i{display:block;height:100%;background:var(--agua)}
+.u-item.completa .t{color:var(--tinta-suave)}
+.u-item.completa .n::after{content:" ●";color:var(--agua);font-size:9px;vertical-align:middle}
 
-.cabecera{margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid var(--linea)}
-.cabecera h2{font-family:var(--serif);font-size:32px;font-weight:600;margin:0 0 6px;letter-spacing:-.02em;line-height:1.15}
-.cabecera .meta{color:var(--suave);font-size:14px}
+/* ---------- barra móvil ---------- */
+#movil{display:none}
 
-.pestanas{display:flex;gap:4px;margin-bottom:28px}
-.pestanas button{background:none;border:0;border-bottom:2px solid transparent;padding:6px 12px 8px;color:var(--suave)}
-.pestanas button.activa{color:var(--tinta);border-bottom-color:var(--azul)}
-.pestanas button .c{font-size:12px;color:var(--suave);margin-left:5px;font-variant-numeric:tabular-nums}
+/* ---------- cabecera de unidad ---------- */
+.cabecera{margin-bottom:34px}
+.cabecera h2{
+  font-family:var(--ui);font-size:34px;font-weight:600;margin:0 0 8px;
+  letter-spacing:-.03em;line-height:1.1;
+}
+.cabecera .meta{color:var(--tinta-suave);font-size:13.5px}
 
-section{margin-bottom:40px}
-h3{font-size:15px;font-weight:600;margin:0 0 4px}
-.instruccion{color:var(--suave);font-size:14px;margin:0 0 16px;max-width:62ch}
-.seccion-num{color:var(--azul);font-variant-numeric:tabular-nums;font-size:13px;font-weight:600;margin-right:8px}
+/* la rejilla: un punto por pregunta de la unidad */
+.rejilla{display:flex;flex-wrap:wrap;gap:5px;margin:20px 0 0}
+.rejilla i{
+  width:9px;height:9px;border-radius:2px;background:var(--borde);
+  display:block;
+}
+.rejilla i.visto{background:var(--celeste)}
+.rejilla i.firme{background:var(--agua)}
 
-.explicacion{border-left:2px solid var(--linea);padding-left:18px;margin-bottom:24px}
-.explicacion p{margin:0 0 12px;max-width:66ch}
-.ejemplo{font-family:var(--serif);font-size:17px;margin:0 0 4px}
-.ejemplo .nota{font-family:var(--sans);font-size:13px;color:var(--suave);margin-left:10px}
+.pestanas{display:flex;gap:2px;margin:30px 0 30px;border-bottom:1px solid var(--borde)}
+.pestanas button{
+  background:none;border:0;border-bottom:2px solid transparent;
+  padding:9px 14px;color:var(--tinta-suave);margin-bottom:-1px;font-size:14.5px;
+}
+.pestanas button.activa{color:var(--tinta);border-bottom-color:var(--celeste);font-weight:500}
+.pestanas button .c{font-size:11.5px;color:var(--tinta-suave);margin-left:6px;font-variant-numeric:tabular-nums}
 
-.item{padding:12px 0;border-bottom:1px solid var(--linea)}
-.item:last-child{border-bottom:0}
-.frase{font-family:var(--serif);font-size:17.5px;line-height:1.7}
-.origen{font-size:12px;color:var(--suave);margin-bottom:8px}
-.hueco{border:0;border-bottom:1.5px solid var(--azul);background:transparent;font-family:var(--serif);font-size:17px;padding:1px 4px;min-width:110px;color:var(--tinta);outline:none}
-.hueco:focus{background:var(--azul-claro)}
-.hueco.ok{border-bottom-color:var(--ok);color:var(--ok)}
-.hueco.mal{border-bottom-color:var(--mal);color:var(--mal)}
-.libre{width:100%;border:1px solid var(--linea);border-radius:3px;background:#fff;font-family:var(--serif);font-size:17px;padding:8px 10px;margin-top:6px;outline:none}
-.libre:focus{border-color:var(--azul)}
-.opciones{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-.opcion{background:#fff;border:1px solid var(--linea);border-radius:3px;padding:5px 12px;font-family:var(--serif);font-size:16px}
-.opcion.elegida{border-color:var(--azul);background:var(--azul-claro)}
-.opcion.ok{border-color:var(--ok);background:var(--ok-fondo);color:var(--ok)}
-.opcion.mal{border-color:var(--mal);background:var(--mal-fondo);color:var(--mal)}
-.correccion{font-size:14px;margin-top:6px}
-.correccion.ok{color:var(--ok)}
-.correccion.mal{color:var(--mal)}
-.correccion b{font-family:var(--serif);font-size:16px;font-weight:600}
-.pedir-ia{background:none;border:0;color:var(--azul);font-size:13px;text-decoration:underline;padding:0;margin-left:10px}
-.ia{background:var(--azul-claro);border-left:2px solid var(--azul);padding:8px 12px;margin-top:8px;font-size:14px;border-radius:0 3px 3px 0}
-.ia.ok{background:var(--ok-fondo);border-left-color:var(--ok)}
-.ia.mal{background:var(--mal-fondo);border-left-color:var(--mal)}
-.ejemplo-resuelto{opacity:.6}
-.ejemplo-resuelto .frase::after{content:" — ejemplo del libro";font-family:var(--sans);font-size:12px;color:var(--suave)}
+section{margin-bottom:44px}
+h3{font-size:15px;font-weight:600;margin:0 0 5px}
+.instruccion{color:var(--tinta-suave);font-size:14px;margin:0 0 18px;max-width:62ch}
+.seccion-num{
+  color:var(--celeste);font-variant-numeric:tabular-nums;
+  font-size:12.5px;font-weight:600;margin-right:8px;
+}
 
-.acciones{display:flex;gap:10px;align-items:center;margin-top:18px;flex-wrap:wrap}
-.btn{background:var(--azul);color:#fff;border:0;border-radius:3px;padding:8px 18px}
-.btn:hover{background:#16406F}
-.btn:disabled{opacity:.5;cursor:default}
-.btn.sec{background:#fff;color:var(--tinta);border:1px solid var(--linea)}
-.btn.sec:hover{background:#EFF1ED}
-.resultado{font-size:14px;color:var(--suave)}
+.explicacion{
+  background:var(--nieve);border-radius:var(--r);
+  padding:20px 22px;margin-bottom:14px;
+}
+.explicacion p{margin:0 0 12px;max-width:64ch}
+.explicacion p:last-child{margin-bottom:0}
+.ejemplo{
+  font-family:var(--lectura);font-size:18px;line-height:1.6;
+  margin:0 0 6px;color:var(--tinta);
+}
+.ejemplo .nota{font-family:var(--ui);font-size:12.5px;color:var(--tinta-suave);margin-left:10px}
 
-.voc{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:2px}
-.voc-item{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:8px 10px;border-bottom:1px solid var(--linea)}
-.voc-item .en{font-family:var(--serif);font-size:17px}
-.voc-item .nota{font-size:13px;color:var(--suave)}
-.voc-item button{background:none;border:1px solid var(--linea);border-radius:20px;font-size:11px;padding:2px 9px;color:var(--suave);flex-shrink:0}
-.voc-item button.sabida{border-color:var(--ok);color:var(--ok);background:var(--ok-fondo)}
+/* ---------- ejercicios ---------- */
+.item{padding:14px 0;border-bottom:1px solid var(--borde)}
+.item:last-of-type{border-bottom:0}
+.frase{font-family:var(--lectura);font-size:18.5px;line-height:1.75}
+.origen{font-size:12.5px;color:var(--tinta-suave);margin-bottom:10px}
+.hueco{
+  border:0;border-bottom:2px solid var(--celeste);background:var(--celeste-tenue);
+  font-family:var(--lectura);font-size:18px;padding:1px 7px;min-width:110px;
+  outline:none;border-radius:3px 3px 0 0;
+}
+.hueco:focus{background:#D2E9F7}
+.hueco.ok{border-bottom-color:var(--agua);background:var(--agua-tenue);color:var(--agua)}
+.hueco.mal{border-bottom-color:var(--coral);background:var(--coral-tenue);color:var(--coral)}
+.libre{
+  width:100%;border:1px solid var(--borde-fuerte);border-radius:8px;background:var(--blanco);
+  font-family:var(--lectura);font-size:18px;padding:10px 12px;margin-top:8px;outline:none;
+}
+.libre:focus{border-color:var(--celeste);background:var(--celeste-tenue)}
+.opciones{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.opcion{
+  background:var(--blanco);border:1px solid var(--borde-fuerte);border-radius:999px;
+  padding:6px 16px;font-family:var(--lectura);font-size:17px;
+}
+.opcion:hover{border-color:var(--celeste)}
+.opcion.elegida{border-color:var(--celeste);background:var(--celeste-tenue)}
+.opcion.ok{border-color:var(--agua);background:var(--agua-tenue);color:var(--agua)}
+.opcion.mal{border-color:var(--coral);background:var(--coral-tenue);color:var(--coral)}
+.correccion{font-size:13.5px;margin-top:8px;color:var(--tinta-suave)}
+.correccion.ok{color:var(--agua)}
+.correccion.mal{color:var(--coral)}
+.correccion b{font-family:var(--lectura);font-size:16.5px;font-weight:500}
+.pedir-ia{
+  background:none;border:0;color:var(--celeste);font-size:13px;
+  text-decoration:underline;padding:0;margin-left:10px;
+}
+.ia{
+  background:var(--celeste-tenue);border-radius:8px;
+  padding:10px 13px;margin-top:10px;font-size:13.5px;line-height:1.5;
+}
+.ia.ok{background:var(--agua-tenue)}
+.ia.mal{background:var(--coral-tenue)}
+.ejemplo-resuelto{opacity:.55}
+.ejemplo-resuelto .frase::after{
+  content:" ejemplo";font-family:var(--ui);font-size:11px;
+  color:var(--tinta-suave);margin-left:8px;
+}
 
-.tarjeta{border:1px solid var(--linea);background:#fff;border-radius:4px;padding:32px 24px;text-align:center;margin-bottom:16px}
-.tarjeta .en{font-family:var(--serif);font-size:28px;line-height:1.3}
-.tarjeta .oculto{color:var(--suave);font-size:14px;margin-top:10px;font-style:italic}
+.acciones{display:flex;gap:9px;align-items:center;margin-top:20px;flex-wrap:wrap}
+.btn{
+  background:var(--tinta);color:var(--blanco);border:0;border-radius:999px;
+  padding:9px 22px;font-size:14.5px;font-weight:500;
+}
+.btn:hover{background:#0A2124}
+.btn:disabled{opacity:.4;cursor:default}
+.btn.sec{background:var(--blanco);color:var(--tinta);border:1px solid var(--borde-fuerte)}
+.btn.sec:hover{background:var(--nieve);border-color:var(--celeste)}
+.resultado{font-size:13.5px;color:var(--tinta-suave)}
+
+/* ---------- vocabulario ---------- */
+.voc{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1px;background:var(--borde)}
+.voc-item{
+  display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  padding:11px 12px;background:var(--blanco);
+}
+.voc-item .en{font-family:var(--lectura);font-size:18px}
+.voc-item .nota{font-size:12.5px;color:var(--tinta-suave)}
+.voc-item button{
+  background:none;border:1px solid var(--borde-fuerte);border-radius:999px;
+  font-size:11px;padding:3px 10px;color:var(--tinta-suave);flex-shrink:0;
+}
+.voc-item button:hover{border-color:var(--agua)}
+.voc-item button.sabida{border-color:var(--agua);color:var(--agua);background:var(--agua-tenue)}
+
+.tarjeta{
+  background:var(--nieve);border-radius:14px;
+  padding:48px 28px;text-align:center;margin-bottom:18px;
+}
+.tarjeta .en{font-family:var(--lectura);font-size:32px;line-height:1.25}
+.tarjeta .oculto{color:var(--tinta-suave);font-size:13.5px;margin-top:14px}
 
 .checklist{list-style:none;padding:0;margin:0}
-.checklist li{padding:6px 0 6px 22px;position:relative;border-bottom:1px solid var(--linea);font-size:15px}
-.checklist li::before{content:"\25A1";position:absolute;left:0;color:var(--suave)}
+.checklist li{
+  padding:10px 0 10px 26px;position:relative;
+  border-bottom:1px solid var(--borde);font-size:15px;
+}
+.checklist li:last-child{border-bottom:0}
+.checklist li::before{
+  content:"";position:absolute;left:0;top:15px;
+  width:11px;height:11px;border:1.5px solid var(--borde-fuerte);border-radius:3px;
+}
 
-.vacio{color:var(--suave);font-size:14px;font-style:italic}
-.omitidos{font-size:13px;color:var(--suave);margin-top:8px}
+.vacio{color:var(--tinta-suave);font-size:14px}
+.omitidos{font-size:12.5px;color:var(--tinta-suave);margin-top:10px}
 
-#portada{max-width:520px;margin:12vh auto;padding:0 24px}
-#portada h1{font-family:var(--serif);font-size:30px;font-weight:600;margin:0 0 10px}
-#portada p{color:var(--suave);margin:0 0 20px;max-width:60ch}
-#portada input[type=email]{width:100%;border:1px solid var(--linea);border-radius:3px;padding:9px 11px;margin-bottom:12px;background:#fff}
-#portada .paso{border-top:1px solid var(--linea);padding-top:20px;margin-top:24px}
-.err{color:var(--mal);font-size:14px;margin-top:8px}
-.aviso-ok{color:var(--ok);font-size:14px;margin-top:8px}
+/* ---------- portada ---------- */
+#portada{max-width:440px;margin:0 auto;padding:16vh 24px}
+#portada h1{font-size:44px;font-weight:600;margin:0 0 6px;letter-spacing:-.035em}
+#portada .lema{color:var(--tinta-suave);margin:0 0 30px;font-size:15px}
+#portada p{color:var(--tinta-suave);margin:0 0 18px;font-size:14.5px}
+#portada input{
+  width:100%;border:1px solid var(--borde-fuerte);border-radius:8px;
+  padding:11px 13px;margin-bottom:10px;background:var(--blanco);
+}
+#portada input:focus{outline:none;border-color:var(--celeste);background:var(--celeste-tenue)}
+#portada .paso{border-top:1px solid var(--borde);padding-top:24px;margin-top:26px}
+#portada .btn{margin-right:8px;margin-bottom:8px}
+.err{color:var(--coral);font-size:13.5px;margin-top:10px}
+.aviso-ok{color:var(--agua);font-size:13.5px;margin-top:10px}
 
-@media (max-width:820px){
+/* ---------- móvil ---------- */
+@media (max-width:860px){
   #app{grid-template-columns:1fr}
-  #lateral{position:static;max-height:none;border-right:0;border-bottom:1px solid var(--linea)}
-  #principal{padding:28px 22px 80px}
-  .cabecera h2{font-size:26px}
+  #movil{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding:12px 18px;border-bottom:1px solid var(--borde);
+    position:sticky;top:0;background:var(--blanco);z-index:30;
+  }
+  #movil .titulo{font-size:17px;font-weight:600;letter-spacing:-.02em}
+  #movil button{
+    background:var(--nieve);border:1px solid var(--borde);border-radius:999px;
+    padding:6px 15px;font-size:13.5px;
+  }
+  #lateral{
+    position:fixed;top:0;left:0;bottom:0;width:86%;max-width:330px;z-index:40;
+    transform:translateX(-102%);max-height:none;
+    box-shadow:0 0 0 100vw rgba(14,43,46,0);
+  }
+  #lateral.abierto{transform:translateX(0)}
+  #velo{
+    display:none;position:fixed;inset:0;background:rgba(14,43,46,.35);z-index:35;
+  }
+  #velo.visible{display:block}
+  #principal{padding:26px 20px 90px}
+  .cabecera h2{font-size:27px}
+  .pestanas button{padding:9px 11px;font-size:14px}
+  .voc{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:no-preference){
-  .u-item,.btn,.opcion{transition:background .12s ease,border-color .12s ease}
+  #lateral{transition:transform .22s ease}
+  .u-item,.btn,.opcion,.voc-item button{transition:background .13s ease,border-color .13s ease}
 }
-:focus-visible{outline:2px solid var(--azul);outline-offset:2px}
+:focus-visible{outline:2px solid var(--celeste);outline-offset:2px}
 </style>
 </head>
 <body>
 
 <div id="portada">
-  <h1>English for Everyone</h1>
+  <h1>Pattern</h1>
+  <p class="lema">Los patrones del inglés, uno a la vez.</p>
   <p id="portada-texto">Carga el archivo del libro para empezar.</p>
 
   <div id="paso-libro">
@@ -159,11 +295,19 @@ h3{font-size:15px;font-weight:600;margin:0 0 4px}
   </div>
 </div>
 
+<div id="velo"></div>
+
 <div id="app" hidden>
+  <header id="movil">
+    <span class="titulo">Pattern</span>
+    <button id="btn-menu">Unidades</button>
+  </header>
+
   <nav id="lateral">
     <div class="marca">
-      <h1>English for Everyone</h1>
-      <p id="progreso-global"></p>
+      <h1>Pattern</h1>
+      <div class="fuente">English for Everyone</div>
+      <div class="avance" id="progreso-global"></div>
       <div class="cuenta">
         <span id="quien"></span>
         <button id="btn-salir" hidden>salir</button>
@@ -173,6 +317,7 @@ h3{font-size:15px;font-weight:600;margin:0 0 4px}
     <button class="repaso-btn" id="btn-repaso"></button>
     <div id="lista-unidades"></div>
   </nav>
+
   <main id="principal"></main>
 </div>
 
@@ -448,6 +593,20 @@ async function iniciar(){
   pintarUnidad();
 }
 
+/* ================= panel lateral en móvil ================= */
+function abrirPanel(){
+  $("#lateral").classList.add("abierto");
+  $("#velo").classList.add("visible");
+}
+function cerrarPanel(){
+  $("#lateral").classList.remove("abierto");
+  $("#velo").classList.remove("visible");
+}
+$("#btn-menu").onclick = () =>
+  $("#lateral").classList.contains("abierto") ? cerrarPanel() : abrirPanel();
+$("#velo").onclick = cerrarPanel;
+document.addEventListener("keydown", e => { if(e.key === "Escape") cerrarPanel(); });
+
 /* ================= avance ================= */
 function clavesDeUnidad(u){
   const cl = [];
@@ -503,6 +662,7 @@ function pintarLateral(){
     b.onclick = () => {
       enRepaso = false; unidadActual = idx; pestanaActual = "explicacion";
       localStorage.setItem("efe-ultima", idx);
+      cerrarPanel();
       pintarLateral(); pintarUnidad(); window.scrollTo(0,0);
     };
     cont.appendChild(b);
@@ -518,6 +678,7 @@ function pintarLateral(){
   rb.onclick = () => {
     if(!pend) return;
     enRepaso = true; colaRepaso = construirCola();
+    cerrarPanel();
     pintarLateral(); pintarRepaso(); window.scrollTo(0,0);
   };
 }
@@ -532,6 +693,8 @@ function pintarRepaso(){
     return;
   }
   const n = colaRepaso[0];
+  const tmr = document.querySelector("#movil .titulo");
+  if(tmr) tmr.textContent = "Repaso";
   m.innerHTML = '<div class="cabecera"><h2>Repaso</h2><div class="meta">' +
     colaRepaso.length + " pendientes · unidad " + n.unidad.numero + ", " + esc(n.unidad.titulo) +
     '</div></div><div id="panel"></div>';
@@ -593,7 +756,8 @@ function pintarUnidad(){
   m.innerHTML =
     '<div class="cabecera"><h2>' + esc(u.titulo) + "</h2>" +
     '<div class="meta">Unidad ' + u.numero + " · páginas " + u.paginas[0] + "–" + u.paginas[1] +
-    (a.total ? " · " + a.hechos + "/" + a.total + " resueltas" : "") + "</div></div>" +
+    (a.total ? " · " + a.hechos + "/" + a.total + " resueltas" : "") + "</div>" +
+    rejillaHTML(u) + "</div>" +
     '<div class="pestanas">' +
       tab("explicacion","Explicación",u.explicaciones.length) +
       tab("practicar","Practicar",nEj) +
@@ -604,11 +768,27 @@ function pintarUnidad(){
     b.onclick = () => { pestanaActual = b.dataset.t; pintarUnidad(); };
   });
 
+  const tm = document.querySelector("#movil .titulo");
+  if(tm) tm.textContent = u.titulo;
+
   const panel = $("#panel");
   if(pestanaActual === "explicacion") panelExplicacion(panel, u);
   else if(pestanaActual === "practicar") panelPracticar(panel, u, omit);
   else panelVocabulario(panel, u);
 }
+function rejillaHTML(u){
+  const cl = clavesDeUnidad(u);
+  if(!cl.length) return "";
+  const puntos = cl.map(c => {
+    const r = P[c];
+    if(!r || !r.intentos) return "<i></i>";
+    if(r.ok && r.nivel >= 3) return '<i class="firme"></i>';
+    if(r.ok) return '<i class="visto"></i>';
+    return "<i></i>";
+  }).join("");
+  return '<div class="rejilla">' + puntos + "</div>";
+}
+
 function tab(id, txt, n){
   return '<button data-t="'+id+'" class="'+(pestanaActual===id?"activa":"")+'">' +
          txt + (n ? '<span class="c">'+n+"</span>" : "") + "</button>";
