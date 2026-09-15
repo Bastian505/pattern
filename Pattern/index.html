@@ -148,9 +148,11 @@ h3{font-size:15px;font-weight:600;margin:0 0 4px}
   </div>
 
   <div id="paso-login" class="paso" hidden>
-    <p>Entra con tu correo para que el progreso te siga entre el computador y el celular.</p>
-    <input type="email" id="email" placeholder="tu@correo.com" autocomplete="email">
-    <button class="btn" id="btn-enviar">Enviar enlace de acceso</button>
+    <p>Entra con tu correo y contraseña para que el progreso te siga entre el computador y el celular.</p>
+    <input type="email" id="email" placeholder="tu@correo.com" autocomplete="username">
+    <input type="password" id="clave" placeholder="contraseña" autocomplete="current-password">
+    <button class="btn" id="btn-entrar">Entrar</button>
+    <button class="btn sec" id="btn-crear">Crear cuenta</button>
     <button class="btn sec" id="btn-sin-cuenta">Seguir sin cuenta</button>
     <div class="err" id="error-login"></div>
     <div class="aviso-ok" id="ok-login"></div>
@@ -319,16 +321,49 @@ function decidirPortada(){
   iniciar();
 }
 
-$("#btn-enviar").onclick = async () => {
+function credenciales(){
   const email = $("#email").value.trim();
-  if(!email || !sb) return;
-  $("#error-login").textContent = ""; $("#ok-login").textContent = "Enviando...";
-  const {error} = await sb.auth.signInWithOtp({
-    email, options:{ emailRedirectTo: window.location.origin }
-  });
-  if(error){ $("#ok-login").textContent = ""; $("#error-login").textContent = error.message; }
-  else $("#ok-login").textContent = "Te llegó un enlace al correo. Ábrelo en este mismo dispositivo. Si no aparece, mira en spam.";
+  const clave = $("#clave").value;
+  if(!email || !clave){
+    $("#error-login").textContent = "Escribe el correo y la contraseña.";
+    return null;
+  }
+  if(clave.length < 6){
+    $("#error-login").textContent = "La contraseña debe tener al menos 6 caracteres.";
+    return null;
+  }
+  return {email, password: clave};
+}
+
+$("#btn-entrar").onclick = async () => {
+  if(!sb) return;
+  $("#error-login").textContent = ""; $("#ok-login").textContent = "";
+  const c = credenciales();
+  if(!c) return;
+  const {data, error} = await sb.auth.signInWithPassword(c);
+  if(error){ $("#error-login").textContent = error.message; return; }
+  usuario = data.user;
+  await bajar();
+  decidirPortada();
 };
+
+$("#btn-crear").onclick = async () => {
+  if(!sb) return;
+  $("#error-login").textContent = ""; $("#ok-login").textContent = "Creando cuenta...";
+  const c = credenciales();
+  if(!c){ $("#ok-login").textContent = ""; return; }
+  const {data, error} = await sb.auth.signUp(c);
+  if(error){ $("#ok-login").textContent = ""; $("#error-login").textContent = error.message; return; }
+  if(data.session){
+    usuario = data.user;
+    await bajar();
+    decidirPortada();
+  } else {
+    $("#ok-login").textContent = "Cuenta creada. Ahora presiona Entrar.";
+  }
+};
+
+$("#clave").addEventListener("keydown", e => { if(e.key === "Enter") $("#btn-entrar").click(); });
 $("#btn-sin-cuenta").onclick = () => { if(LIBRO) iniciar(); };
 $("#btn-salir").onclick = async () => { if(sb) await sb.auth.signOut(); location.reload(); };
 
