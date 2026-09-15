@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>English for Everyone — estudio</title>
+<style>
+:root{
+  --papel:#F7F8F6; --tinta:#1A1D1A; --suave:#6B7168; --linea:#DDE0D9;
+  --azul:#1B4D8F; --azul-claro:#E8EFF7;
+  --ok:#2F7A4E; --ok-fondo:#EAF3EC;
+  --mal:#A63D2F; --mal-fondo:#F7EAE7;
+  --ambar:#8A6A1F; --ambar-fondo:#F7F1E0;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--papel);color:var(--tinta);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+button{font-family:inherit;font-size:inherit;cursor:pointer}
+input{font-family:inherit;font-size:inherit}
+
+#app{display:grid;grid-template-columns:280px 1fr;min-height:100vh}
+#lateral{border-right:1px solid var(--linea);padding:28px 0 40px;overflow-y:auto;max-height:100vh;position:sticky;top:0}
+#principal{padding:40px 48px 96px;max-width:760px}
+
+.marca{padding:0 24px 16px;border-bottom:1px solid var(--linea);margin-bottom:8px}
+.marca h1{font-family:var(--serif);font-size:20px;font-weight:600;margin:0;letter-spacing:-.01em}
+.marca p{margin:4px 0 0;font-size:13px;color:var(--suave)}
+.marca .cuenta{margin-top:8px;font-size:12px;color:var(--suave);display:flex;justify-content:space-between;align-items:center;gap:8px}
+.marca .cuenta button{background:none;border:0;color:var(--azul);font-size:12px;padding:0;text-decoration:underline}
+
+.repaso-btn{display:block;width:calc(100% - 32px);margin:0 16px 14px;text-align:left;background:var(--ambar-fondo);border:1px solid #E5D9B8;border-radius:4px;padding:10px 14px;color:var(--tinta)}
+.repaso-btn.activa{border-color:var(--ambar)}
+.repaso-btn b{display:block;font-size:14px;font-weight:600}
+.repaso-btn span{font-size:12px;color:var(--suave)}
+.repaso-btn.vacia{background:none;border-color:var(--linea);opacity:.7}
+
+.u-item{display:block;width:100%;text-align:left;background:none;border:0;padding:9px 24px;color:var(--tinta);border-left:3px solid transparent}
+.u-item:hover{background:#EFF1ED}
+.u-item.activa{border-left-color:var(--azul);background:var(--azul-claro)}
+.u-item .n{color:var(--suave);font-variant-numeric:tabular-nums;font-size:13px;margin-right:8px}
+.u-item .t{font-size:14px}
+.u-item .barra{height:2px;background:var(--linea);margin-top:6px;border-radius:1px}
+.u-item .barra i{display:block;height:100%;background:var(--ok);border-radius:1px}
+.u-item.completa .t{color:var(--suave)}
+
+.cabecera{margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid var(--linea)}
+.cabecera h2{font-family:var(--serif);font-size:32px;font-weight:600;margin:0 0 6px;letter-spacing:-.02em;line-height:1.15}
+.cabecera .meta{color:var(--suave);font-size:14px}
+
+.pestanas{display:flex;gap:4px;margin-bottom:28px}
+.pestanas button{background:none;border:0;border-bottom:2px solid transparent;padding:6px 12px 8px;color:var(--suave)}
+.pestanas button.activa{color:var(--tinta);border-bottom-color:var(--azul)}
+.pestanas button .c{font-size:12px;color:var(--suave);margin-left:5px;font-variant-numeric:tabular-nums}
+
+section{margin-bottom:40px}
+h3{font-size:15px;font-weight:600;margin:0 0 4px}
+.instruccion{color:var(--suave);font-size:14px;margin:0 0 16px;max-width:62ch}
+.seccion-num{color:var(--azul);font-variant-numeric:tabular-nums;font-size:13px;font-weight:600;margin-right:8px}
+
+.explicacion{border-left:2px solid var(--linea);padding-left:18px;margin-bottom:24px}
+.explicacion p{margin:0 0 12px;max-width:66ch}
+.ejemplo{font-family:var(--serif);font-size:17px;margin:0 0 4px}
+.ejemplo .nota{font-family:var(--sans);font-size:13px;color:var(--suave);margin-left:10px}
+
+.item{padding:12px 0;border-bottom:1px solid var(--linea)}
+.item:last-child{border-bottom:0}
+.frase{font-family:var(--serif);font-size:17.5px;line-height:1.7}
+.origen{font-size:12px;color:var(--suave);margin-bottom:8px}
+.hueco{border:0;border-bottom:1.5px solid var(--azul);background:transparent;font-family:var(--serif);font-size:17px;padding:1px 4px;min-width:110px;color:var(--tinta);outline:none}
+.hueco:focus{background:var(--azul-claro)}
+.hueco.ok{border-bottom-color:var(--ok);color:var(--ok)}
+.hueco.mal{border-bottom-color:var(--mal);color:var(--mal)}
+.libre{width:100%;border:1px solid var(--linea);border-radius:3px;background:#fff;font-family:var(--serif);font-size:17px;padding:8px 10px;margin-top:6px;outline:none}
+.libre:focus{border-color:var(--azul)}
+.opciones{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.opcion{background:#fff;border:1px solid var(--linea);border-radius:3px;padding:5px 12px;font-family:var(--serif);font-size:16px}
+.opcion.elegida{border-color:var(--azul);background:var(--azul-claro)}
+.opcion.ok{border-color:var(--ok);background:var(--ok-fondo);color:var(--ok)}
+.opcion.mal{border-color:var(--mal);background:var(--mal-fondo);color:var(--mal)}
+.correccion{font-size:14px;margin-top:6px}
+.correccion.ok{color:var(--ok)}
+.correccion.mal{color:var(--mal)}
+.correccion b{font-family:var(--serif);font-size:16px;font-weight:600}
+.pedir-ia{background:none;border:0;color:var(--azul);font-size:13px;text-decoration:underline;padding:0;margin-left:10px}
+.ia{background:var(--azul-claro);border-left:2px solid var(--azul);padding:8px 12px;margin-top:8px;font-size:14px;border-radius:0 3px 3px 0}
+.ia.ok{background:var(--ok-fondo);border-left-color:var(--ok)}
+.ia.mal{background:var(--mal-fondo);border-left-color:var(--mal)}
+.ejemplo-resuelto{opacity:.6}
+.ejemplo-resuelto .frase::after{content:" — ejemplo del libro";font-family:var(--sans);font-size:12px;color:var(--suave)}
+
+.acciones{display:flex;gap:10px;align-items:center;margin-top:18px;flex-wrap:wrap}
+.btn{background:var(--azul);color:#fff;border:0;border-radius:3px;padding:8px 18px}
+.btn:hover{background:#16406F}
+.btn:disabled{opacity:.5;cursor:default}
+.btn.sec{background:#fff;color:var(--tinta);border:1px solid var(--linea)}
+.btn.sec:hover{background:#EFF1ED}
+.resultado{font-size:14px;color:var(--suave)}
+
+.voc{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:2px}
+.voc-item{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:8px 10px;border-bottom:1px solid var(--linea)}
+.voc-item .en{font-family:var(--serif);font-size:17px}
+.voc-item .nota{font-size:13px;color:var(--suave)}
+.voc-item button{background:none;border:1px solid var(--linea);border-radius:20px;font-size:11px;padding:2px 9px;color:var(--suave);flex-shrink:0}
+.voc-item button.sabida{border-color:var(--ok);color:var(--ok);background:var(--ok-fondo)}
+
+.tarjeta{border:1px solid var(--linea);background:#fff;border-radius:4px;padding:32px 24px;text-align:center;margin-bottom:16px}
+.tarjeta .en{font-family:var(--serif);font-size:28px;line-height:1.3}
+.tarjeta .oculto{color:var(--suave);font-size:14px;margin-top:10px;font-style:italic}
+
+.checklist{list-style:none;padding:0;margin:0}
+.checklist li{padding:6px 0 6px 22px;position:relative;border-bottom:1px solid var(--linea);font-size:15px}
+.checklist li::before{content:"\25A1";position:absolute;left:0;color:var(--suave)}
+
+.vacio{color:var(--suave);font-size:14px;font-style:italic}
+.omitidos{font-size:13px;color:var(--suave);margin-top:8px}
+
+#portada{max-width:520px;margin:12vh auto;padding:0 24px}
+#portada h1{font-family:var(--serif);font-size:30px;font-weight:600;margin:0 0 10px}
+#portada p{color:var(--suave);margin:0 0 20px;max-width:60ch}
+#portada input[type=email]{width:100%;border:1px solid var(--linea);border-radius:3px;padding:9px 11px;margin-bottom:12px;background:#fff}
+#portada .paso{border-top:1px solid var(--linea);padding-top:20px;margin-top:24px}
+.err{color:var(--mal);font-size:14px;margin-top:8px}
+.aviso-ok{color:var(--ok);font-size:14px;margin-top:8px}
+
+@media (max-width:820px){
+  #app{grid-template-columns:1fr}
+  #lateral{position:static;max-height:none;border-right:0;border-bottom:1px solid var(--linea)}
+  #principal{padding:28px 22px 80px}
+  .cabecera h2{font-size:26px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .u-item,.btn,.opcion{transition:background .12s ease,border-color .12s ease}
+}
+:focus-visible{outline:2px solid var(--azul);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<div id="portada">
+  <h1>English for Everyone</h1>
+  <p id="portada-texto">Carga el archivo del libro para empezar.</p>
+
+  <div id="paso-libro">
+    <input type="file" id="archivo" accept=".json">
+    <div class="err" id="error-libro"></div>
+  </div>
+
+  <div id="paso-login" class="paso" hidden>
+    <p>Entra con tu correo para que el progreso te siga entre el computador y el celular.</p>
+    <input type="email" id="email" placeholder="tu@correo.com" autocomplete="email">
+    <button class="btn" id="btn-enviar">Enviar enlace de acceso</button>
+    <button class="btn sec" id="btn-sin-cuenta">Seguir sin cuenta</button>
+    <div class="err" id="error-login"></div>
+    <div class="aviso-ok" id="ok-login"></div>
+  </div>
+</div>
+
+<div id="app" hidden>
+  <nav id="lateral">
+    <div class="marca">
+      <h1>English for Everyone</h1>
+      <p id="progreso-global"></p>
+      <div class="cuenta">
+        <span id="quien"></span>
+        <button id="btn-salir" hidden>salir</button>
+      </div>
+    </div>
+    <button class="repaso-btn" id="btn-repaso"></button>
+    <div id="lista-unidades"></div>
+  </nav>
+  <main id="principal"></main>
+</div>
+
+<script type="module">
+// ===================================================================
+//  CONFIGURACION
+//  Pega aqui los dos datos de Supabase:
+//  Supabase -> Project Settings -> Data API -> URL y anon public key
+//  Si los dejas vacios la app funciona igual, pero guarda el progreso
+//  solo en este navegador.
+// ===================================================================
+const SUPABASE_URL  = "https://upyyigfqefydzisqkjac.supabase.co";
+const SUPABASE_ANON = "sb_publishable_jAVf0BlZ4IAyZv7wT2N8yQ_kUzSLy4l";
+// ===================================================================
+
+const HAY_NUBE = !!(SUPABASE_URL && SUPABASE_ANON);
+let sb = null;
+if (HAY_NUBE) {
+  const { createClient } = await import("https://esm.sh/@supabase/supabase-js@2");
+  sb = createClient(SUPABASE_URL, SUPABASE_ANON);
+}
+
+const CLAVE_LOCAL = "efe-progreso-v2";
+const ESCALONES = [1, 3, 7, 16, 35, 90];   // dias hasta el proximo repaso segun nivel
+
+let LIBRO = null;
+let P = {};
+let usuario = null;
+let unidadActual = 0;
+let pestanaActual = "explicacion";
+let enRepaso = false;
+let colaRepaso = [];
+
+const $ = s => document.querySelector(s);
+const hoy = () => new Date().toISOString().slice(0, 10);
+function sumarDias(d){
+  const f = new Date();
+  f.setDate(f.getDate() + d);
+  return f.toISOString().slice(0, 10);
+}
+function esc(t){
+  return String(t == null ? "" : t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+function normalizar(t){
+  return (t||"").toLowerCase()
+    .replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"')
+    .replace(/[.,!?;:]+\s*$/,"").replace(/\s+/g," ").trim();
+}
+function comparar(dado, esperado){
+  if(!dado || !esperado) return false;
+  const a = normalizar(dado), b = normalizar(esperado);
+  if(a === b) return true;
+  if(b.includes(" ") && !a.includes(" ")) return b.split(" ").includes(a);
+  return false;
+}
+
+/* ================= progreso ================= */
+function registro(clave, tipo){
+  if(!P[clave]) P[clave] = {tipo, ok:false, intentos:0, aciertos:0, nivel:0, proxima:null, datos:null};
+  return P[clave];
+}
+function guardarLocal(){
+  try { localStorage.setItem(CLAVE_LOCAL, JSON.stringify(P)); } catch(e){}
+}
+function cargarLocal(){
+  try { P = JSON.parse(localStorage.getItem(CLAVE_LOCAL)) || {}; } catch(e){ P = {}; }
+}
+async function subir(clave){
+  guardarLocal();
+  if(!usuario || !sb) return;
+  const r = P[clave];
+  try {
+    await sb.from("progreso").upsert({
+      user_id: usuario.id, clave, tipo: r.tipo, ok: r.ok,
+      intentos: r.intentos, aciertos: r.aciertos, nivel: r.nivel,
+      proxima: r.proxima, datos: r.datos, actualizado: new Date().toISOString()
+    });
+  } catch(e){}
+}
+async function bajar(){
+  if(!usuario || !sb) return;
+  const {data, error} = await sb.from("progreso").select("*").eq("user_id", usuario.id);
+  if(error || !data) return;
+  data.forEach(f => {
+    P[f.clave] = {tipo:f.tipo, ok:f.ok, intentos:f.intentos, aciertos:f.aciertos,
+                  nivel:f.nivel, proxima:f.proxima, datos:f.datos};
+  });
+  guardarLocal();
+}
+function programar(clave, tipo, acerto){
+  const r = registro(clave, tipo);
+  r.intentos++;
+  if(acerto){
+    r.aciertos++;
+    r.ok = true;
+    r.nivel = Math.min(r.nivel + 1, ESCALONES.length);
+  } else {
+    r.ok = false;
+    r.nivel = Math.max(r.nivel - 1, 0);
+  }
+  r.proxima = sumarDias(ESCALONES[Math.max(r.nivel - 1, 0)]);
+  subir(clave);
+}
+
+/* ================= arranque ================= */
+$("#archivo").addEventListener("change", e => {
+  const f = e.target.files[0];
+  if(!f) return;
+  const r = new FileReader();
+  r.onload = () => {
+    try {
+      const j = JSON.parse(r.result);
+      if(!j.unidades) throw new Error();
+      LIBRO = j;
+      try { localStorage.setItem("efe-libro", r.result); } catch(e){}
+      trasCargarLibro();
+    } catch(err){
+      $("#error-libro").textContent = "Ese archivo no es el EFE_app.json.";
+    }
+  };
+  r.readAsText(f, "utf-8");
+});
+
+function trasCargarLibro(){
+  $("#paso-libro").hidden = true;
+  $("#portada-texto").textContent = "Libro cargado: " + LIBRO.unidades.length + " unidades.";
+  if(HAY_NUBE) $("#paso-login").hidden = false;
+  else iniciar();
+}
+
+$("#btn-enviar").onclick = async () => {
+  const email = $("#email").value.trim();
+  if(!email || !sb) return;
+  $("#error-login").textContent = ""; $("#ok-login").textContent = "Enviando...";
+  const {error} = await sb.auth.signInWithOtp({ email, options:{ emailRedirectTo: window.location.href }});
+  if(error){ $("#ok-login").textContent = ""; $("#error-login").textContent = error.message; }
+  else $("#ok-login").textContent = "Revisa tu correo y abre el enlace en este mismo dispositivo.";
+};
+$("#btn-sin-cuenta").onclick = () => iniciar();
+$("#btn-salir").onclick = async () => { if(sb) await sb.auth.signOut(); location.reload(); };
+
+(async function(){
+  cargarLocal();
+  const g = localStorage.getItem("efe-libro");
+  if(g){ try { LIBRO = JSON.parse(g); } catch(e){} }
+  if(HAY_NUBE && sb){
+    const {data} = await sb.auth.getSession();
+    if(data && data.session){
+      usuario = data.session.user;
+      await bajar();
+      if(LIBRO){ iniciar(); return; }
+    }
+  }
+  if(LIBRO) trasCargarLibro();
+})();
+
+function iniciar(){
+  $("#portada").hidden = true;
+  $("#app").hidden = false;
+  $("#quien").textContent = usuario ? usuario.email : "sin cuenta, solo este navegador";
+  $("#btn-salir").hidden = !usuario;
+  const u = parseInt(localStorage.getItem("efe-ultima") || "0", 10);
+  unidadActual = (u >= 0 && u < LIBRO.unidades.length) ? u : 0;
+  pintarLateral();
+  pintarUnidad();
+}
+
+/* ================= avance ================= */
+function clavesDeUnidad(u){
+  const cl = [];
+  u.ejercicios.forEach(ej => {
+    if(!ej.activo) return;
+    if(ej.tipo === "produccion"){ cl.push(ej.id); return; }
+    ej.items.forEach(i => { if(!i.es_ejemplo) cl.push(i.id); });
+  });
+  return cl;
+}
+function avanceUnidad(u){
+  const cl = clavesDeUnidad(u);
+  if(!cl.length) return {hechos:0,total:0,pct:0};
+  const hechos = cl.filter(c => P[c] && P[c].ok).length;
+  return {hechos, total:cl.length, pct:Math.round(100*hechos/cl.length)};
+}
+
+/* ================= cola de repaso ================= */
+function construirCola(){
+  const h = hoy();
+  const cola = [];
+  LIBRO.unidades.forEach(u => {
+    u.ejercicios.forEach(ej => {
+      if(!ej.activo || ej.tipo === "produccion") return;
+      ej.items.forEach(it => {
+        if(it.es_ejemplo) return;
+        const r = P[it.id];
+        if(r && r.proxima && r.proxima <= h) cola.push({clase:"item", item:it, ejercicio:ej, unidad:u});
+      });
+    });
+    u.vocabulario.forEach((v,k) => {
+      const id = "u" + u.numero + "v" + k;
+      const r = P[id];
+      if(r && r.proxima && r.proxima <= h) cola.push({clase:"voc", id, voc:v, unidad:u});
+    });
+  });
+  return cola.sort(() => Math.random() - .5);
+}
+
+/* ================= lateral ================= */
+function pintarLateral(){
+  const cont = $("#lista-unidades");
+  cont.innerHTML = "";
+  let hT = 0, tT = 0;
+  LIBRO.unidades.forEach((u, idx) => {
+    const a = avanceUnidad(u);
+    hT += a.hechos; tT += a.total;
+    const b = document.createElement("button");
+    b.className = "u-item" + (!enRepaso && idx === unidadActual ? " activa" : "") +
+                  (a.total && a.pct === 100 ? " completa" : "");
+    b.innerHTML = '<span class="n">'+u.numero+'</span><span class="t">'+esc(u.titulo)+'</span>' +
+                  (a.total ? '<span class="barra"><i style="width:'+a.pct+'%"></i></span>' : "");
+    b.onclick = () => {
+      enRepaso = false; unidadActual = idx; pestanaActual = "explicacion";
+      localStorage.setItem("efe-ultima", idx);
+      pintarLateral(); pintarUnidad(); window.scrollTo(0,0);
+    };
+    cont.appendChild(b);
+  });
+  $("#progreso-global").textContent = tT ? hT + " de " + tT + " respuestas correctas" : "";
+
+  const pend = construirCola().length;
+  const rb = $("#btn-repaso");
+  rb.className = "repaso-btn" + (enRepaso ? " activa" : "") + (pend ? "" : " vacia");
+  rb.innerHTML = pend
+    ? "<b>Repasar hoy</b><span>" + pend + (pend === 1 ? " cosa pendiente" : " cosas pendientes") + "</span>"
+    : "<b>Repasar hoy</b><span>nada vencido por ahora</span>";
+  rb.onclick = () => {
+    if(!pend) return;
+    enRepaso = true; colaRepaso = construirCola();
+    pintarLateral(); pintarRepaso(); window.scrollTo(0,0);
+  };
+}
+
+/* ================= repaso ================= */
+function pintarRepaso(){
+  const m = $("#principal");
+  if(!colaRepaso.length){
+    m.innerHTML = '<div class="cabecera"><h2>Repaso terminado</h2>' +
+      '<div class="meta">Sigue con una unidad nueva cuando quieras.</div></div>';
+    pintarLateral();
+    return;
+  }
+  const n = colaRepaso[0];
+  m.innerHTML = '<div class="cabecera"><h2>Repaso</h2><div class="meta">' +
+    colaRepaso.length + " pendientes · unidad " + n.unidad.numero + ", " + esc(n.unidad.titulo) +
+    '</div></div><div id="panel"></div>';
+  const panel = $("#panel");
+
+  if(n.clase === "voc"){
+    const d = document.createElement("div");
+    d.className = "tarjeta";
+    d.innerHTML = '<div class="en">' + esc(n.voc.en) + "</div>" +
+      '<div class="oculto">¿Sabes qué significa y cómo se usa?</div>';
+    panel.appendChild(d);
+    if(n.voc.nota){
+      const rev = document.createElement("button");
+      rev.className = "btn sec"; rev.textContent = "Ver la nota del libro";
+      rev.onclick = () => {
+        const p = document.createElement("p");
+        p.className = "instruccion"; p.textContent = n.voc.nota;
+        rev.replaceWith(p);
+      };
+      panel.appendChild(rev);
+    }
+    const acc = document.createElement("div"); acc.className = "acciones";
+    const si = document.createElement("button"); si.className = "btn"; si.textContent = "La sé";
+    const no = document.createElement("button"); no.className = "btn sec"; no.textContent = "No la sé";
+    si.onclick = () => { programar(n.id,"voc",true);  colaRepaso.shift(); pintarRepaso(); };
+    no.onclick = () => { programar(n.id,"voc",false); colaRepaso.shift(); pintarRepaso(); };
+    acc.append(si,no); panel.appendChild(acc);
+    return;
+  }
+
+  const s = document.createElement("section");
+  s.innerHTML = '<p class="origen">' + esc(n.ejercicio.seccion || "") + " · " +
+                esc(n.ejercicio.instruccion) + "</p>";
+  const d = cajaItem(n.item);
+  s.appendChild(d);
+  const acc = document.createElement("div"); acc.className = "acciones";
+  const rev = document.createElement("button"); rev.className = "btn"; rev.textContent = "Revisar";
+  const sig = document.createElement("button"); sig.className = "btn sec"; sig.textContent = "Saltar";
+  rev.onclick = () => {
+    const dado = leerRespuesta(d);
+    const bien = comparar(dado, n.item.respuesta);
+    pintarCorreccion(d, n.item, dado, bien, n.ejercicio);
+    programar(n.item.id, "item", bien);
+    rev.disabled = true; sig.textContent = "Siguiente";
+  };
+  sig.onclick = () => { colaRepaso.shift(); pintarRepaso(); };
+  acc.append(rev,sig); s.appendChild(acc);
+  panel.appendChild(s);
+}
+
+/* ================= unidad ================= */
+function pintarUnidad(){
+  const u = LIBRO.unidades[unidadActual];
+  const m = $("#principal");
+  const a = avanceUnidad(u);
+  const nEj = u.ejercicios.filter(e => e.activo).length;
+  const omit = u.ejercicios.filter(e => !e.activo).length;
+
+  m.innerHTML =
+    '<div class="cabecera"><h2>' + esc(u.titulo) + "</h2>" +
+    '<div class="meta">Unidad ' + u.numero + " · páginas " + u.paginas[0] + "–" + u.paginas[1] +
+    (a.total ? " · " + a.hechos + "/" + a.total + " resueltas" : "") + "</div></div>" +
+    '<div class="pestanas">' +
+      tab("explicacion","Explicación",u.explicaciones.length) +
+      tab("practicar","Practicar",nEj) +
+      tab("vocabulario","Vocabulario",u.vocabulario.length) +
+    '</div><div id="panel"></div>';
+
+  m.querySelectorAll(".pestanas button").forEach(b => {
+    b.onclick = () => { pestanaActual = b.dataset.t; pintarUnidad(); };
+  });
+
+  const panel = $("#panel");
+  if(pestanaActual === "explicacion") panelExplicacion(panel, u);
+  else if(pestanaActual === "practicar") panelPracticar(panel, u, omit);
+  else panelVocabulario(panel, u);
+}
+function tab(id, txt, n){
+  return '<button data-t="'+id+'" class="'+(pestanaActual===id?"activa":"")+'">' +
+         txt + (n ? '<span class="c">'+n+"</span>" : "") + "</button>";
+}
+
+/* ================= practicar ================= */
+function panelPracticar(panel, u, omit){
+  const activos = u.ejercicios.filter(e => e.activo);
+  if(!activos.length){
+    panel.innerHTML = '<p class="vacio">Esta unidad no tiene ejercicios para responder.</p>';
+    return;
+  }
+  activos.forEach(ej => {
+    const s = document.createElement("section");
+    s.innerHTML = "<h3><span class=\"seccion-num\">" + esc(ej.seccion||"") + "</span></h3>" +
+                  '<p class="instruccion">' + esc(ej.instruccion) + "</p>";
+    if(ej.tipo === "produccion") bloqueProduccion(s, ej);
+    else bloqueNormal(s, ej);
+    panel.appendChild(s);
+  });
+  if(omit){
+    const p = document.createElement("p");
+    p.className = "omitidos";
+    p.textContent = omit + (omit === 1 ? " ejercicio de audio omitido" : " ejercicios de audio omitidos") + " en esta unidad.";
+    panel.appendChild(p);
+  }
+}
+
+function cajaItem(it){
+  const d = document.createElement("div");
+  d.className = "item";
+  d.dataset.item = it.id;
+  if(it.opciones && it.opciones.length){
+    d.innerHTML = '<div class="frase">' + esc(it.prompt) + "</div>";
+    const box = document.createElement("div"); box.className = "opciones";
+    it.opciones.forEach(op => {
+      const b = document.createElement("button");
+      b.className = "opcion"; b.textContent = op; b.dataset.v = op;
+      b.onclick = () => {
+        box.querySelectorAll(".opcion").forEach(x => x.classList.remove("elegida"));
+        b.classList.add("elegida");
+      };
+      box.appendChild(b);
+    });
+    d.appendChild(box);
+  } else {
+    const partes = it.prompt.split(/_{2,}/);
+    const frase = document.createElement("div"); frase.className = "frase";
+    if(partes.length > 1){
+      partes.forEach((t,k) => {
+        frase.appendChild(document.createTextNode(t));
+        if(k < partes.length - 1){
+          const inp = document.createElement("input");
+          inp.className = "hueco"; inp.type = "text";
+          inp.setAttribute("aria-label","respuesta");
+          frase.appendChild(inp);
+        }
+      });
+      d.appendChild(frase);
+    } else {
+      frase.textContent = it.prompt;
+      d.appendChild(frase);
+      const inp = document.createElement("input");
+      inp.className = "libre"; inp.type = "text";
+      inp.placeholder = "Escribe tu respuesta";
+      d.appendChild(inp);
+    }
+  }
+  const c = document.createElement("div"); c.className = "correccion"; c.hidden = true;
+  d.appendChild(c);
+  return d;
+}
+
+function bloqueNormal(s, ej){
+  const cont = document.createElement("div");
+  ej.items.forEach(it => {
+    if(it.es_ejemplo){
+      const d = document.createElement("div");
+      d.className = "item ejemplo-resuelto";
+      d.innerHTML = '<div class="frase">' + esc(it.prompt.replace(/_{2,}/g, it.respuesta || "___")) + "</div>";
+      cont.appendChild(d);
+      return;
+    }
+    const d = cajaItem(it);
+    const r = P[it.id];
+    if(r && r.ok){
+      const c = d.querySelector(".correccion");
+      c.hidden = false; c.className = "correccion ok";
+      c.textContent = "Resuelta antes · vuelve el " + (r.proxima || "—");
+    }
+    cont.appendChild(d);
+  });
+  s.appendChild(cont);
+
+  const acc = document.createElement("div"); acc.className = "acciones";
+  const rev = document.createElement("button"); rev.className = "btn"; rev.textContent = "Revisar";
+  const ver = document.createElement("button"); ver.className = "btn sec"; ver.textContent = "Ver respuestas";
+  const res = document.createElement("span"); res.className = "resultado";
+  acc.append(rev, ver, res); s.appendChild(acc);
+
+  rev.onclick = () => {
+    let ok = 0, tot = 0;
+    ej.items.forEach(it => {
+      if(it.es_ejemplo) return;
+      const d = s.querySelector('[data-item="' + it.id + '"]');
+      if(!d) return;
+      tot++;
+      const dado = leerRespuesta(d);
+      const bien = comparar(dado, it.respuesta);
+      if(bien) ok++;
+      pintarCorreccion(d, it, dado, bien, ej);
+      programar(it.id, "item", bien);
+    });
+    pintarLateral();
+    res.textContent = ok + " de " + tot + " correctas";
+  };
+  ver.onclick = () => {
+    ej.items.forEach(it => {
+      if(it.es_ejemplo) return;
+      const d = s.querySelector('[data-item="' + it.id + '"]');
+      if(!d) return;
+      const c = d.querySelector(".correccion");
+      c.hidden = false; c.className = "correccion";
+      c.innerHTML = "Respuesta: <b>" + esc(it.respuesta) + "</b>";
+    });
+  };
+}
+
+function leerRespuesta(d){
+  const sel = d.querySelector(".opcion.elegida");
+  if(sel) return sel.dataset.v;
+  const huecos = [...d.querySelectorAll(".hueco")];
+  if(huecos.length) return huecos.map(h => h.value).join(" ").trim();
+  const libre = d.querySelector(".libre");
+  return libre ? libre.value.trim() : "";
+}
+
+function pintarCorreccion(d, it, dado, bien, ej){
+  const c = d.querySelector(".correccion");
+  c.hidden = false;
+  c.className = "correccion " + (bien ? "ok" : "mal");
+  d.querySelectorAll(".hueco").forEach(h => {
+    h.classList.remove("ok","mal"); h.classList.add(bien ? "ok" : "mal");
+  });
+  const sel = d.querySelector(".opcion.elegida");
+  if(sel){ sel.classList.remove("elegida"); sel.classList.add(bien ? "ok" : "mal"); }
+
+  if(bien){ c.textContent = "Correcto"; return; }
+  c.innerHTML = (dado ? "" : "Sin responder. ") + "Respuesta: <b>" + esc(it.respuesta) + "</b>";
+  if(dado){
+    const b = document.createElement("button");
+    b.className = "pedir-ia"; b.textContent = "creo que la mía también vale";
+    b.onclick = () => revisarConIA(d, {
+      modo:"normal", instruccion:ej.instruccion, prompt:it.prompt,
+      esperada:it.respuesta, dada:dado
+    }, it.id, b);
+    c.appendChild(b);
+  }
+}
+
+async function revisarConIA(d, cuerpo, clave, boton){
+  boton.textContent = "consultando...";
+  boton.disabled = true;
+  const caja = document.createElement("div");
+  caja.className = "ia";
+  caja.textContent = "Revisando tu respuesta...";
+  d.appendChild(caja);
+  try {
+    const r = await fetch("/api/corregir", {
+      method:"POST", headers:{"content-type":"application/json"},
+      body: JSON.stringify(cuerpo)
+    });
+    const j = await r.json();
+    if(j.error){ caja.textContent = "No se pudo consultar: " + j.error; boton.remove(); return; }
+    caja.className = "ia " + (j.correcto ? "ok" : "mal");
+    caja.textContent = j.explicacion || (j.correcto ? "Es válida." : "No es válida.");
+    if(j.correcto && clave){
+      programar(clave, "item", true);
+      const c = d.querySelector(".correccion");
+      c.className = "correccion ok";
+      c.textContent = "Aceptada";
+      c.appendChild(caja);
+      pintarLateral();
+    }
+    boton.remove();
+  } catch(e){
+    caja.textContent = "No se pudo consultar. Esto solo funciona con la app publicada en Vercel.";
+    boton.disabled = false;
+    boton.textContent = "reintentar";
+  }
+}
+
+/* ================= producción libre ================= */
+function bloqueProduccion(s, ej){
+  const objetivo = ej.objetivo || 5;
+  const r = registro(ej.id, "produccion");
+  if(!r.datos || !r.datos.frases) r.datos = {frases:[]};
+
+  const cont = document.createElement("div");
+  const lista = document.createElement("div");
+  cont.appendChild(lista);
+
+  const inp = document.createElement("input");
+  inp.className = "libre"; inp.type = "text";
+  inp.placeholder = "Escribe una oración y presiona Enter";
+  cont.appendChild(inp);
+
+  const res = document.createElement("div");
+  res.className = "resultado"; res.style.marginTop = "10px";
+  cont.appendChild(res);
+  s.appendChild(cont);
+
+  function refrescar(){
+    lista.innerHTML = "";
+    r.datos.frases.forEach((f, idx) => {
+      const d = document.createElement("div"); d.className = "item";
+      d.innerHTML = '<div class="frase">' + esc(f.texto) + "</div>";
+      const c = document.createElement("div");
+      c.className = "correccion " + (f.ok ? "ok" : "mal");
+      c.textContent = f.ok ? "Válida" : "No coincide con las oraciones de la tabla";
+      if(!f.ok && !f.ia){
+        const b = document.createElement("button");
+        b.className = "pedir-ia"; b.textContent = "revisar con IA";
+        b.onclick = () => revisarProduccionIA(ej, idx, b, refrescar);
+        c.appendChild(b);
+      }
+      d.appendChild(c);
+      if(f.ia){
+        const caja = document.createElement("div");
+        caja.className = "ia " + (f.ok ? "ok" : "mal");
+        caja.textContent = f.ia;
+        d.appendChild(caja);
+      }
+      lista.appendChild(d);
+    });
+    const ok = r.datos.frases.filter(f => f.ok).length;
+    res.textContent = ok + " de " + objetivo + " oraciones válidas";
+    const logrado = ok >= objetivo;
+    if(logrado !== r.ok) programar(ej.id, "produccion", logrado);
+    else subir(ej.id);
+    pintarLateral();
+  }
+
+  inp.addEventListener("keydown", e => {
+    if(e.key !== "Enter") return;
+    const txt = inp.value.trim();
+    if(!txt) return;
+    const bien = (ej.validas || []).some(v => comparar(txt, v));
+    r.datos.frases.push({texto:txt, ok:bien});
+    inp.value = "";
+    refrescar();
+  });
+  refrescar();
+}
+
+async function revisarProduccionIA(ej, idx, boton, refrescar){
+  boton.textContent = "consultando...";
+  boton.disabled = true;
+  const r = P[ej.id];
+  try {
+    const resp = await fetch("/api/corregir", {
+      method:"POST", headers:{"content-type":"application/json"},
+      body: JSON.stringify({modo:"produccion", dada:r.datos.frases[idx].texto, validas:ej.validas})
+    });
+    const j = await resp.json();
+    if(j.error){ boton.textContent = "no disponible"; return; }
+    r.datos.frases[idx].ok = !!j.correcto;
+    r.datos.frases[idx].ia = j.explicacion || "";
+    refrescar();
+  } catch(e){
+    boton.disabled = false;
+    boton.textContent = "reintentar";
+  }
+}
+
+/* ================= explicación ================= */
+function panelExplicacion(panel, u){
+  if(!u.explicaciones.length){
+    panel.innerHTML = '<p class="vacio">Esta unidad no trae bloques de explicación. ' +
+      "Pasa a practicar o al vocabulario.</p>";
+  }
+  u.explicaciones.forEach(e => {
+    const d = document.createElement("div"); d.className = "explicacion";
+    let h = "";
+    if(e.titulo) h += "<h3>" + (e.seccion ? '<span class="seccion-num">'+esc(e.seccion)+"</span>" : "") + esc(e.titulo) + "</h3>";
+    if(e.texto) h += "<p>" + esc(e.texto) + "</p>";
+    (e.ejemplos || []).forEach(x => {
+      h += '<p class="ejemplo">' + esc(x.en || "") +
+           (x.nota ? '<span class="nota">' + esc(x.nota) + "</span>" : "") + "</p>";
+    });
+    d.innerHTML = h;
+    panel.appendChild(d);
+  });
+  if(u.checklist && u.checklist.length){
+    const s = document.createElement("section");
+    s.innerHTML = "<h3>Al terminar esta unidad deberías poder</h3>";
+    const ul = document.createElement("ul"); ul.className = "checklist";
+    u.checklist.forEach(c => { const li = document.createElement("li"); li.textContent = c; ul.appendChild(li); });
+    s.appendChild(ul); panel.appendChild(s);
+  }
+}
+
+/* ================= vocabulario ================= */
+function panelVocabulario(panel, u){
+  if(!u.vocabulario.length){
+    panel.innerHTML = '<p class="vacio">Sin vocabulario en esta unidad.</p>';
+    return;
+  }
+  const p = document.createElement("p");
+  p.className = "instruccion";
+  p.textContent = "Marca lo que ya manejas. Lo marcado entra al repaso y vuelve a aparecer más adelante.";
+  panel.appendChild(p);
+
+  const cont = document.createElement("div"); cont.className = "voc";
+  u.vocabulario.forEach((v, k) => {
+    const id = "u" + u.numero + "v" + k;
+    const d = document.createElement("div"); d.className = "voc-item";
+    d.innerHTML = '<span><span class="en">' + esc(v.en) + "</span>" +
+                  (v.nota ? '<span class="nota"> ' + esc(v.nota) + "</span>" : "") + "</span>";
+    const b = document.createElement("button");
+    const pintar = () => {
+      const r = P[id];
+      b.textContent = r && r.ok ? "la sé" : "marcar";
+      b.className = r && r.ok ? "sabida" : "";
+    };
+    b.onclick = () => {
+      const r = P[id];
+      programar(id, "voc", !(r && r.ok));
+      pintar(); pintarLateral();
+    };
+    pintar(); d.appendChild(b); cont.appendChild(d);
+  });
+  panel.appendChild(cont);
+}
+</script>
+</body>
+</html>
