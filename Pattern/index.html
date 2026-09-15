@@ -168,6 +168,7 @@ h3{font-size:15px;font-weight:600;margin:0 0 4px}
         <span id="quien"></span>
         <button id="btn-salir" hidden>salir</button>
       </div>
+      <div class="cuenta"><span id="sync"></span></div>
     </div>
     <button class="repaso-btn" id="btn-repaso"></button>
     <div id="lista-unidades"></div>
@@ -239,22 +240,50 @@ function guardarLocal(){
 function cargarLocal(){
   try { P = JSON.parse(localStorage.getItem(CLAVE_LOCAL)) || {}; } catch(e){ P = {}; }
 }
+function estado(txt, malo){
+  const e = $("#sync");
+  if(!e) return;
+  e.textContent = txt;
+  e.style.color = malo ? "var(--mal)" : "var(--suave)";
+}
+
 async function subir(clave){
   guardarLocal();
   if(!usuario || !sb) return;
   const r = P[clave];
   try {
-    await sb.from("progreso").upsert({
+    const {error} = await sb.from("progreso").upsert({
       user_id: usuario.id, clave, tipo: r.tipo, ok: r.ok,
       intentos: r.intentos, aciertos: r.aciertos, nivel: r.nivel,
       proxima: r.proxima, datos: r.datos, actualizado: new Date().toISOString()
     });
-  } catch(e){}
+    if(error){ console.error("Supabase:", error); estado("no se pudo guardar: " + error.message, true); }
+    else estado("guardado");
+  } catch(e){
+    console.error(e);
+    estado("sin conexión, guardado solo aquí", true);
+  }
+}
+
+/* Sube todo lo local que aun no este en la nube */
+async function subirTodo(){
+  if(!usuario || !sb) return;
+  const filas = Object.keys(P).map(clave => {
+    const r = P[clave];
+    return {user_id: usuario.id, clave, tipo: r.tipo, ok: r.ok,
+            intentos: r.intentos, aciertos: r.aciertos, nivel: r.nivel,
+            proxima: r.proxima, datos: r.datos, actualizado: new Date().toISOString()};
+  });
+  if(!filas.length) return;
+  const {error} = await sb.from("progreso").upsert(filas);
+  if(error){ console.error("Supabase:", error); estado("no se pudo sincronizar: " + error.message, true); }
+  else estado(filas.length + " registros sincronizados");
 }
 async function bajar(){
   if(!usuario || !sb) return;
   const {data, error} = await sb.from("progreso").select("*").eq("user_id", usuario.id);
-  if(error || !data) return;
+  if(error){ console.error("Supabase:", error); estado("no se pudo leer: " + error.message, true); return; }
+  if(!data) return;
   data.forEach(f => {
     P[f.clave] = {tipo:f.tipo, ok:f.ok, intentos:f.intentos, aciertos:f.aciertos,
                   nivel:f.nivel, proxima:f.proxima, datos:f.datos};
@@ -399,9 +428,16 @@ $("#btn-salir").onclick = async () => { if(sb) await sb.auth.signOut(); location
   decidirPortada();
 })();
 
-function iniciar(){
+async function iniciar(){
   if(yaInicio) return;
   yaInicio = true;
+  if(usuario) await subirTodo();
+  document.addEventListener("visibilitychange", async () => {
+    if(document.visibilityState === "visible" && usuario){
+      await bajar(); pintarLateral();
+      if(!enRepaso) pintarUnidad();
+    }
+  });
   $("#portada").hidden = true;
   $("#app").hidden = false;
   $("#quien").textContent = usuario ? usuario.email : "sin cuenta, solo este navegador";
