@@ -1,0 +1,174 @@
+{
+ "numero": 39,
+ "bloque": 7,
+ "titulo": "Planes",
+ "puedes": "Hablar de tus planes y de lo que ya tienes decidido hacer.",
+ "gramatica": "Be going to",
+ "concepto": {
+  "puntos": [
+   "Be going to sirve para lo que ya está decidido o planeado. No es una idea que se te ocurre ahora, es algo que ya pensaste.",
+   "Se arma con tres piezas: to be, luego going to, y luego el verbo en forma base.",
+   "El to be es el que cambia según la persona; going to no cambia nunca.",
+   "También se usa para predecir algo cuando hay señales visibles: Look at those clouds. It's going to rain."
+  ],
+  "clave": "To be + going to + verbo. El to be lleva toda la información."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Afirmativo",
+    "formula": "I'm going to travel."
+   },
+   {
+    "etiqueta": "Negativo",
+    "formula": "I'm not going to travel."
+   },
+   {
+    "etiqueta": "Pregunta",
+    "formula": "Are you going to travel?"
+   },
+   {
+    "etiqueta": "Con el verbo go",
+    "formula": "I'm going to go home. (o solo: I'm going home)"
+   }
+  ],
+  "notas": [
+   "Cuando el verbo es go, se suele decir I'm going home en vez de repetir going to go.",
+   "Al hablar rápido, going to suena como gonna. Se entiende, pero no se escribe así en textos formales.",
+   "Las palabras de futuro van al final: tomorrow, next week, next year."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "I'm going to look for a new job.",
+   "es": "Voy a buscar un trabajo nuevo.",
+   "nota": "Ya decidido"
+  },
+  {
+   "en": "We're going to travel in December.",
+   "es": "Vamos a viajar en diciembre.",
+   "nota": null
+  },
+  {
+   "en": "She isn't going to come tonight.",
+   "es": "Ella no va a venir esta noche.",
+   "nota": null
+  },
+  {
+   "en": "What are you going to do tomorrow?",
+   "es": "¿Qué vas a hacer mañana?",
+   "nota": null
+  },
+  {
+   "en": "Look at those clouds. It's going to rain.",
+   "es": "Mira esas nubes. Va a llover.",
+   "nota": "Hay señales"
+  },
+  {
+   "en": "I'm going home now.",
+   "es": "Me voy a casa ahora.",
+   "nota": "Con go no se repite"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Olvidar el to be es el error más común, igual que en el present continuous: I going to work no está completo.",
+   "Después de going to el verbo va en forma base, sin -ing y sin otro to.",
+   "No confundas I'm going to the store (voy a la tienda, un lugar) con I'm going to study (voy a estudiar, un plan)."
+  ],
+  "contrastes": [
+   {
+    "mal": "I going to call him.",
+    "bien": "I'm going to call him.",
+    "por_que": "Falta el to be, que es parte de la estructura."
+   },
+   {
+    "mal": "I'm going to calling him.",
+    "bien": "I'm going to call him.",
+    "por_que": "Después de going to el verbo va en forma base."
+   },
+   {
+    "mal": "I go to travel next year.",
+    "bien": "I'm going to travel next year.",
+    "por_que": "Para un plan se usa be going to, no el present simple."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "be going to",
+   "es": "ir a",
+   "nota": null
+  },
+  {
+   "en": "tomorrow",
+   "es": "mañana",
+   "nota": null
+  },
+  {
+   "en": "next week / next month",
+   "es": "la próxima semana / el próximo mes",
+   "nota": null
+  },
+  {
+   "en": "soon",
+   "es": "pronto",
+   "nota": null
+  },
+  {
+   "en": "plan",
+   "es": "plan, planear",
+   "nota": null
+  },
+  {
+   "en": "decide",
+   "es": "decidir",
+   "nota": null
+  },
+  {
+   "en": "move",
+   "es": "mudarse",
+   "nota": null
+  },
+  {
+   "en": "look for",
+   "es": "buscar",
+   "nota": null
+  },
+  {
+   "en": "save money",
+   "es": "ahorrar",
+   "nota": null
+  },
+  {
+   "en": "clouds",
+   "es": "nubes",
+   "nota": null
+  },
+  {
+   "en": "vacation",
+   "es": "vacaciones",
+   "nota": "Americano; británico: holiday"
+  },
+  {
+   "en": "later",
+   "es": "más tarde",
+   "nota": null
+  },
+  {
+   "en": "in two weeks",
+   "es": "en dos semanas",
+   "nota": null
+  },
+  {
+   "en": "What are you going to do?",
+   "es": "¿Qué vas a hacer?",
+   "nota": null
+  },
+  {
+   "en": "I'm not sure yet",
+   "es": "Todavía no estoy seguro",
+   "nota": null
+  }
+ ]
+}

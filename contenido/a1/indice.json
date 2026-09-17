@@ -204,6 +204,214 @@
    "gramatica": "Present simple completo, have, WH questions y frecuencia",
    "tipo": "checkpoint",
    "archivo": "19.json"
+  },
+  {
+   "numero": 20,
+   "bloque": 4,
+   "titulo": "Qué hay",
+   "puedes": "Describir un lugar diciendo qué cosas hay en él, y preguntar por lo que existe.",
+   "gramatica": "There is / there are",
+   "tipo": "unidad",
+   "archivo": "20.json"
+  },
+  {
+   "numero": 21,
+   "bloque": 4,
+   "titulo": "El artículo the",
+   "puedes": "Saber cuándo poner the y cuándo el inglés no lleva artículo, que es donde el español sí lo pone.",
+   "gramatica": "El artículo the y el artículo cero",
+   "tipo": "unidad",
+   "archivo": "21.json"
+  },
+  {
+   "numero": 22,
+   "bloque": 4,
+   "titulo": "Dónde está",
+   "puedes": "Decir dónde está algo o alguien, y entender indicaciones sencillas.",
+   "gramatica": "Preposiciones de lugar",
+   "tipo": "unidad",
+   "archivo": "22.json"
+  },
+  {
+   "numero": 23,
+   "bloque": 4,
+   "titulo": "La hora y la fecha",
+   "puedes": "Decir la hora, acordar una cita y hablar de días, meses y fechas.",
+   "gramatica": "Preposiciones de tiempo: in, on, at",
+   "tipo": "unidad",
+   "archivo": "23.json"
+  },
+  {
+   "numero": 24,
+   "bloque": 4,
+   "titulo": "Cantidades",
+   "puedes": "Hablar de cuánto hay de algo, pedir comida y hacer una lista de compras.",
+   "gramatica": "Some, any, much, many, a lot of",
+   "tipo": "unidad",
+   "archivo": "24.json"
+  },
+  {
+   "numero": 25,
+   "bloque": 4,
+   "titulo": "Unir ideas",
+   "puedes": "Dejar de hablar en frases sueltas y encadenar ideas: sumar, contrastar, dar motivos y consecuencias.",
+   "gramatica": "Conectores: and, but, or, because, so",
+   "tipo": "unidad",
+   "archivo": "25.json"
+  },
+  {
+   "numero": 26,
+   "bloque": 4,
+   "titulo": "Repaso del bloque 4",
+   "puedes": "Describir un lugar, ubicar cosas, acordar una hora y encadenar tus ideas en frases largas.",
+   "gramatica": "There is/are, the, preposiciones, cantidades y conectores",
+   "tipo": "checkpoint",
+   "archivo": "26.json"
+  },
+  {
+   "numero": 27,
+   "bloque": 5,
+   "titulo": "Qué está pasando",
+   "puedes": "Decir lo que estás haciendo en este momento y describir una escena.",
+   "gramatica": "Present continuous",
+   "tipo": "unidad",
+   "archivo": "27.json"
+  },
+  {
+   "numero": 28,
+   "bloque": 5,
+   "titulo": "Rutina o ahora",
+   "puedes": "Elegir bien entre los dos presentes y no mezclarlos.",
+   "gramatica": "Present simple frente a present continuous",
+   "tipo": "unidad",
+   "archivo": "28.json"
+  },
+  {
+   "numero": 29,
+   "bloque": 5,
+   "titulo": "Lo que sabes hacer",
+   "puedes": "Hablar de tus habilidades, pedir permiso y hacer peticiones con cortesía.",
+   "gramatica": "Can / can't",
+   "tipo": "unidad",
+   "archivo": "29.json"
+  },
+  {
+   "numero": 30,
+   "bloque": 5,
+   "titulo": "Gustos",
+   "puedes": "Decir qué te gusta y qué no, con cosas y con actividades.",
+   "gramatica": "Like, love, hate + gerundio",
+   "tipo": "unidad",
+   "archivo": "30.json"
+  },
+  {
+   "numero": 31,
+   "bloque": 5,
+   "titulo": "Pedir y ofrecer",
+   "puedes": "Pedir algo en un restaurante o una tienda con cortesía, y ofrecerle algo a alguien.",
+   "gramatica": "Would like",
+   "tipo": "unidad",
+   "archivo": "31.json"
+  },
+  {
+   "numero": 32,
+   "bloque": 5,
+   "titulo": "Dar instrucciones",
+   "puedes": "Dar una orden, una indicación o un consejo directo, y entender carteles e instrucciones.",
+   "gramatica": "Imperativo",
+   "tipo": "unidad",
+   "archivo": "32.json"
+  },
+  {
+   "numero": 33,
+   "bloque": 5,
+   "titulo": "Repaso del bloque 5",
+   "puedes": "Hablar de lo que pasa ahora, de lo que sabes hacer, de lo que te gusta y pedir cosas con cortesía.",
+   "gramatica": "Present continuous, can, like + ing, would like e imperativo",
+   "tipo": "checkpoint",
+   "archivo": "33.json"
+  },
+  {
+   "numero": 34,
+   "bloque": 6,
+   "titulo": "Dónde estuviste",
+   "puedes": "Decir dónde estabas, cómo estuvo algo y hablar del pasado con to be.",
+   "gramatica": "Was / were — pasado de to be",
+   "tipo": "unidad",
+   "archivo": "34.json"
+  },
+  {
+   "numero": 35,
+   "bloque": 6,
+   "titulo": "Qué hiciste",
+   "puedes": "Contar lo que hiciste ayer, el fin de semana o en tus vacaciones.",
+   "gramatica": "Past simple — verbos regulares",
+   "tipo": "unidad",
+   "archivo": "35.json"
+  },
+  {
+   "numero": 36,
+   "bloque": 6,
+   "titulo": "Verbos irregulares",
+   "puedes": "Usar en pasado los veinte verbos que más vas a necesitar.",
+   "gramatica": "Past simple — verbos irregulares",
+   "tipo": "unidad",
+   "archivo": "36.json"
+  },
+  {
+   "numero": 37,
+   "bloque": 6,
+   "titulo": "Preguntas en pasado",
+   "puedes": "Preguntarle a alguien qué hizo y negar cosas en pasado.",
+   "gramatica": "Did / didn't",
+   "tipo": "unidad",
+   "archivo": "37.json"
+  },
+  {
+   "numero": 38,
+   "bloque": 6,
+   "titulo": "Repaso del bloque 6",
+   "puedes": "Contar lo que hiciste ayer o el fin de semana, y preguntarle a otro por lo suyo.",
+   "gramatica": "Pasado completo: was/were, regulares, irregulares y did",
+   "tipo": "checkpoint",
+   "archivo": "38.json"
+  },
+  {
+   "numero": 39,
+   "bloque": 7,
+   "titulo": "Planes",
+   "puedes": "Hablar de tus planes y de lo que ya tienes decidido hacer.",
+   "gramatica": "Be going to",
+   "tipo": "unidad",
+   "archivo": "39.json"
+  },
+  {
+   "numero": 40,
+   "bloque": 7,
+   "titulo": "Predicciones y decisiones",
+   "puedes": "Predecir algo, ofrecerte a ayudar y tomar una decisión en el momento.",
+   "gramatica": "Will",
+   "tipo": "unidad",
+   "archivo": "40.json"
+  },
+  {
+   "numero": 41,
+   "bloque": 7,
+   "titulo": "Comparar",
+   "puedes": "Comparar dos cosas y decir cuál es la mejor de todas.",
+   "gramatica": "Comparativos y superlativos",
+   "tipo": "unidad",
+   "archivo": "41.json"
+  },
+  {
+   "numero": 42,
+   "bloque": 7,
+   "titulo": "Checkpoint final del A1",
+   "puedes": "Presentarte, contar tu rutina, describir tu entorno, hablar de ayer y de mañana, y comparar cosas. Eso es el nivel A1 completo.",
+   "gramatica": "Todo el nivel A1",
+   "tipo": "checkpoint",
+   "archivo": "42.json"
   }
- ]
+ ],
+ "completo": true
 }

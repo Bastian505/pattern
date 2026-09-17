@@ -1,0 +1,97 @@
+{
+ "numero": 26,
+ "bloque": 4,
+ "tipo": "checkpoint",
+ "titulo": "Repaso del bloque 4",
+ "puedes": "Describir un lugar, ubicar cosas, acordar una hora y encadenar tus ideas en frases largas.",
+ "gramatica": "There is/are, the, preposiciones, cantidades y conectores",
+ "concepto": {
+  "puntos": [
+   "Este bloque te dio el escenario: dónde pasan las cosas, cuándo pasan y en qué cantidad.",
+   "Las preposiciones in, on y at aparecieron dos veces, una para lugar y otra para tiempo. No son dos sistemas: es el mismo criterio de lo específico a lo general.",
+   "Los conectores de la unidad 25 son la pieza que cambia tu manera de hablar: ya no dices frases sueltas."
+  ],
+  "clave": "At es puntual, on es concreto, in es amplio. Vale para el espacio y para el tiempo."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Existencia",
+    "formula": "There's a bank. There are two banks."
+   },
+   {
+    "etiqueta": "Lugar",
+    "formula": "in the box · on the table · at work"
+   },
+   {
+    "etiqueta": "Tiempo",
+    "formula": "in May · on Monday · at seven"
+   },
+   {
+    "etiqueta": "Cantidad",
+    "formula": "some / any · much / many · a lot of"
+   }
+  ],
+  "notas": [
+   "Al hablar en general no se pone artículo: I like music.",
+   "Los no contables nunca van en plural.",
+   "Because da el motivo, so da la consecuencia."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "There's a good restaurant on my street.",
+   "es": "Hay un buen restaurante en mi calle.",
+   "nota": "Unidades 20 y 22"
+  },
+  {
+   "en": "I like Italian food, especially pasta.",
+   "es": "Me gusta la comida italiana, sobre todo la pasta.",
+   "nota": "Unidad 21: sin artículo"
+  },
+  {
+   "en": "The meeting is on Tuesday at ten in the morning.",
+   "es": "La reunión es el martes a las diez de la mañana.",
+   "nota": "Unidad 23: las tres juntas"
+  },
+  {
+   "en": "We don't have any milk, so I'm going to the store.",
+   "es": "No tenemos leche, así que voy a la tienda.",
+   "nota": "Unidades 24 y 25"
+  },
+  {
+   "en": "The apartment is small but there are two bedrooms.",
+   "es": "El departamento es pequeño pero tiene dos dormitorios.",
+   "nota": null
+  },
+  {
+   "en": "I don't drink coffee because it's bad for my sleep.",
+   "es": "No tomo café porque me hace mal para dormir.",
+   "nota": "Todo junto"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Los tres errores que deben estar superados: usar it is en vez de there is, poner the al hablar en general, y confundir much con many.",
+   "Si el bloque está firme, ya puedes describir tu casa, tu barrio y tu semana completa. Eso es bastante más de lo que parece."
+  ],
+  "contrastes": [
+   {
+    "mal": "It is many people in the park.",
+    "bien": "There are a lot of people in the park.",
+    "por_que": "Existencia va con there are, y en afirmativo se prefiere a lot of."
+   },
+   {
+    "mal": "I like the sports.",
+    "bien": "I like sports.",
+    "por_que": "Al hablar en general no va artículo."
+   },
+   {
+    "mal": "The class is in Monday at the 9.",
+    "bien": "The class is on Monday at nine.",
+    "por_que": "Día con on, hora con at y sin artículo."
+   }
+  ]
+ },
+ "vocabulario": []
+}

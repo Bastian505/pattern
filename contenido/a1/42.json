@@ -1,0 +1,97 @@
+{
+ "numero": 42,
+ "bloque": 7,
+ "tipo": "checkpoint",
+ "titulo": "Checkpoint final del A1",
+ "puedes": "Presentarte, contar tu rutina, describir tu entorno, hablar de ayer y de mañana, y comparar cosas. Eso es el nivel A1 completo.",
+ "gramatica": "Todo el nivel A1",
+ "concepto": {
+  "puntos": [
+   "Cuarenta y dos unidades atrás no podías decir tu nombre en inglés. Ahora manejas presente, pasado y futuro.",
+   "Todo el nivel se sostiene sobre una sola mecánica que se repite: en afirmativo el verbo carga la marca, y en negativo y pregunta esa marca salta a un ayudante, que puede ser do, does, did o el propio to be.",
+   "Lo que viene en el A2 no es más difícil, es más: más tiempos verbales, más modales y más matices sobre esta misma base."
+  ],
+  "clave": "La marca aparece una sola vez y siempre en el primer verbo. Ese es el patrón de todo el inglés."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Presente habitual",
+    "formula": "I work. · I don't work. · Do you work?"
+   },
+   {
+    "etiqueta": "Presente ahora",
+    "formula": "I'm working. · Are you working?"
+   },
+   {
+    "etiqueta": "Pasado",
+    "formula": "I worked. · I didn't work. · Did you work?"
+   },
+   {
+    "etiqueta": "Futuro",
+    "formula": "I'm going to work. · I'll work."
+   }
+  ],
+  "notas": [
+   "To be nunca usa ayudante: ni do, ni did, ni nada.",
+   "Los modales can y will no cambian con la persona y van seguidos del verbo sin to.",
+   "Adjetivos cortos con -er, largos con more."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "Hi, I'm Daniel. I'm from Colombia and I work as a teacher.",
+   "es": "Hola, soy Daniel. Soy de Colombia y trabajo como profesor.",
+   "nota": "Bloques 1 y 2"
+  },
+  {
+   "en": "I usually get up at six and I don't work on weekends.",
+   "es": "Normalmente me levanto a las seis y no trabajo los fines de semana.",
+   "nota": "Bloque 3"
+  },
+  {
+   "en": "There's a park near my house, so I go running there.",
+   "es": "Hay un parque cerca de mi casa, así que voy a correr ahí.",
+   "nota": "Bloque 4"
+  },
+  {
+   "en": "Right now I'm learning English because I'd like a better job.",
+   "es": "Ahora estoy aprendiendo inglés porque quisiera un trabajo mejor.",
+   "nota": "Bloque 5"
+  },
+  {
+   "en": "Last weekend I went to the beach and had a great time.",
+   "es": "El fin de semana pasado fui a la playa y lo pasé muy bien.",
+   "nota": "Bloque 6"
+  },
+  {
+   "en": "Next year I'm going to travel, and I think it will be the best trip of my life.",
+   "es": "El próximo año voy a viajar, y creo que será el mejor viaje de mi vida.",
+   "nota": "Bloque 7"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Los cinco errores que definen si el A1 está cerrado: la s de tercera persona, dejarla después de does o did, poner to después de un modal, usar have para la edad, y poner the al hablar en general.",
+   "Si esos cinco están resueltos, el nivel está firme. Si alguno sigue apareciendo, vale más volver a esa unidad que avanzar al A2."
+  ],
+  "contrastes": [
+   {
+    "mal": "He work here and he don't like it.",
+    "bien": "He works here and he doesn't like it.",
+    "por_que": "Tercera persona: la s en el verbo al afirmar y en el ayudante al negar."
+   },
+   {
+    "mal": "I have 30 years and I can to speak English.",
+    "bien": "I'm 30 and I can speak English.",
+    "por_que": "La edad va con to be y después de un modal el verbo va sin to."
+   },
+   {
+    "mal": "Yesterday I didn't went because the life is complicated.",
+    "bien": "Yesterday I didn't go because life is complicated.",
+    "por_que": "Con did el verbo vuelve a su base, y al hablar en general no va artículo."
+   }
+  ]
+ },
+ "vocabulario": []
+}

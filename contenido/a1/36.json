@@ -1,0 +1,199 @@
+{
+ "numero": 36,
+ "bloque": 6,
+ "titulo": "Verbos irregulares",
+ "puedes": "Usar en pasado los veinte verbos que más vas a necesitar.",
+ "gramatica": "Past simple — verbos irregulares",
+ "concepto": {
+  "puntos": [
+   "Los verbos más usados del inglés no siguen la regla del -ed: tienen su propia forma en pasado y hay que memorizarla.",
+   "No es tan malo como suena: son irregulares justamente porque se usan mucho, así que se fijan rápido con el uso.",
+   "No hay lógica que aprender. Algunos cambian una vocal (come → came), otros cambian entero (go → went), y otros no cambian nada (put → put).",
+   "Con veinte verbos cubres la mayoría de lo que vas a querer contar en pasado."
+  ],
+  "clave": "No hay regla: se memorizan. Pero son pocos y son justo los que más usas."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Los tres básicos",
+    "formula": "be → was/were · have → had · do → did"
+   },
+   {
+    "etiqueta": "Cambian entero",
+    "formula": "go → went · see → saw · buy → bought"
+   },
+   {
+    "etiqueta": "Cambian la vocal",
+    "formula": "come → came · give → gave · write → wrote"
+   },
+   {
+    "etiqueta": "No cambian",
+    "formula": "put → put · cut → cut · let → let"
+   }
+  ],
+  "notas": [
+   "En negativo y pregunta el verbo vuelve a su forma base: I didn't go, no I didn't went.",
+   "Read no cambia de escritura pero sí de pronunciación en pasado.",
+   "Los veinte de la lista de vocabulario cubren casi todo lo que necesitas en este nivel."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "I went to the beach last weekend.",
+   "es": "Fui a la playa el fin de semana pasado.",
+   "nota": "go → went"
+  },
+  {
+   "en": "She had a good time.",
+   "es": "Lo pasó bien.",
+   "nota": "have → had"
+  },
+  {
+   "en": "We saw a great movie.",
+   "es": "Vimos una película excelente.",
+   "nota": "see → saw"
+  },
+  {
+   "en": "He told me the truth.",
+   "es": "Me dijo la verdad.",
+   "nota": "tell → told"
+  },
+  {
+   "en": "I bought a new phone.",
+   "es": "Compré un teléfono nuevo.",
+   "nota": "buy → bought"
+  },
+  {
+   "en": "They came late and left early.",
+   "es": "Llegaron tarde y se fueron temprano.",
+   "nota": "come → came, leave → left"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Agregarle -ed a un verbo irregular es el error más común: goed, buyed y seed no existen.",
+   "En la negativa y la pregunta el verbo vuelve a su forma base, porque el pasado ya está en did: I didn't go.",
+   "Went es el pasado de go. No tiene ninguna relación con otro verbo, aunque lo parezca."
+  ],
+  "contrastes": [
+   {
+    "mal": "I goed to the store.",
+    "bien": "I went to the store.",
+    "por_que": "Go es irregular: su pasado es went."
+   },
+   {
+    "mal": "I didn't went.",
+    "bien": "I didn't go.",
+    "por_que": "El did ya marca el pasado, así que el verbo vuelve a su forma base."
+   },
+   {
+    "mal": "She buyed a car.",
+    "bien": "She bought a car.",
+    "por_que": "Buy es irregular: bought."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "be → was / were",
+   "es": "ser, estar",
+   "nota": null
+  },
+  {
+   "en": "have → had",
+   "es": "tener",
+   "nota": null
+  },
+  {
+   "en": "do → did",
+   "es": "hacer",
+   "nota": null
+  },
+  {
+   "en": "go → went",
+   "es": "ir",
+   "nota": null
+  },
+  {
+   "en": "say → said",
+   "es": "decir",
+   "nota": null
+  },
+  {
+   "en": "get → got",
+   "es": "conseguir, obtener",
+   "nota": null
+  },
+  {
+   "en": "make → made",
+   "es": "hacer, fabricar",
+   "nota": null
+  },
+  {
+   "en": "take → took",
+   "es": "tomar, llevar",
+   "nota": null
+  },
+  {
+   "en": "come → came",
+   "es": "venir",
+   "nota": null
+  },
+  {
+   "en": "see → saw",
+   "es": "ver",
+   "nota": null
+  },
+  {
+   "en": "know → knew",
+   "es": "saber",
+   "nota": null
+  },
+  {
+   "en": "think → thought",
+   "es": "pensar",
+   "nota": null
+  },
+  {
+   "en": "give → gave",
+   "es": "dar",
+   "nota": null
+  },
+  {
+   "en": "find → found",
+   "es": "encontrar",
+   "nota": null
+  },
+  {
+   "en": "tell → told",
+   "es": "contar, decir",
+   "nota": null
+  },
+  {
+   "en": "leave → left",
+   "es": "irse, dejar",
+   "nota": null
+  },
+  {
+   "en": "feel → felt",
+   "es": "sentir",
+   "nota": null
+  },
+  {
+   "en": "buy → bought",
+   "es": "comprar",
+   "nota": null
+  },
+  {
+   "en": "eat → ate",
+   "es": "comer",
+   "nota": null
+  },
+  {
+   "en": "put → put",
+   "es": "poner",
+   "nota": "No cambia"
+  }
+ ]
+}

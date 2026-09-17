@@ -1,0 +1,174 @@
+{
+ "numero": 30,
+ "bloque": 5,
+ "titulo": "Gustos",
+ "puedes": "Decir qué te gusta y qué no, con cosas y con actividades.",
+ "gramatica": "Like, love, hate + gerundio",
+ "concepto": {
+  "puntos": [
+   "El inglés construye el gusto al revés del español. Nosotros decimos me gusta el café, donde el café es el sujeto. El inglés dice I like coffee, donde el sujeto eres tú.",
+   "Eso simplifica todo: like funciona como cualquier verbo normal y lleva s en tercera persona.",
+   "Cuando lo que te gusta es una actividad, el verbo va con -ing: I like cooking, I hate waiting.",
+   "Hay una escala: love, like, don't mind, don't like, hate."
+  ],
+  "clave": "El sujeto eres tú, no la cosa. Y si lo que gusta es una acción, esa acción lleva -ing."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Con un sustantivo",
+    "formula": "I like coffee."
+   },
+   {
+    "etiqueta": "Con una actividad",
+    "formula": "I like cooking."
+   },
+   {
+    "etiqueta": "Tercera persona",
+    "formula": "She likes cooking."
+   },
+   {
+    "etiqueta": "Negativo y pregunta",
+    "formula": "I don't like it. · Do you like it?"
+   }
+  ],
+  "notas": [
+   "Escala de menos a más: hate < don't like < don't mind < like < love.",
+   "Would like es distinto: no es gustar sino querer, y lo verás en la unidad 31.",
+   "Para decir que algo te gusta mucho: I really like it o I love it."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "I like coffee but I don't like tea.",
+   "es": "Me gusta el café pero no el té.",
+   "nota": null
+  },
+  {
+   "en": "She loves running in the morning.",
+   "es": "A ella le encanta correr en la mañana.",
+   "nota": "Actividad: -ing"
+  },
+  {
+   "en": "I hate waiting in line.",
+   "es": "Odio hacer fila.",
+   "nota": null
+  },
+  {
+   "en": "Do you like your new job? — Yes, I love it.",
+   "es": "¿Te gusta tu nuevo trabajo? — Sí, me encanta.",
+   "nota": null
+  },
+  {
+   "en": "He doesn't mind working on weekends.",
+   "es": "A él no le molesta trabajar los fines de semana.",
+   "nota": null
+  },
+  {
+   "en": "My favorite thing is reading at night.",
+   "es": "Lo que más me gusta es leer de noche.",
+   "nota": null
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Invertir el sujeto es el error clásico: Me likes coffee o It likes me no existen. El que hace la acción de gustar eres tú.",
+   "Después de like, love y hate la actividad va con -ing, no con to en este nivel.",
+   "Like lleva s en tercera persona como cualquier verbo: she likes, no she like."
+  ],
+  "contrastes": [
+   {
+    "mal": "Me like coffee.",
+    "bien": "I like coffee.",
+    "por_que": "El sujeto es I, no me. En inglés tú eres quien gusta."
+   },
+   {
+    "mal": "I like to cooking.",
+    "bien": "I like cooking.",
+    "por_que": "No se mezclan to y -ing. Elige una forma."
+   },
+   {
+    "mal": "She like her job.",
+    "bien": "She likes her job.",
+    "por_que": "Like es un verbo normal y lleva s en tercera persona."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "like",
+   "es": "gustar",
+   "nota": null
+  },
+  {
+   "en": "love",
+   "es": "encantar",
+   "nota": null
+  },
+  {
+   "en": "hate",
+   "es": "odiar",
+   "nota": null
+  },
+  {
+   "en": "don't mind",
+   "es": "no molestar",
+   "nota": null
+  },
+  {
+   "en": "prefer",
+   "es": "preferir",
+   "nota": null
+  },
+  {
+   "en": "favorite",
+   "es": "favorito",
+   "nota": "Americano; británico: favourite"
+  },
+  {
+   "en": "hobby",
+   "es": "pasatiempo",
+   "nota": null
+  },
+  {
+   "en": "sports",
+   "es": "deportes",
+   "nota": null
+  },
+  {
+   "en": "reading",
+   "es": "leer, lectura",
+   "nota": null
+  },
+  {
+   "en": "cooking",
+   "es": "cocinar",
+   "nota": null
+  },
+  {
+   "en": "traveling",
+   "es": "viajar",
+   "nota": null
+  },
+  {
+   "en": "shopping",
+   "es": "ir de compras",
+   "nota": null
+  },
+  {
+   "en": "wait in line",
+   "es": "hacer fila",
+   "nota": null
+  },
+  {
+   "en": "really",
+   "es": "de verdad, mucho",
+   "nota": null
+  },
+  {
+   "en": "at all",
+   "es": "para nada",
+   "nota": "En negativas"
+  }
+ ]
+}

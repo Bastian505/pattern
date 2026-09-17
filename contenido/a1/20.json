@@ -1,0 +1,174 @@
+{
+ "numero": 20,
+ "bloque": 4,
+ "titulo": "Qué hay",
+ "puedes": "Describir un lugar diciendo qué cosas hay en él, y preguntar por lo que existe.",
+ "gramatica": "There is / there are",
+ "concepto": {
+  "puntos": [
+   "There is y there are equivalen a hay. El español usa una sola palabra; el inglés usa dos y además distingue singular de plural.",
+   "There is va con una sola cosa, there are con varias. La elección depende de lo que viene después, no del sujeto.",
+   "There no significa allí en este caso: es una palabra vacía que solo sostiene la frase. El significado lo lleva is o are.",
+   "Se usa para presentar algo por primera vez. Una vez presentado, se pasa a it o they: There's a bank here. It's very old."
+  ],
+  "clave": "There is para una cosa, there are para varias. Es el hay del español, partido en dos."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Singular",
+    "formula": "There is a bank. → There's a bank."
+   },
+   {
+    "etiqueta": "Plural",
+    "formula": "There are two banks."
+   },
+   {
+    "etiqueta": "Negativo",
+    "formula": "There isn't / There aren't"
+   },
+   {
+    "etiqueta": "Pregunta",
+    "formula": "Is there...? / Are there...?"
+   }
+  ],
+  "notas": [
+   "En la pregunta se da vuelta el orden, igual que con to be: Is there a bathroom?",
+   "Con cosas que no se cuentan siempre va there is: There is water in the bottle.",
+   "Respuestas cortas: Yes, there is. / No, there aren't."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "There's a supermarket near my house.",
+   "es": "Hay un supermercado cerca de mi casa.",
+   "nota": null
+  },
+  {
+   "en": "There are four rooms in the apartment.",
+   "es": "Hay cuatro habitaciones en el departamento.",
+   "nota": "Plural: are"
+  },
+  {
+   "en": "There isn't any milk in the fridge.",
+   "es": "No hay leche en el refrigerador.",
+   "nota": null
+  },
+  {
+   "en": "Are there any restaurants around here?",
+   "es": "¿Hay restaurantes por aquí?",
+   "nota": null
+  },
+  {
+   "en": "Is there a bathroom? — Yes, there is.",
+   "es": "¿Hay baño? — Sí.",
+   "nota": "Respuesta corta"
+  },
+  {
+   "en": "There's a problem with the door.",
+   "es": "Hay un problema con la puerta.",
+   "nota": null
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Traducir hay como it is o have es el error típico: It is a bank near my house no significa lo que crees.",
+   "El verbo concuerda con lo que viene después: There are two chairs, no There is two chairs.",
+   "No confundas there con their ni con they're. Suenan igual y significan cosas distintas."
+  ],
+  "contrastes": [
+   {
+    "mal": "It is a bank near my house.",
+    "bien": "There's a bank near my house.",
+    "por_que": "Para decir que algo existe se usa there is, no it is."
+   },
+   {
+    "mal": "There is three chairs.",
+    "bien": "There are three chairs.",
+    "por_que": "Tres sillas son plural, así que va are."
+   },
+   {
+    "mal": "Have a problem with the door.",
+    "bien": "There's a problem with the door.",
+    "por_que": "Hay se dice there is, no have."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "there is / there are",
+   "es": "hay",
+   "nota": null
+  },
+  {
+   "en": "room",
+   "es": "habitación, sala",
+   "nota": null
+  },
+  {
+   "en": "bedroom",
+   "es": "dormitorio",
+   "nota": null
+  },
+  {
+   "en": "bathroom",
+   "es": "baño",
+   "nota": null
+  },
+  {
+   "en": "kitchen",
+   "es": "cocina",
+   "nota": "El lugar"
+  },
+  {
+   "en": "living room",
+   "es": "living",
+   "nota": null
+  },
+  {
+   "en": "fridge",
+   "es": "refrigerador",
+   "nota": null
+  },
+  {
+   "en": "bed / sofa",
+   "es": "cama / sofá",
+   "nota": null
+  },
+  {
+   "en": "supermarket",
+   "es": "supermercado",
+   "nota": null
+  },
+  {
+   "en": "bank",
+   "es": "banco",
+   "nota": null
+  },
+  {
+   "en": "restaurant",
+   "es": "restaurante",
+   "nota": null
+  },
+  {
+   "en": "park",
+   "es": "parque",
+   "nota": null
+  },
+  {
+   "en": "around here",
+   "es": "por aquí",
+   "nota": null
+  },
+  {
+   "en": "floor",
+   "es": "piso",
+   "nota": null
+  },
+  {
+   "en": "garage",
+   "es": "estacionamiento",
+   "nota": null
+  }
+ ]
+}

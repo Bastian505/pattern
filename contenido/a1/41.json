@@ -1,0 +1,174 @@
+{
+ "numero": 41,
+ "bloque": 7,
+ "titulo": "Comparar",
+ "puedes": "Comparar dos cosas y decir cuál es la mejor de todas.",
+ "gramatica": "Comparativos y superlativos",
+ "concepto": {
+  "puntos": [
+   "Hay dos formas de comparar y la elección depende del largo del adjetivo, no de su significado.",
+   "Si el adjetivo es corto, de una sílaba, se le agrega -er: bigger, older, faster. Y para el superlativo, the + -est.",
+   "Si es largo, de tres o más sílabas, se antepone more o the most: more expensive, the most interesting.",
+   "Al comparar dos cosas se usa than, que equivale a que: bigger than, more expensive than."
+  ],
+  "clave": "Adjetivo corto lleva -er. Adjetivo largo lleva more delante. Y than para el que."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Corto: comparar",
+    "formula": "big → bigger than"
+   },
+   {
+    "etiqueta": "Corto: el más",
+    "formula": "big → the biggest"
+   },
+   {
+    "etiqueta": "Largo: comparar",
+    "formula": "expensive → more expensive than"
+   },
+   {
+    "etiqueta": "Largo: el más",
+    "formula": "expensive → the most expensive"
+   }
+  ],
+  "notas": [
+   "Los de dos sílabas terminados en y usan -er: happy → happier, easy → easier.",
+   "Irregulares: good → better → the best, bad → worse → the worst, far → farther.",
+   "Para decir que dos cosas son iguales: as big as."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "My apartment is smaller than yours.",
+   "es": "Mi departamento es más chico que el tuyo.",
+   "nota": "Corto: -er + than"
+  },
+  {
+   "en": "This phone is more expensive than that one.",
+   "es": "Este teléfono es más caro que ese.",
+   "nota": "Largo: more"
+  },
+  {
+   "en": "She's the best teacher in the school.",
+   "es": "Es la mejor profesora del colegio.",
+   "nota": "Irregular: the best"
+  },
+  {
+   "en": "Today is hotter than yesterday.",
+   "es": "Hoy está más caluroso que ayer.",
+   "nota": "Se dobla la t"
+  },
+  {
+   "en": "It was the most interesting movie of the year.",
+   "es": "Fue la película más interesante del año.",
+   "nota": null
+  },
+  {
+   "en": "My car isn't as fast as his.",
+   "es": "Mi auto no es tan rápido como el suyo.",
+   "nota": "as... as para igualdad"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Mezclar las dos formas es el error más típico: more bigger no existe. O -er o more, nunca los dos.",
+   "El comparativo usa than, no that. Suenan parecido pero son palabras distintas.",
+   "El superlativo siempre lleva the delante: the biggest, no solo biggest."
+  ],
+  "contrastes": [
+   {
+    "mal": "This is more cheaper than that.",
+    "bien": "This is cheaper than that.",
+    "por_que": "Cheap es corto: lleva -er y no admite more además."
+   },
+   {
+    "mal": "My house is bigger that yours.",
+    "bien": "My house is bigger than yours.",
+    "por_que": "Al comparar se usa than, no that."
+   },
+   {
+    "mal": "She is best student.",
+    "bien": "She is the best student.",
+    "por_que": "El superlativo siempre va con the."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "bigger / smaller",
+   "es": "más grande / más chico",
+   "nota": null
+  },
+  {
+   "en": "older / younger",
+   "es": "mayor / menor",
+   "nota": null
+  },
+  {
+   "en": "faster / slower",
+   "es": "más rápido / más lento",
+   "nota": null
+  },
+  {
+   "en": "cheaper",
+   "es": "más barato",
+   "nota": null
+  },
+  {
+   "en": "more expensive",
+   "es": "más caro",
+   "nota": "Largo: con more"
+  },
+  {
+   "en": "more interesting",
+   "es": "más interesante",
+   "nota": null
+  },
+  {
+   "en": "more difficult",
+   "es": "más difícil",
+   "nota": null
+  },
+  {
+   "en": "better than",
+   "es": "mejor que",
+   "nota": "Irregular"
+  },
+  {
+   "en": "worse than",
+   "es": "peor que",
+   "nota": "Irregular"
+  },
+  {
+   "en": "the best / the worst",
+   "es": "el mejor / el peor",
+   "nota": null
+  },
+  {
+   "en": "than",
+   "es": "que",
+   "nota": "Al comparar"
+  },
+  {
+   "en": "as... as",
+   "es": "tan... como",
+   "nota": "Igualdad"
+  },
+  {
+   "en": "happier / easier",
+   "es": "más feliz / más fácil",
+   "nota": "La y pasa a ier"
+  },
+  {
+   "en": "hotter",
+   "es": "más caluroso",
+   "nota": "Se dobla la t"
+  },
+  {
+   "en": "the same as",
+   "es": "igual que",
+   "nota": null
+  }
+ ]
+}

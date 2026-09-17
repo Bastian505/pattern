@@ -1,0 +1,174 @@
+{
+ "numero": 37,
+ "bloque": 6,
+ "titulo": "Preguntas en pasado",
+ "puedes": "Preguntarle a alguien qué hizo y negar cosas en pasado.",
+ "gramatica": "Did / didn't",
+ "concepto": {
+  "puntos": [
+   "Para negar y preguntar en pasado hay un solo ayudante: did. No cambia con la persona, nunca.",
+   "Esto es más simple que el presente, donde había que elegir entre do y does. En pasado siempre es did.",
+   "Y ocurre lo mismo que con la s: el did se lleva la marca de pasado, así que el verbo vuelve a su forma base.",
+   "Por eso se dice I didn't go y Did you go, con go limpio, aunque la frase hable del pasado."
+  ],
+  "clave": "Did carga el pasado. El verbo que le sigue queda en forma base, regular o irregular."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Negativo",
+    "formula": "I didn't go. (did not)"
+   },
+   {
+    "etiqueta": "Pregunta",
+    "formula": "Did you go?"
+   },
+   {
+    "etiqueta": "Con palabra de pregunta",
+    "formula": "Where did you go?"
+   },
+   {
+    "etiqueta": "Respuesta corta",
+    "formula": "Yes, I did. / No, I didn't."
+   }
+  ],
+  "notas": [
+   "To be es la excepción de siempre: no usa did. Se dice Were you there?, no Did you be there?",
+   "Can tampoco: su pasado es could, y se pregunta solo.",
+   "Did sirve para todas las personas, incluida la tercera: Did she go?"
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "Did you go to the party?",
+   "es": "¿Fuiste a la fiesta?",
+   "nota": "El verbo en forma base"
+  },
+  {
+   "en": "I didn't see him yesterday.",
+   "es": "No lo vi ayer.",
+   "nota": "See, no saw"
+  },
+  {
+   "en": "What did you do last weekend?",
+   "es": "¿Qué hiciste el fin de semana?",
+   "nota": null
+  },
+  {
+   "en": "She didn't like the food.",
+   "es": "No le gustó la comida.",
+   "nota": null
+  },
+  {
+   "en": "Where did they stay?",
+   "es": "¿Dónde se quedaron?",
+   "nota": null
+  },
+  {
+   "en": "Did you have a good time? — Yes, I did.",
+   "es": "¿Lo pasaste bien? — Sí.",
+   "nota": "Respuesta corta"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Dejar el verbo en pasado después de did es el error más frecuente: Did you went está mal, es Did you go.",
+   "No uses did con to be. Es Were you tired?, nunca Did you be tired?",
+   "En la respuesta corta se repite el ayudante, no el verbo: Yes, I did, no Yes, I went."
+  ],
+  "contrastes": [
+   {
+    "mal": "Did you went to the party?",
+    "bien": "Did you go to the party?",
+    "por_que": "El did ya marca el pasado; el verbo vuelve a su forma base."
+   },
+   {
+    "mal": "I didn't saw him.",
+    "bien": "I didn't see him.",
+    "por_que": "Mismo caso en negativo: see, no saw."
+   },
+   {
+    "mal": "Did she was at home?",
+    "bien": "Was she at home?",
+    "por_que": "To be no usa ayudante, tampoco en pasado."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "did / didn't",
+   "es": "auxiliar de pasado",
+   "nota": null
+  },
+  {
+   "en": "What did you do?",
+   "es": "¿Qué hiciste?",
+   "nota": null
+  },
+  {
+   "en": "Did you...?",
+   "es": "¿Hiciste...?",
+   "nota": null
+  },
+  {
+   "en": "Yes, I did / No, I didn't",
+   "es": "Sí / No",
+   "nota": "Respuesta corta"
+  },
+  {
+   "en": "stay",
+   "es": "quedarse",
+   "nota": null
+  },
+  {
+   "en": "visit",
+   "es": "visitar",
+   "nota": null
+  },
+  {
+   "en": "enjoy",
+   "es": "disfrutar",
+   "nota": null
+  },
+  {
+   "en": "have a good time",
+   "es": "pasarlo bien",
+   "nota": null
+  },
+  {
+   "en": "happen",
+   "es": "pasar, ocurrir",
+   "nota": null
+  },
+  {
+   "en": "forget → forgot",
+   "es": "olvidar",
+   "nota": "Irregular"
+  },
+  {
+   "en": "lose → lost",
+   "es": "perder",
+   "nota": "Irregular"
+  },
+  {
+   "en": "meet → met",
+   "es": "conocer, reunirse",
+   "nota": "Irregular"
+  },
+  {
+   "en": "read → read",
+   "es": "leer",
+   "nota": "Se escribe igual"
+  },
+  {
+   "en": "drink → drank",
+   "es": "beber",
+   "nota": "Irregular"
+  },
+  {
+   "en": "sleep → slept",
+   "es": "dormir",
+   "nota": "Irregular"
+  }
+ ]
+}
