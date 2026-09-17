@@ -1,0 +1,174 @@
+{
+ "numero": 10,
+ "bloque": 2,
+ "titulo": "Uno o varios",
+ "puedes": "Hablar de varias cosas a la vez y formar el plural correctamente.",
+ "gramatica": "Plurales regulares e irregulares",
+ "concepto": {
+  "puntos": [
+   "La regla base es simple: se agrega -s al final. Book se convierte en books.",
+   "Cuando la palabra termina en s, sh, ch, x o o, se agrega -es para que se pueda pronunciar: box se vuelve boxes.",
+   "Si termina en consonante más y, la y se transforma en i y se agrega -es: city se vuelve cities.",
+   "Hay un grupo pequeño de irregulares que hay que memorizar. Son pocos pero de uso diario."
+  ],
+  "clave": "Casi todo hace plural con -s; el resto es cuestión de que se pueda pronunciar."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Regla general",
+    "formula": "book → books  ·  car → cars"
+   },
+   {
+    "etiqueta": "Termina en s, sh, ch, x, o",
+    "formula": "box → boxes  ·  watch → watches"
+   },
+   {
+    "etiqueta": "Consonante + y",
+    "formula": "city → cities  ·  country → countries"
+   },
+   {
+    "etiqueta": "Irregulares",
+    "formula": "man → men  ·  child → children"
+   }
+  ],
+  "notas": [
+   "Los irregulares más usados: man/men, woman/women, child/children, person/people, foot/feet, tooth/teeth.",
+   "Algunos no cambian nunca: fish, sheep.",
+   "En plural desaparece el artículo a: a book pero books, sin nada delante."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "I have two brothers and one sister.",
+   "es": "Tengo dos hermanos y una hermana.",
+   "nota": null
+  },
+  {
+   "en": "There are three boxes on the table.",
+   "es": "Hay tres cajas sobre la mesa.",
+   "nota": "Termina en x, lleva -es"
+  },
+  {
+   "en": "We visit many cities every year.",
+   "es": "Visitamos muchas ciudades cada año.",
+   "nota": "City pasa a cities"
+  },
+  {
+   "en": "Those men are my coworkers.",
+   "es": "Esos hombres son mis colegas.",
+   "nota": "Plural irregular"
+  },
+  {
+   "en": "There are a lot of people here.",
+   "es": "Hay mucha gente aquí.",
+   "nota": "People ya es plural"
+  },
+  {
+   "en": "My children are at school.",
+   "es": "Mis hijos están en el colegio.",
+   "nota": null
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "People ya es plural. Decir peoples es un error, salvo que hables de pueblos o etnias.",
+   "Los adjetivos no tienen plural en inglés: se dice red cars, nunca reds cars.",
+   "No confundas woman (una mujer) con women (varias). Se escriben casi igual pero suenan distinto."
+  ],
+  "contrastes": [
+   {
+    "mal": "There are many peoples here.",
+    "bien": "There are many people here.",
+    "por_que": "People ya es el plural de person."
+   },
+   {
+    "mal": "I have two reds cars.",
+    "bien": "I have two red cars.",
+    "por_que": "El adjetivo en inglés nunca lleva s."
+   },
+   {
+    "mal": "I have three childs.",
+    "bien": "I have three children.",
+    "por_que": "Child tiene plural irregular."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "man / men",
+   "es": "hombre / hombres",
+   "nota": "Irregular"
+  },
+  {
+   "en": "woman / women",
+   "es": "mujer / mujeres",
+   "nota": "Irregular"
+  },
+  {
+   "en": "child / children",
+   "es": "niño / niños",
+   "nota": "Irregular"
+  },
+  {
+   "en": "person / people",
+   "es": "persona / personas",
+   "nota": "Irregular"
+  },
+  {
+   "en": "foot / feet",
+   "es": "pie / pies",
+   "nota": "Irregular"
+  },
+  {
+   "en": "tooth / teeth",
+   "es": "diente / dientes",
+   "nota": "Irregular"
+  },
+  {
+   "en": "box / boxes",
+   "es": "caja / cajas",
+   "nota": "Lleva -es"
+  },
+  {
+   "en": "watch / watches",
+   "es": "reloj / relojes",
+   "nota": "Lleva -es"
+  },
+  {
+   "en": "city / cities",
+   "es": "ciudad / ciudades",
+   "nota": "La y pasa a i"
+  },
+  {
+   "en": "country / countries",
+   "es": "país / países",
+   "nota": null
+  },
+  {
+   "en": "fish / sheep",
+   "es": "pez / oveja",
+   "nota": "No cambian en plural"
+  },
+  {
+   "en": "how many",
+   "es": "cuántos",
+   "nota": null
+  },
+  {
+   "en": "a lot of",
+   "es": "muchos",
+   "nota": null
+  },
+  {
+   "en": "some",
+   "es": "algunos",
+   "nota": null
+  },
+  {
+   "en": "every",
+   "es": "cada",
+   "nota": null
+  }
+ ]
+}

@@ -1,0 +1,141 @@
+{
+ "nivel": "A1",
+ "nombre": "Nivel A1",
+ "variante": "Inglés americano",
+ "bloques": [
+  {
+   "numero": 1,
+   "titulo": "Quién soy"
+  },
+  {
+   "numero": 2,
+   "titulo": "Mi mundo cercano"
+  },
+  {
+   "numero": 3,
+   "titulo": "Lo que hago"
+  },
+  {
+   "numero": 4,
+   "titulo": "Dónde y cuándo"
+  },
+  {
+   "numero": 5,
+   "titulo": "Ahora y lo que puedo"
+  },
+  {
+   "numero": 6,
+   "titulo": "Antes y después"
+  }
+ ],
+ "unidades": [
+  {
+   "numero": 1,
+   "bloque": 1,
+   "titulo": "Saludar y despedirse",
+   "puedes": "Saludar a alguien, responder cómo estás y despedirte.",
+   "gramatica": "Verbo to be — forma afirmativa",
+   "tipo": "unidad",
+   "archivo": "01.json"
+  },
+  {
+   "numero": 2,
+   "bloque": 1,
+   "titulo": "Decir tu nombre y deletrear",
+   "puedes": "Preguntar y decir cómo te llamas, y deletrear tu nombre en voz alta.",
+   "gramatica": "Verbo to be — preguntas",
+   "tipo": "unidad",
+   "archivo": "02.json"
+  },
+  {
+   "numero": 3,
+   "bloque": 1,
+   "titulo": "De dónde eres",
+   "puedes": "Decir de dónde eres, corregir a alguien que se equivoca y preguntar por el origen de otro.",
+   "gramatica": "Verbo to be — forma negativa",
+   "tipo": "unidad",
+   "archivo": "03.json"
+  },
+  {
+   "numero": 4,
+   "bloque": 1,
+   "titulo": "Tu edad y tus datos",
+   "puedes": "Decir tu edad, dar tu número de teléfono y tu correo, y entender cifras cuando te las dicen.",
+   "gramatica": "Números del 1 al 100 y to be para la edad",
+   "tipo": "unidad",
+   "archivo": "04.json"
+  },
+  {
+   "numero": 5,
+   "bloque": 1,
+   "titulo": "Tu trabajo",
+   "puedes": "Decir en qué trabajas, preguntarle a otro a qué se dedica y hablar de dónde trabajas.",
+   "gramatica": "Artículos a / an y el artículo cero",
+   "tipo": "unidad",
+   "archivo": "05.json"
+  },
+  {
+   "numero": 6,
+   "bloque": 1,
+   "titulo": "Repaso del bloque 1",
+   "puedes": "Presentarte por completo: nombre, origen, edad y trabajo, en una conversación corta.",
+   "gramatica": "Todo el verbo to be: afirmativo, negativo y preguntas",
+   "tipo": "checkpoint",
+   "archivo": "06.json"
+  },
+  {
+   "numero": 7,
+   "bloque": 2,
+   "titulo": "Presentar a otros",
+   "puedes": "Presentar a tu familia y hablar de otras personas sin repetir sus nombres.",
+   "gramatica": "Pronombres personales (I, you, he, she, it, we, they)",
+   "tipo": "unidad",
+   "archivo": "07.json"
+  },
+  {
+   "numero": 8,
+   "bloque": 2,
+   "titulo": "Lo que es tuyo",
+   "puedes": "Decir de quién es algo y hablar de tus cosas y de las de otros.",
+   "gramatica": "Adjetivos posesivos y el genitivo 's",
+   "tipo": "unidad",
+   "archivo": "08.json"
+  },
+  {
+   "numero": 9,
+   "bloque": 2,
+   "titulo": "Esto y aquello",
+   "puedes": "Señalar cosas cercanas o lejanas y preguntar qué son.",
+   "gramatica": "This, that, these, those",
+   "tipo": "unidad",
+   "archivo": "09.json"
+  },
+  {
+   "numero": 10,
+   "bloque": 2,
+   "titulo": "Uno o varios",
+   "puedes": "Hablar de varias cosas a la vez y formar el plural correctamente.",
+   "gramatica": "Plurales regulares e irregulares",
+   "tipo": "unidad",
+   "archivo": "10.json"
+  },
+  {
+   "numero": 11,
+   "bloque": 2,
+   "titulo": "Describir personas",
+   "puedes": "Describir cómo es alguien físicamente y de carácter, y preguntar por alguien que no conoces.",
+   "gramatica": "Adjetivos con to be y orden del adjetivo",
+   "tipo": "unidad",
+   "archivo": "11.json"
+  },
+  {
+   "numero": 12,
+   "bloque": 2,
+   "titulo": "Repaso del bloque 2",
+   "puedes": "Hablar de tu familia y tus cosas: quiénes son, cómo son y de quién es qué.",
+   "gramatica": "Pronombres, posesivos, demostrativos, plurales y adjetivos",
+   "tipo": "checkpoint",
+   "archivo": "12.json"
+  }
+ ]
+}

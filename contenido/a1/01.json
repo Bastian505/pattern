@@ -1,0 +1,174 @@
+{
+ "numero": 1,
+ "bloque": 1,
+ "titulo": "Saludar y despedirse",
+ "puedes": "Saludar a alguien, responder cómo estás y despedirte.",
+ "gramatica": "Verbo to be — forma afirmativa",
+ "concepto": {
+  "puntos": [
+   "En inglés casi toda frase necesita un verbo, incluso donde el español lo omite. Decimos I am fine, no solo fine.",
+   "El verbo to be equivale a ser y estar. Es el mismo verbo para las dos cosas: el contexto decide cuál es.",
+   "Cambia de forma según quién habla: am, is o are. No es opcional, es obligatorio elegir bien.",
+   "En el día a día casi siempre se usa contraído: I'm en vez de I am. Suena natural y es lo que vas a oír."
+  ],
+  "clave": "To be conecta a alguien con una información básica: quién es, cómo está, de dónde viene."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "I",
+    "formula": "I am → I'm"
+   },
+   {
+    "etiqueta": "You",
+    "formula": "You are → You're"
+   },
+   {
+    "etiqueta": "He / She / It",
+    "formula": "He is → He's"
+   },
+   {
+    "etiqueta": "We / They",
+    "formula": "We are → We're"
+   }
+  ],
+  "notas": [
+   "La fórmula base es: sujeto + am/is/are + el resto.",
+   "You sirve para tú y para ustedes: el inglés no distingue.",
+   "Los saludos como Good morning o Hello no llevan verbo; son expresiones fijas."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "Hello! I'm Daniel.",
+   "es": "¡Hola! Soy Daniel.",
+   "nota": null
+  },
+  {
+   "en": "Good morning. How are you?",
+   "es": "Buenos días. ¿Cómo estás?",
+   "nota": "Antes del mediodía"
+  },
+  {
+   "en": "I'm fine, thanks. And you?",
+   "es": "Estoy bien, gracias. ¿Y tú?",
+   "nota": "La respuesta estándar"
+  },
+  {
+   "en": "She's my friend.",
+   "es": "Ella es mi amiga.",
+   "nota": null
+  },
+  {
+   "en": "We're here.",
+   "es": "Estamos aquí.",
+   "nota": "Mismo verbo, ahora es estar"
+  },
+  {
+   "en": "Nice to meet you. See you later!",
+   "es": "Mucho gusto. ¡Nos vemos!",
+   "nota": "Al conocer y al despedirse"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "El error más común del hispanohablante es olvidar el verbo, porque en español se puede: ¿cómo estás? — bien. En inglés hay que decir I'm fine.",
+   "Tampoco se puede omitir el sujeto. En español decimos soy Bastian sin el yo; en inglés el I es obligatorio.",
+   "Good night no es un saludo, es una despedida. Para saludar de noche se usa Good evening."
+  ],
+  "contrastes": [
+   {
+    "mal": "Fine, thanks.",
+    "bien": "I'm fine, thanks.",
+    "por_que": "Falta el sujeto y el verbo. Sin ellos suena a telegrama."
+   },
+   {
+    "mal": "Am Bastian.",
+    "bien": "I'm Bastian.",
+    "por_que": "El sujeto I nunca se omite en inglés."
+   },
+   {
+    "mal": "How are you? — I am good, and you? (llegando a una reunión de noche) Good night!",
+    "bien": "Good evening!",
+    "por_que": "Good night solo se dice al irse o al acostarse."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "Hello / Hi",
+   "es": "Hola",
+   "nota": "Hi es más informal"
+  },
+  {
+   "en": "Good morning",
+   "es": "Buenos días",
+   "nota": "Hasta el mediodía"
+  },
+  {
+   "en": "Good afternoon",
+   "es": "Buenas tardes",
+   "nota": null
+  },
+  {
+   "en": "Good evening",
+   "es": "Buenas noches",
+   "nota": "Al llegar"
+  },
+  {
+   "en": "Good night",
+   "es": "Buenas noches",
+   "nota": "Al irse"
+  },
+  {
+   "en": "How are you?",
+   "es": "¿Cómo estás?",
+   "nota": null
+  },
+  {
+   "en": "I'm fine / I'm good",
+   "es": "Estoy bien",
+   "nota": null
+  },
+  {
+   "en": "Not bad",
+   "es": "Nada mal",
+   "nota": null
+  },
+  {
+   "en": "Thanks / Thank you",
+   "es": "Gracias",
+   "nota": null
+  },
+  {
+   "en": "Nice to meet you",
+   "es": "Mucho gusto",
+   "nota": "Solo la primera vez"
+  },
+  {
+   "en": "Goodbye / Bye",
+   "es": "Adiós / Chao",
+   "nota": null
+  },
+  {
+   "en": "See you later",
+   "es": "Nos vemos",
+   "nota": null
+  },
+  {
+   "en": "Please",
+   "es": "Por favor",
+   "nota": null
+  },
+  {
+   "en": "Excuse me",
+   "es": "Disculpa",
+   "nota": "Para pedir paso o atención"
+  },
+  {
+   "en": "Sorry",
+   "es": "Perdón",
+   "nota": "Para disculparse"
+  }
+ ]
+}

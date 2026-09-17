@@ -1,0 +1,97 @@
+{
+ "numero": 12,
+ "bloque": 2,
+ "tipo": "checkpoint",
+ "titulo": "Repaso del bloque 2",
+ "puedes": "Hablar de tu familia y tus cosas: quiénes son, cómo son y de quién es qué.",
+ "gramatica": "Pronombres, posesivos, demostrativos, plurales y adjetivos",
+ "concepto": {
+  "puntos": [
+   "Este bloque te dio las piezas para describir tu entorno: quién es quién, qué es de quién y cómo son.",
+   "Todo sigue apoyado en to be, pero ahora con sustantivos y adjetivos alrededor.",
+   "Si puedes presentar a tu familia y describirla sin trabarte, el bloque está cerrado."
+  ],
+  "clave": "Con el bloque 1 te presentas tú; con el bloque 2 presentas tu mundo."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Pronombres",
+    "formula": "I, you, he, she, it, we, they"
+   },
+   {
+    "etiqueta": "Posesión",
+    "formula": "my book  ·  Ana's book"
+   },
+   {
+    "etiqueta": "Señalar",
+    "formula": "this / that  ·  these / those"
+   },
+   {
+    "etiqueta": "Describir",
+    "formula": "a tall woman  ·  She has dark hair."
+   }
+  ],
+  "notas": [
+   "El adjetivo va antes del sustantivo y nunca lleva s.",
+   "Con 's el dueño va primero.",
+   "These y those piden are."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "This is my sister. Her name is Laura.",
+   "es": "Esta es mi hermana. Se llama Laura.",
+   "nota": "Unidades 7 y 8"
+  },
+  {
+   "en": "She's a nurse. She works in a hospital.",
+   "es": "Es enfermera. Trabaja en un hospital.",
+   "nota": null
+  },
+  {
+   "en": "Those are my parents' keys.",
+   "es": "Esas son las llaves de mis padres.",
+   "nota": "Unidades 8 y 9"
+  },
+  {
+   "en": "I have two brothers. They're very tall.",
+   "es": "Tengo dos hermanos. Son muy altos.",
+   "nota": "Unidades 10 y 11"
+  },
+  {
+   "en": "My friends are funny and kind.",
+   "es": "Mis amigos son divertidos y amables.",
+   "nota": "Adjetivos sin plural"
+  },
+  {
+   "en": "What does your brother look like? — He's short and he has a beard.",
+   "es": "¿Cómo es tu hermano? — Es bajo y tiene barba.",
+   "nota": "Todo junto"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Los tres errores que deberías tener superados: el adjetivo después del sustantivo, el of para personas, y el plural en los adjetivos.",
+   "Si alguno sigue apareciendo, vuelve a esa unidad antes de pasar al bloque 3, donde entra el present simple y se complica."
+  ],
+  "contrastes": [
+   {
+    "mal": "The car of my brother.",
+    "bien": "My brother's car.",
+    "por_que": "Con personas, el dueño va primero."
+   },
+   {
+    "mal": "They are persons nices.",
+    "bien": "They are nice people.",
+    "por_que": "People es el plural de person y el adjetivo va antes y sin s."
+   },
+   {
+    "mal": "These is my friend.",
+    "bien": "This is my friend.",
+    "por_que": "Una sola persona es this."
+   }
+  ]
+ },
+ "vocabulario": []
+}
