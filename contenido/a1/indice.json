@@ -2,6 +2,7 @@
  "nivel": "A1",
  "nombre": "Nivel A1",
  "variante": "Inglés americano",
+ "total_previsto": 42,
  "bloques": [
   {
    "numero": 1,
@@ -25,7 +26,11 @@
   },
   {
    "numero": 6,
-   "titulo": "Antes y después"
+   "titulo": "Antes"
+  },
+  {
+   "numero": 7,
+   "titulo": "Después y comparar"
   }
  ],
  "unidades": [
@@ -136,6 +141,69 @@
    "gramatica": "Pronombres, posesivos, demostrativos, plurales y adjetivos",
    "tipo": "checkpoint",
    "archivo": "12.json"
+  },
+  {
+   "numero": 13,
+   "bloque": 3,
+   "titulo": "Lo que tienes",
+   "puedes": "Decir lo que tienes y lo que no, y preguntarle a otro qué tiene.",
+   "gramatica": "Have / has",
+   "tipo": "unidad",
+   "archivo": "13.json"
+  },
+  {
+   "numero": 14,
+   "bloque": 3,
+   "titulo": "Tu rutina",
+   "puedes": "Contar lo que haces habitualmente: tu trabajo, tus horarios, tus costumbres.",
+   "gramatica": "Present simple — forma afirmativa",
+   "tipo": "unidad",
+   "archivo": "14.json"
+  },
+  {
+   "numero": 15,
+   "bloque": 3,
+   "titulo": "Lo que no haces",
+   "puedes": "Decir lo que no haces, lo que no te gusta y corregir a alguien que se equivoca sobre ti.",
+   "gramatica": "Present simple — negativo con don't y doesn't",
+   "tipo": "unidad",
+   "archivo": "15.json"
+  },
+  {
+   "numero": 16,
+   "bloque": 3,
+   "titulo": "Preguntar por rutinas",
+   "puedes": "Preguntarle a alguien qué hace, dónde vive, si le gusta algo, y responder con naturalidad.",
+   "gramatica": "Present simple — preguntas con do y does",
+   "tipo": "unidad",
+   "archivo": "16.json"
+  },
+  {
+   "numero": 17,
+   "bloque": 3,
+   "titulo": "Las palabras de pregunta",
+   "puedes": "Preguntar cualquier cosa: qué, dónde, cuándo, quién, por qué, cómo, cuánto y cuántos.",
+   "gramatica": "WH questions — what, where, when, who, why, how",
+   "tipo": "unidad",
+   "archivo": "17.json"
+  },
+  {
+   "numero": 18,
+   "bloque": 3,
+   "titulo": "Cada cuánto",
+   "puedes": "Decir con qué frecuencia haces algo y preguntarle a otro por sus costumbres.",
+   "gramatica": "Adverbios de frecuencia",
+   "tipo": "unidad",
+   "archivo": "18.json"
+  },
+  {
+   "numero": 19,
+   "bloque": 3,
+   "titulo": "Repaso del bloque 3",
+   "puedes": "Contar tu rutina completa y preguntarle a otro por la suya, en afirmativo, negativo y pregunta.",
+   "gramatica": "Present simple completo, have, WH questions y frecuencia",
+   "tipo": "checkpoint",
+   "archivo": "19.json"
   }
  ]
 }

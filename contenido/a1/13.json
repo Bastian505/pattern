@@ -1,0 +1,174 @@
+{
+ "numero": 13,
+ "bloque": 3,
+ "titulo": "Lo que tienes",
+ "puedes": "Decir lo que tienes y lo que no, y preguntarle a otro qué tiene.",
+ "gramatica": "Have / has",
+ "concepto": {
+  "puntos": [
+   "Have significa tener. Es el segundo verbo más usado del inglés, después de to be.",
+   "Solo tiene dos formas en presente: have para casi todos, y has para he, she e it.",
+   "Para negar y preguntar necesita ayuda: aparecen don't, doesn't y do, does. Es tu primer contacto con ellos.",
+   "Ojo con una trampa: en la negativa y la pregunta, has vuelve a ser have. Se dice doesn't have, nunca doesn't has."
+  ],
+  "clave": "Have para todos, has solo para él, ella y eso. En negativo y pregunta, siempre have."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Afirmativo",
+    "formula": "I / you / we / they have"
+   },
+   {
+    "etiqueta": "Tercera persona",
+    "formula": "he / she / it has"
+   },
+   {
+    "etiqueta": "Negativo",
+    "formula": "I don't have  ·  He doesn't have"
+   },
+   {
+    "etiqueta": "Pregunta",
+    "formula": "Do you have...?  ·  Does he have...?"
+   }
+  ],
+  "notas": [
+   "La s de has es la misma marca de tercera persona que verás en todos los verbos en la unidad 14.",
+   "En inglés británico se usa have got. En americano se dice simplemente have.",
+   "Have también sirve para comidas y actividades: have breakfast, have a shower."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "I have two brothers.",
+   "es": "Tengo dos hermanos.",
+   "nota": null
+  },
+  {
+   "en": "She has a new car.",
+   "es": "Ella tiene un auto nuevo.",
+   "nota": "Tercera persona: has"
+  },
+  {
+   "en": "We don't have time.",
+   "es": "No tenemos tiempo.",
+   "nota": null
+  },
+  {
+   "en": "He doesn't have a phone.",
+   "es": "Él no tiene teléfono.",
+   "nota": "Vuelve a have"
+  },
+  {
+   "en": "Do you have any questions?",
+   "es": "¿Tienes alguna pregunta?",
+   "nota": null
+  },
+  {
+   "en": "I have breakfast at seven.",
+   "es": "Desayuno a las siete.",
+   "nota": "Have para comidas"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "El error clásico es mantener la s en la negativa: doesn't has no existe. El doesn't ya lleva la marca de tercera persona.",
+   "No uses have para la edad: no es I have 25 years, es I am 25. Ese calco del español es el más delator de todos.",
+   "Have got se oye mucho en series británicas. Entiéndelo, pero no lo uses si vas por el inglés americano."
+  ],
+  "contrastes": [
+   {
+    "mal": "She doesn't has a car.",
+    "bien": "She doesn't have a car.",
+    "por_que": "La marca de tercera persona ya está en doesn't."
+   },
+   {
+    "mal": "I have hungry.",
+    "bien": "I'm hungry.",
+    "por_que": "Hambre, frío, sed y calor van con to be, no con have."
+   },
+   {
+    "mal": "Do you have 30 years?",
+    "bien": "Are you 30?",
+    "por_que": "La edad se dice con to be."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "have / has",
+   "es": "tener",
+   "nota": null
+  },
+  {
+   "en": "don't have / doesn't have",
+   "es": "no tener",
+   "nota": null
+  },
+  {
+   "en": "time",
+   "es": "tiempo",
+   "nota": null
+  },
+  {
+   "en": "money",
+   "es": "dinero",
+   "nota": "No tiene plural"
+  },
+  {
+   "en": "question",
+   "es": "pregunta",
+   "nota": null
+  },
+  {
+   "en": "idea",
+   "es": "idea",
+   "nota": "an idea"
+  },
+  {
+   "en": "problem",
+   "es": "problema",
+   "nota": null
+  },
+  {
+   "en": "pet",
+   "es": "mascota",
+   "nota": null
+  },
+  {
+   "en": "have breakfast",
+   "es": "desayunar",
+   "nota": "Sin verbo propio"
+  },
+  {
+   "en": "have lunch / dinner",
+   "es": "almorzar / cenar",
+   "nota": null
+  },
+  {
+   "en": "have a shower",
+   "es": "ducharse",
+   "nota": null
+  },
+  {
+   "en": "I'm hungry / thirsty",
+   "es": "Tengo hambre / sed",
+   "nota": "Con to be, no con have"
+  },
+  {
+   "en": "I'm cold / hot",
+   "es": "Tengo frío / calor",
+   "nota": "Con to be"
+  },
+  {
+   "en": "any",
+   "es": "algún, alguno",
+   "nota": "En preguntas y negativas"
+  },
+  {
+   "en": "a new / an old",
+   "es": "un nuevo / un viejo",
+   "nota": null
+  }
+ ]
+}

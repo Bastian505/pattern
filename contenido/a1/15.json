@@ -1,0 +1,174 @@
+{
+ "numero": 15,
+ "bloque": 3,
+ "titulo": "Lo que no haces",
+ "puedes": "Decir lo que no haces, lo que no te gusta y corregir a alguien que se equivoca sobre ti.",
+ "gramatica": "Present simple — negativo con don't y doesn't",
+ "concepto": {
+  "puntos": [
+   "Para negar un verbo normal no basta con agregar not: hace falta un ayudante. Ese ayudante es do.",
+   "La fórmula es don't o doesn't más el verbo tal cual, sin nada añadido.",
+   "Aquí ocurre lo importante: la s de tercera persona se traslada al ayudante. Por eso es doesn't y el verbo queda limpio.",
+   "To be es la excepción de siempre: se niega solo, sin ayudante. I'm not tired, no I don't be tired."
+  ],
+  "clave": "La s salta al ayudante: he works, pero he doesn't work."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "I / you / we / they",
+    "formula": "I don't work on Sundays."
+   },
+   {
+    "etiqueta": "He / she / it",
+    "formula": "She doesn't work on Sundays."
+   },
+   {
+    "etiqueta": "Forma larga",
+    "formula": "do not / does not"
+   },
+   {
+    "etiqueta": "Con to be",
+    "formula": "I'm not tired. (sin ayudante)"
+   }
+  ],
+  "notas": [
+   "Don't es do not y doesn't es does not. En el habla diaria siempre se contraen.",
+   "El verbo después de don't o doesn't va en su forma base: sin s, sin nada.",
+   "No hay doble negación: se dice I don't have any money, no I don't have no money."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "I don't like coffee.",
+   "es": "No me gusta el café.",
+   "nota": null
+  },
+  {
+   "en": "She doesn't live here anymore.",
+   "es": "Ella ya no vive aquí.",
+   "nota": "El verbo sin s"
+  },
+  {
+   "en": "We don't work on weekends.",
+   "es": "No trabajamos los fines de semana.",
+   "nota": null
+  },
+  {
+   "en": "He doesn't speak Spanish.",
+   "es": "Él no habla español.",
+   "nota": null
+  },
+  {
+   "en": "They don't have children.",
+   "es": "No tienen hijos.",
+   "nota": null
+  },
+  {
+   "en": "I'm not busy right now.",
+   "es": "No estoy ocupado ahora.",
+   "nota": "To be se niega solo"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Dejar la s en el verbo después de doesn't es el error más común: she doesn't works está mal, la s ya está en doesn't.",
+   "No mezcles to be con don't. I don't be tired no existe: es I'm not tired.",
+   "La doble negación del español no se traslada. Nunca digo nada es I never say anything, con un solo negativo."
+  ],
+  "contrastes": [
+   {
+    "mal": "He doesn't works here.",
+    "bien": "He doesn't work here.",
+    "por_que": "La s de tercera persona ya está en doesn't."
+   },
+   {
+    "mal": "I not work on Sundays.",
+    "bien": "I don't work on Sundays.",
+    "por_que": "Un verbo normal necesita el ayudante do para negarse."
+   },
+   {
+    "mal": "I don't have nothing.",
+    "bien": "I don't have anything.",
+    "por_que": "El inglés no admite dos negativos en la misma frase."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "don't / doesn't",
+   "es": "no (con verbos)",
+   "nota": null
+  },
+  {
+   "en": "like",
+   "es": "gustar",
+   "nota": "El sujeto es quien gusta"
+  },
+  {
+   "en": "want",
+   "es": "querer",
+   "nota": null
+  },
+  {
+   "en": "need",
+   "es": "necesitar",
+   "nota": null
+  },
+  {
+   "en": "speak",
+   "es": "hablar",
+   "nota": null
+  },
+  {
+   "en": "understand",
+   "es": "entender",
+   "nota": null
+  },
+  {
+   "en": "know",
+   "es": "saber, conocer",
+   "nota": null
+  },
+  {
+   "en": "remember / forget",
+   "es": "recordar / olvidar",
+   "nota": null
+  },
+  {
+   "en": "anything",
+   "es": "nada, algo",
+   "nota": "En frases negativas"
+  },
+  {
+   "en": "anymore",
+   "es": "ya no",
+   "nota": "Va al final"
+  },
+  {
+   "en": "weekend",
+   "es": "fin de semana",
+   "nota": null
+  },
+  {
+   "en": "busy",
+   "es": "ocupado",
+   "nota": null
+  },
+  {
+   "en": "tired",
+   "es": "cansado",
+   "nota": null
+  },
+  {
+   "en": "right now",
+   "es": "ahora mismo",
+   "nota": null
+  },
+  {
+   "en": "usually",
+   "es": "usualmente",
+   "nota": null
+  }
+ ]
+}

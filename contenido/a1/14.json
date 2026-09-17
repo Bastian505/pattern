@@ -1,0 +1,174 @@
+{
+ "numero": 14,
+ "bloque": 3,
+ "titulo": "Tu rutina",
+ "puedes": "Contar lo que haces habitualmente: tu trabajo, tus horarios, tus costumbres.",
+ "gramatica": "Present simple — forma afirmativa",
+ "concepto": {
+  "puntos": [
+   "El present simple sirve para lo que haces siempre, por costumbre o por rutina. No para lo que haces en este momento.",
+   "El verbo va tal cual, sin cambiar, para I, you, we y they: I work, you work, we work.",
+   "La única excepción es he, she e it: se agrega una s al final. He works.",
+   "Esa s es la marca más olvidada del inglés y la que más delata a un hispanohablante, porque en español no existe nada parecido."
+  ],
+  "clave": "Verbo sin cambios, salvo con he, she o it: ahí lleva s."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "I / you / we / they",
+    "formula": "I work in an office."
+   },
+   {
+    "etiqueta": "He / she / it",
+    "formula": "She works in an office."
+   },
+   {
+    "etiqueta": "Termina en o, s, sh, ch, x",
+    "formula": "go → goes  ·  watch → watches"
+   },
+   {
+    "etiqueta": "Consonante + y",
+    "formula": "study → studies"
+   }
+  ],
+  "notas": [
+   "Have es irregular en tercera persona: he has, no he haves.",
+   "El present simple también sirve para verdades generales: water boils at 100 degrees.",
+   "Las palabras de tiempo suelen ir al final: I work every day."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "I work from nine to six.",
+   "es": "Trabajo de nueve a seis.",
+   "nota": null
+  },
+  {
+   "en": "She works at a hospital.",
+   "es": "Ella trabaja en un hospital.",
+   "nota": "La s de tercera persona"
+  },
+  {
+   "en": "We live in a small apartment.",
+   "es": "Vivimos en un departamento pequeño.",
+   "nota": null
+  },
+  {
+   "en": "He goes to the gym on Mondays.",
+   "es": "Él va al gimnasio los lunes.",
+   "nota": "Go pasa a goes"
+  },
+  {
+   "en": "My brother studies engineering.",
+   "es": "Mi hermano estudia ingeniería.",
+   "nota": "Study pasa a studies"
+  },
+  {
+   "en": "They get up early every day.",
+   "es": "Se levantan temprano todos los días.",
+   "nota": null
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Olvidar la s en tercera persona es el error número uno de este nivel. He work no existe: es he works.",
+   "No confundas el present simple con el continuous. I work es lo que haces siempre; I'm working es lo que haces ahora.",
+   "El sujeto sigue siendo obligatorio, aunque el español lo omita: se dice I work, nunca solo work."
+  ],
+  "contrastes": [
+   {
+    "mal": "My sister work in a bank.",
+    "bien": "My sister works in a bank.",
+    "por_que": "My sister equivale a she, así que el verbo lleva s."
+   },
+   {
+    "mal": "He study every night.",
+    "bien": "He studies every night.",
+    "por_que": "Consonante más y: la y pasa a ies."
+   },
+   {
+    "mal": "I'm work in an office.",
+    "bien": "I work in an office.",
+    "por_que": "El present simple no lleva to be delante."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "work",
+   "es": "trabajar",
+   "nota": null
+  },
+  {
+   "en": "live",
+   "es": "vivir",
+   "nota": null
+  },
+  {
+   "en": "study",
+   "es": "estudiar",
+   "nota": "studies"
+  },
+  {
+   "en": "go",
+   "es": "ir",
+   "nota": "goes"
+  },
+  {
+   "en": "get up",
+   "es": "levantarse",
+   "nota": null
+  },
+  {
+   "en": "wake up",
+   "es": "despertarse",
+   "nota": null
+  },
+  {
+   "en": "eat",
+   "es": "comer",
+   "nota": null
+  },
+  {
+   "en": "drink",
+   "es": "beber",
+   "nota": null
+  },
+  {
+   "en": "sleep",
+   "es": "dormir",
+   "nota": null
+  },
+  {
+   "en": "start / finish",
+   "es": "empezar / terminar",
+   "nota": null
+  },
+  {
+   "en": "read / write",
+   "es": "leer / escribir",
+   "nota": null
+  },
+  {
+   "en": "watch TV",
+   "es": "ver televisión",
+   "nota": "watches"
+  },
+  {
+   "en": "early / late",
+   "es": "temprano / tarde",
+   "nota": null
+  },
+  {
+   "en": "every day",
+   "es": "todos los días",
+   "nota": null
+  },
+  {
+   "en": "on Mondays",
+   "es": "los lunes",
+   "nota": "En plural para la costumbre"
+  }
+ ]
+}
