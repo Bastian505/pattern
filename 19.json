@@ -1,0 +1,97 @@
+{
+ "numero": 19,
+ "bloque": 3,
+ "tipo": "checkpoint",
+ "titulo": "Repaso del bloque 3",
+ "puedes": "Contar tu rutina completa y preguntarle a otro por la suya, en afirmativo, negativo y pregunta.",
+ "gramatica": "Present simple completo, have, WH questions y frecuencia",
+ "concepto": {
+  "puntos": [
+   "Este es el bloque más importante del A1. Con el present simple ya puedes hablar de tu vida entera en tiempo presente.",
+   "Todo gira alrededor de una sola idea: la s de tercera persona. Está en el verbo cuando afirmas, y salta al ayudante cuando niegas o preguntas.",
+   "Si tienes clara esa danza de la s, el resto del nivel es cuesta abajo."
+  ],
+  "clave": "He works. He doesn't work. Does he work? La s solo aparece una vez, y siempre en el primer verbo."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Afirmar",
+    "formula": "She works here."
+   },
+   {
+    "etiqueta": "Negar",
+    "formula": "She doesn't work here."
+   },
+   {
+    "etiqueta": "Preguntar",
+    "formula": "Does she work here?"
+   },
+   {
+    "etiqueta": "Pedir información",
+    "formula": "Where does she work?"
+   }
+  ],
+  "notas": [
+   "Have es irregular solo en afirmativo: he has, pero he doesn't have.",
+   "Los adverbios de frecuencia van antes del verbo y después de to be.",
+   "To be nunca usa do: Are you tired?, no Do you are tired?"
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "I get up at six and I start work at eight.",
+   "es": "Me levanto a las seis y empiezo a trabajar a las ocho.",
+   "nota": "Unidad 14"
+  },
+  {
+   "en": "My wife works from home. She doesn't travel much.",
+   "es": "Mi esposa trabaja desde casa. No viaja mucho.",
+   "nota": "Unidades 14 y 15"
+  },
+  {
+   "en": "Do you have lunch at the office?",
+   "es": "¿Almuerzas en la oficina?",
+   "nota": "Unidades 13 y 16"
+  },
+  {
+   "en": "Where does your brother live?",
+   "es": "¿Dónde vive tu hermano?",
+   "nota": "Unidad 17"
+  },
+  {
+   "en": "I usually go to the gym twice a week.",
+   "es": "Normalmente voy al gimnasio dos veces por semana.",
+   "nota": "Unidad 18"
+  },
+  {
+   "en": "He never works on Sundays. — Why not?",
+   "es": "Él nunca trabaja los domingos. — ¿Por qué no?",
+   "nota": "Todo junto"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Los tres errores que deben estar superados antes del bloque 4: olvidar la s en tercera persona, dejarla después de doesn't o does, y preguntar sin ayudante.",
+   "Si alguno todavía se te escapa, no sigas: este bloque es la base de todo lo que viene."
+  ],
+  "contrastes": [
+   {
+    "mal": "He work in a bank.",
+    "bien": "He works in a bank.",
+    "por_que": "Tercera persona afirmativa: el verbo lleva s."
+   },
+   {
+    "mal": "He doesn't works in a bank.",
+    "bien": "He doesn't work in a bank.",
+    "por_que": "La s ya está en doesn't."
+   },
+   {
+    "mal": "Where he works?",
+    "bien": "Where does he work?",
+    "por_que": "Falta el ayudante, y entonces el verbo pierde la s."
+   }
+  ]
+ },
+ "vocabulario": []
+}

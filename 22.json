@@ -1,0 +1,174 @@
+{
+ "numero": 22,
+ "bloque": 4,
+ "titulo": "Dónde está",
+ "puedes": "Decir dónde está algo o alguien, y entender indicaciones sencillas.",
+ "gramatica": "Preposiciones de lugar",
+ "concepto": {
+  "puntos": [
+   "Las tres preposiciones básicas de lugar son in, on y at, y no se reparten igual que en español.",
+   "In es adentro de algo con límites: in the box, in the kitchen, in Chile.",
+   "On es sobre una superficie o en contacto con ella: on the table, on the wall, on the bus.",
+   "At es un punto, un lugar específico donde pasa algo: at home, at work, at the door."
+  ],
+  "clave": "In es dentro, on es encima, at es un punto. El español usa en para las tres."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "in",
+    "formula": "in the box · in the city · in my bag"
+   },
+   {
+    "etiqueta": "on",
+    "formula": "on the table · on the wall · on the bus"
+   },
+   {
+    "etiqueta": "at",
+    "formula": "at home · at work · at the bus stop"
+   },
+   {
+    "etiqueta": "Preguntar",
+    "formula": "Where is the...?"
+   }
+  ],
+  "notas": [
+   "Otras útiles: under, behind, in front of, between, next to, near, opposite.",
+   "In front of es delante de; opposite es enfrente, del otro lado.",
+   "Se dice at home y at work, sin artículo, pero in the office con artículo."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "The keys are on the table.",
+   "es": "Las llaves están sobre la mesa.",
+   "nota": "Superficie: on"
+  },
+  {
+   "en": "My phone is in my bag.",
+   "es": "Mi teléfono está en mi bolso.",
+   "nota": "Adentro: in"
+  },
+  {
+   "en": "She's at work right now.",
+   "es": "Ella está en el trabajo ahora.",
+   "nota": "Punto: at"
+  },
+  {
+   "en": "The bank is next to the supermarket.",
+   "es": "El banco está al lado del supermercado.",
+   "nota": null
+  },
+  {
+   "en": "There's a car in front of the house.",
+   "es": "Hay un auto delante de la casa.",
+   "nota": null
+  },
+  {
+   "en": "Where's the bathroom? — It's behind you.",
+   "es": "¿Dónde está el baño? — Detrás de ti.",
+   "nota": null
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "El español usa en para todo, así que hay que elegir a conciencia entre in, on y at. Es cuestión de práctica, no de regla perfecta.",
+   "Ojo con el transporte: se dice on the bus, on the plane, on the train, pero in the car y in a taxi.",
+   "In front of no es enfrente en el sentido de al otro lado. Eso es opposite."
+  ],
+  "contrastes": [
+   {
+    "mal": "The keys are in the table.",
+    "bien": "The keys are on the table.",
+    "por_que": "Sobre una superficie va on. In sería dentro de la mesa."
+   },
+   {
+    "mal": "I'm in work.",
+    "bien": "I'm at work.",
+    "por_que": "El trabajo como lugar donde estás es at."
+   },
+   {
+    "mal": "I'm in the bus.",
+    "bien": "I'm on the bus.",
+    "por_que": "Bus, tren y avión llevan on; el auto lleva in."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "in",
+   "es": "dentro de",
+   "nota": null
+  },
+  {
+   "en": "on",
+   "es": "sobre",
+   "nota": null
+  },
+  {
+   "en": "at",
+   "es": "en (un punto)",
+   "nota": null
+  },
+  {
+   "en": "under",
+   "es": "debajo de",
+   "nota": null
+  },
+  {
+   "en": "behind",
+   "es": "detrás de",
+   "nota": null
+  },
+  {
+   "en": "in front of",
+   "es": "delante de",
+   "nota": null
+  },
+  {
+   "en": "opposite",
+   "es": "enfrente de",
+   "nota": "Al otro lado"
+  },
+  {
+   "en": "next to",
+   "es": "al lado de",
+   "nota": null
+  },
+  {
+   "en": "between",
+   "es": "entre",
+   "nota": null
+  },
+  {
+   "en": "street",
+   "es": "calle",
+   "nota": null
+  },
+  {
+   "en": "corner",
+   "es": "esquina",
+   "nota": null
+  },
+  {
+   "en": "bus stop",
+   "es": "paradero",
+   "nota": null
+  },
+  {
+   "en": "turn left / right",
+   "es": "doblar a la izquierda / derecha",
+   "nota": null
+  },
+  {
+   "en": "go straight",
+   "es": "seguir derecho",
+   "nota": null
+  },
+  {
+   "en": "on the bus / in the car",
+   "es": "en el bus / en el auto",
+   "nota": "Cada uno con la suya"
+  }
+ ]
+}

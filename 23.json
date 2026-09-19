@@ -1,0 +1,174 @@
+{
+ "numero": 23,
+ "bloque": 4,
+ "titulo": "La hora y la fecha",
+ "puedes": "Decir la hora, acordar una cita y hablar de días, meses y fechas.",
+ "gramatica": "Preposiciones de tiempo: in, on, at",
+ "concepto": {
+  "puntos": [
+   "Las mismas tres preposiciones del lugar sirven para el tiempo, pero con una lógica clara y fácil de recordar.",
+   "At para horas exactas y momentos puntuales: at seven, at noon, at night.",
+   "On para días y fechas: on Monday, on July 5th.",
+   "In para periodos largos: meses, estaciones, años y partes del día: in April, in the morning, in 2026."
+  ],
+  "clave": "De lo más corto a lo más largo: at para la hora, on para el día, in para el mes o el año."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "at",
+    "formula": "at 7:00 · at noon · at night"
+   },
+   {
+    "etiqueta": "on",
+    "formula": "on Monday · on May 3rd"
+   },
+   {
+    "etiqueta": "in",
+    "formula": "in May · in 2026 · in the morning"
+   },
+   {
+    "etiqueta": "Preguntar la hora",
+    "formula": "What time is it?"
+   }
+  ],
+  "notas": [
+   "La hora se dice con it: It's three o'clock. It's half past four.",
+   "En Estados Unidos se usa el reloj de 12 horas con a.m. y p.m.",
+   "La fecha americana pone el mes primero: May 3rd, 2026 y se escribe 5/3/2026."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "What time is it? — It's a quarter past nine.",
+   "es": "¿Qué hora es? — Son las nueve y cuarto.",
+   "nota": null
+  },
+  {
+   "en": "The meeting is at three o'clock.",
+   "es": "La reunión es a las tres.",
+   "nota": "Hora: at"
+  },
+  {
+   "en": "I don't work on Sundays.",
+   "es": "No trabajo los domingos.",
+   "nota": "Día: on"
+  },
+  {
+   "en": "My birthday is in March.",
+   "es": "Mi cumpleaños es en marzo.",
+   "nota": "Mes: in"
+  },
+  {
+   "en": "See you on Friday at eight.",
+   "es": "Nos vemos el viernes a las ocho.",
+   "nota": "Día y hora juntos"
+  },
+  {
+   "en": "I get up early in the morning.",
+   "es": "Me levanto temprano en la mañana.",
+   "nota": "Parte del día: in"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "At night es la excepción: la noche va con at, aunque las otras partes del día vayan con in.",
+   "Los días y meses siempre con mayúscula en inglés: Monday, March. En español van en minúscula.",
+   "La fecha americana invierte el orden respecto al chileno: 5/3 es 3 de mayo, no 5 de marzo."
+  ],
+  "contrastes": [
+   {
+    "mal": "I work in Monday.",
+    "bien": "I work on Monday.",
+    "por_que": "Los días llevan on."
+   },
+   {
+    "mal": "My birthday is in march.",
+    "bien": "My birthday is in March.",
+    "por_que": "Los meses van con mayúscula."
+   },
+   {
+    "mal": "I study in the night.",
+    "bien": "I study at night.",
+    "por_que": "La noche es la excepción: va con at."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "What time is it?",
+   "es": "¿Qué hora es?",
+   "nota": null
+  },
+  {
+   "en": "o'clock",
+   "es": "en punto",
+   "nota": null
+  },
+  {
+   "en": "half past",
+   "es": "y media",
+   "nota": null
+  },
+  {
+   "en": "a quarter past / to",
+   "es": "y cuarto / menos cuarto",
+   "nota": null
+  },
+  {
+   "en": "a.m. / p.m.",
+   "es": "de la mañana / de la tarde",
+   "nota": null
+  },
+  {
+   "en": "noon / midnight",
+   "es": "mediodía / medianoche",
+   "nota": null
+  },
+  {
+   "en": "Monday, Tuesday, Wednesday",
+   "es": "lunes, martes, miércoles",
+   "nota": "Con mayúscula"
+  },
+  {
+   "en": "Thursday, Friday",
+   "es": "jueves, viernes",
+   "nota": null
+  },
+  {
+   "en": "Saturday, Sunday",
+   "es": "sábado, domingo",
+   "nota": null
+  },
+  {
+   "en": "January, February, March",
+   "es": "enero, febrero, marzo",
+   "nota": null
+  },
+  {
+   "en": "today / tomorrow",
+   "es": "hoy / mañana",
+   "nota": null
+  },
+  {
+   "en": "yesterday",
+   "es": "ayer",
+   "nota": null
+  },
+  {
+   "en": "meeting",
+   "es": "reunión",
+   "nota": null
+  },
+  {
+   "en": "in the morning",
+   "es": "en la mañana",
+   "nota": null
+  },
+  {
+   "en": "at night",
+   "es": "de noche",
+   "nota": "Excepción: at"
+  }
+ ]
+}

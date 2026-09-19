@@ -1,0 +1,97 @@
+{
+ "numero": 6,
+ "bloque": 1,
+ "tipo": "checkpoint",
+ "titulo": "Repaso del bloque 1",
+ "puedes": "Presentarte por completo: nombre, origen, edad y trabajo, en una conversación corta.",
+ "gramatica": "Todo el verbo to be: afirmativo, negativo y preguntas",
+ "concepto": {
+  "puntos": [
+   "Las cinco unidades anteriores giran alrededor de un solo verbo: to be. Si lo dominas, ya puedes sostener una presentación completa.",
+   "Tienes las tres formas: afirmar (I'm Bastian), negar (I'm not from Peru) y preguntar (Are you Chilean?).",
+   "Este checkpoint no enseña nada nuevo: comprueba que lo anterior está firme antes de seguir."
+  ],
+  "clave": "Si puedes presentarte entero sin pensar cada palabra, el bloque 1 está cerrado."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Afirmar",
+    "formula": "I'm / You're / He's / We're"
+   },
+   {
+    "etiqueta": "Negar",
+    "formula": "I'm not / He isn't / They aren't"
+   },
+   {
+    "etiqueta": "Preguntar",
+    "formula": "Am I? / Is he? / Are you?"
+   },
+   {
+    "etiqueta": "Responder corto",
+    "formula": "Yes, I am. / No, I'm not."
+   }
+  ],
+  "notas": [
+   "Artículo a o an delante de toda profesión en singular.",
+   "La edad va con to be, nunca con have.",
+   "Países, nacionalidades e idiomas siempre con mayúscula."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "Hi, I'm Daniel. Nice to meet you.",
+   "es": "Hola, soy Daniel. Mucho gusto.",
+   "nota": "Unidad 1"
+  },
+  {
+   "en": "What's your name? How do you spell it?",
+   "es": "¿Cómo te llamas? ¿Cómo se escribe?",
+   "nota": "Unidad 2"
+  },
+  {
+   "en": "I'm from Bogota, in Colombia. I'm Colombian.",
+   "es": "Soy de Bogotá, en Colombia. Soy colombiano.",
+   "nota": "Unidad 3"
+  },
+  {
+   "en": "I'm twenty-eight years old.",
+   "es": "Tengo veintiocho años.",
+   "nota": "Unidad 4"
+  },
+  {
+   "en": "I'm a teacher. I work for a small school.",
+   "es": "Soy profesor. Trabajo para un colegio pequeño.",
+   "nota": "Unidad 5"
+  },
+  {
+   "en": "I'm not a student. And you? Are you a student?",
+   "es": "No soy estudiante. ¿Y tú? ¿Eres estudiante?",
+   "nota": "Todo junto"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Los tres errores que hay que tener superados antes de seguir: decir la edad con have, olvidar el artículo en la profesión, y omitir el sujeto o el verbo en una respuesta.",
+   "Si alguno de esos tres todavía se te escapa, conviene repetir esa unidad antes de pasar al bloque 2."
+  ],
+  "contrastes": [
+   {
+    "mal": "I have 28 years.",
+    "bien": "I'm 28.",
+    "por_que": "La edad va con to be."
+   },
+   {
+    "mal": "I'm engineer.",
+    "bien": "I'm an engineer.",
+    "por_que": "Profesión en singular siempre con artículo."
+   },
+   {
+    "mal": "Fine, thanks.",
+    "bien": "I'm fine, thanks.",
+    "por_que": "El sujeto y el verbo no se omiten."
+   }
+  ]
+ },
+ "vocabulario": []
+}

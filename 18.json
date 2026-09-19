@@ -1,0 +1,174 @@
+{
+ "numero": 18,
+ "bloque": 3,
+ "titulo": "Cada cuánto",
+ "puedes": "Decir con qué frecuencia haces algo y preguntarle a otro por sus costumbres.",
+ "gramatica": "Adverbios de frecuencia",
+ "concepto": {
+  "puntos": [
+   "Los adverbios de frecuencia dicen cada cuánto pasa algo: always, usually, often, sometimes, never.",
+   "Su posición es fija y poco intuitiva: van antes del verbo principal, no al final como en español.",
+   "Pero con to be van después: I am always tired, no I always am tired. Es la única excepción.",
+   "Never ya es negativo. No se combina con don't: se dice I never smoke, nunca I don't never smoke."
+  ],
+  "clave": "Antes del verbo normal, después de to be."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Antes del verbo",
+    "formula": "I always get up at six."
+   },
+   {
+    "etiqueta": "Después de to be",
+    "formula": "She is never late."
+   },
+   {
+    "etiqueta": "Escala",
+    "formula": "always > usually > often > sometimes > rarely > never"
+   },
+   {
+    "etiqueta": "Preguntar",
+    "formula": "How often do you...?"
+   }
+  ],
+  "notas": [
+   "Las expresiones largas como every day, once a week o twice a month van al final de la frase.",
+   "Sometimes es flexible: puede ir al principio o antes del verbo.",
+   "Once es una vez, twice dos veces, y de ahí en adelante se usa three times, four times."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "I always have coffee in the morning.",
+   "es": "Siempre tomo café en la mañana.",
+   "nota": "Antes del verbo"
+  },
+  {
+   "en": "She is never late for work.",
+   "es": "Ella nunca llega tarde al trabajo.",
+   "nota": "Después de to be"
+  },
+  {
+   "en": "We usually eat at home.",
+   "es": "Normalmente comemos en casa.",
+   "nota": null
+  },
+  {
+   "en": "He goes to the gym twice a week.",
+   "es": "Va al gimnasio dos veces por semana.",
+   "nota": "Expresión larga, al final"
+  },
+  {
+   "en": "How often do you travel?",
+   "es": "¿Cada cuánto viajas?",
+   "nota": null
+  },
+  {
+   "en": "I don't often watch TV.",
+   "es": "No veo televisión muy seguido.",
+   "nota": null
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Poner el adverbio al final es el error más común, porque en español suena natural: I get up early always está mal.",
+   "Never ya niega. Combinarlo con don't crea una doble negación que el inglés no acepta.",
+   "Con to be el orden se invierte. Si dudas, recuerda: I am always, pero I always work."
+  ],
+  "contrastes": [
+   {
+    "mal": "I go always to the gym.",
+    "bien": "I always go to the gym.",
+    "por_que": "El adverbio va antes del verbo, no después."
+   },
+   {
+    "mal": "I don't never smoke.",
+    "bien": "I never smoke.",
+    "por_que": "Never ya es negativo; no admite otro negativo al lado."
+   },
+   {
+    "mal": "He always is tired.",
+    "bien": "He is always tired.",
+    "por_que": "Con to be el adverbio va después del verbo."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "always",
+   "es": "siempre",
+   "nota": null
+  },
+  {
+   "en": "usually",
+   "es": "normalmente",
+   "nota": null
+  },
+  {
+   "en": "often",
+   "es": "a menudo",
+   "nota": null
+  },
+  {
+   "en": "sometimes",
+   "es": "a veces",
+   "nota": null
+  },
+  {
+   "en": "rarely / hardly ever",
+   "es": "casi nunca",
+   "nota": null
+  },
+  {
+   "en": "never",
+   "es": "nunca",
+   "nota": "Ya es negativo"
+  },
+  {
+   "en": "how often",
+   "es": "cada cuánto",
+   "nota": null
+  },
+  {
+   "en": "once a week",
+   "es": "una vez por semana",
+   "nota": null
+  },
+  {
+   "en": "twice a month",
+   "es": "dos veces al mes",
+   "nota": null
+  },
+  {
+   "en": "three times a year",
+   "es": "tres veces al año",
+   "nota": null
+  },
+  {
+   "en": "every morning",
+   "es": "todas las mañanas",
+   "nota": null
+  },
+  {
+   "en": "on weekends",
+   "es": "los fines de semana",
+   "nota": null
+  },
+  {
+   "en": "at night",
+   "es": "de noche",
+   "nota": null
+  },
+  {
+   "en": "gym",
+   "es": "gimnasio",
+   "nota": null
+  },
+  {
+   "en": "smoke",
+   "es": "fumar",
+   "nota": null
+  }
+ ]
+}

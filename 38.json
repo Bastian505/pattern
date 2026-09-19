@@ -1,0 +1,97 @@
+{
+ "numero": 38,
+ "bloque": 6,
+ "tipo": "checkpoint",
+ "titulo": "Repaso del bloque 6",
+ "puedes": "Contar lo que hiciste ayer o el fin de semana, y preguntarle a otro por lo suyo.",
+ "gramatica": "Pasado completo: was/were, regulares, irregulares y did",
+ "concepto": {
+  "puntos": [
+   "Con este bloque ya puedes hablar de tu día de ayer completo, que es justo lo que necesita la sección de Día a Día.",
+   "El patrón es idéntico al del presente: en afirmativo el verbo carga la marca, y en negativo y pregunta esa marca salta al ayudante.",
+   "Solo cambia quién es el ayudante: en presente era do o does, en pasado siempre es did."
+  ],
+  "clave": "I went. I didn't go. Did I go? La marca de pasado aparece una sola vez, siempre en el primer verbo."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Afirmar",
+    "formula": "I went to the beach."
+   },
+   {
+    "etiqueta": "Negar",
+    "formula": "I didn't go to the beach."
+   },
+   {
+    "etiqueta": "Preguntar",
+    "formula": "Did you go to the beach?"
+   },
+   {
+    "etiqueta": "Con to be",
+    "formula": "I was there. · Were you there?"
+   }
+  ],
+  "notas": [
+   "To be nunca usa did, ni en presente ni en pasado.",
+   "El pasado no cambia con la persona: ni los regulares ni did.",
+   "Ago va al final: three days ago."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "I was at home all weekend.",
+   "es": "Estuve en casa todo el fin de semana.",
+   "nota": "Unidad 34"
+  },
+  {
+   "en": "I watched two movies and cooked a lot.",
+   "es": "Vi dos películas y cociné bastante.",
+   "nota": "Unidad 35"
+  },
+  {
+   "en": "On Sunday I went to my parents' house.",
+   "es": "El domingo fui a casa de mis padres.",
+   "nota": "Unidad 36"
+  },
+  {
+   "en": "We had lunch together and talked for hours.",
+   "es": "Almorzamos juntos y conversamos por horas.",
+   "nota": null
+  },
+  {
+   "en": "What did you do last night?",
+   "es": "¿Qué hiciste anoche?",
+   "nota": "Unidad 37"
+  },
+  {
+   "en": "I didn't do much. I was really tired.",
+   "es": "No hice mucho. Estaba muy cansado.",
+   "nota": "Todo junto"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Los tres errores que deben estar superados: dejar el verbo en pasado después de did, poner -ed a un verbo irregular, y usar did con to be.",
+   "Si el pasado está firme, ya puedes contar tu día. El bloque 7 cierra el nivel con el futuro y las comparaciones."
+  ],
+  "contrastes": [
+   {
+    "mal": "I didn't went out.",
+    "bien": "I didn't go out.",
+    "por_que": "Con did el verbo vuelve a su forma base."
+   },
+   {
+    "mal": "She goed to work.",
+    "bien": "She went to work.",
+    "por_que": "Go es irregular; no admite -ed."
+   },
+   {
+    "mal": "Did you were tired?",
+    "bien": "Were you tired?",
+    "por_que": "To be se pregunta solo, sin did."
+   }
+  ]
+ },
+ "vocabulario": []
+}

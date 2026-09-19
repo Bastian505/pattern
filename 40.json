@@ -1,0 +1,174 @@
+{
+ "numero": 40,
+ "bloque": 7,
+ "titulo": "Predicciones y decisiones",
+ "puedes": "Predecir algo, ofrecerte a ayudar y tomar una decisión en el momento.",
+ "gramatica": "Will",
+ "concepto": {
+  "puntos": [
+   "Will es un modal, así que se comporta como can: no cambia con la persona y el verbo va en forma base.",
+   "Se usa para tres cosas: predecir el futuro, decidir algo en el momento y ofrecerse a hacer algo.",
+   "La diferencia con going to está en cuándo se decidió. Going to es un plan previo; will es algo que decides mientras hablas.",
+   "Casi siempre se contrae: I'll, you'll, she'll. Y el negativo es won't, no willn't."
+  ],
+  "clave": "Ya lo tenías pensado: going to. Lo decides ahora mismo: will."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Afirmativo",
+    "formula": "I will help. → I'll help."
+   },
+   {
+    "etiqueta": "Negativo",
+    "formula": "I won't be late."
+   },
+   {
+    "etiqueta": "Pregunta",
+    "formula": "Will you come?"
+   },
+   {
+    "etiqueta": "Contraste",
+    "formula": "I'm going to study. (plan) · I'll study. (decisión)"
+   }
+  ],
+  "notas": [
+   "Won't es la contracción de will not, con esa forma irregular.",
+   "Se usa mucho con probably, maybe, I think: I think it will rain.",
+   "Para ofrecerse: I'll help you with that. Para prometer: I won't forget."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "I think it will rain tomorrow.",
+   "es": "Creo que va a llover mañana.",
+   "nota": "Predicción"
+  },
+  {
+   "en": "That bag looks heavy. I'll help you.",
+   "es": "Esa bolsa se ve pesada. Te ayudo.",
+   "nota": "Decisión del momento"
+  },
+  {
+   "en": "Don't worry, I won't forget.",
+   "es": "No te preocupes, no se me va a olvidar.",
+   "nota": "Promesa"
+  },
+  {
+   "en": "Will you be home tonight?",
+   "es": "¿Vas a estar en casa esta noche?",
+   "nota": null
+  },
+  {
+   "en": "She'll probably arrive late.",
+   "es": "Probablemente llegue tarde.",
+   "nota": null
+  },
+  {
+   "en": "In ten years everything will be different.",
+   "es": "En diez años todo será distinto.",
+   "nota": "Futuro lejano"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Poner to después de will es un error clásico: no es I will to go, es I will go.",
+   "Will no lleva s en tercera persona: he will, no he wills.",
+   "Usar will para un plan que ya tenías suena raro. Si compraste el pasaje, di I'm going to travel, no I'll travel."
+  ],
+  "contrastes": [
+   {
+    "mal": "I will to help you.",
+    "bien": "I'll help you.",
+    "por_que": "Después de un modal el verbo va sin to."
+   },
+   {
+    "mal": "He wills come tomorrow.",
+    "bien": "He'll come tomorrow.",
+    "por_que": "Los modales no cambian con la persona."
+   },
+   {
+    "mal": "I willn't go.",
+    "bien": "I won't go.",
+    "por_que": "El negativo de will es won't, una forma irregular."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "will / won't",
+   "es": "futuro / negativo",
+   "nota": null
+  },
+  {
+   "en": "I'll",
+   "es": "yo voy a",
+   "nota": "Contracción de I will"
+  },
+  {
+   "en": "probably",
+   "es": "probablemente",
+   "nota": null
+  },
+  {
+   "en": "maybe",
+   "es": "quizás",
+   "nota": null
+  },
+  {
+   "en": "I think",
+   "es": "creo que",
+   "nota": null
+  },
+  {
+   "en": "I hope",
+   "es": "espero que",
+   "nota": null
+  },
+  {
+   "en": "promise",
+   "es": "prometer",
+   "nota": null
+  },
+  {
+   "en": "heavy / light",
+   "es": "pesado / liviano",
+   "nota": null
+  },
+  {
+   "en": "different",
+   "es": "distinto",
+   "nota": null
+  },
+  {
+   "en": "future",
+   "es": "futuro",
+   "nota": null
+  },
+  {
+   "en": "in ten years",
+   "es": "en diez años",
+   "nota": null
+  },
+  {
+   "en": "someday",
+   "es": "algún día",
+   "nota": null
+  },
+  {
+   "en": "See you soon",
+   "es": "Nos vemos pronto",
+   "nota": null
+  },
+  {
+   "en": "I'll be right back",
+   "es": "Ya vuelvo",
+   "nota": null
+  },
+  {
+   "en": "It depends",
+   "es": "Depende",
+   "nota": null
+  }
+ ]
+}

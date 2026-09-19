@@ -1,0 +1,174 @@
+{
+ "numero": 21,
+ "bloque": 4,
+ "titulo": "El artículo the",
+ "puedes": "Saber cuándo poner the y cuándo el inglés no lleva artículo, que es donde el español sí lo pone.",
+ "gramatica": "El artículo the y el artículo cero",
+ "concepto": {
+  "puntos": [
+   "A o an presentan algo por primera vez. The se usa cuando el otro ya sabe de qué hablas: I have a car. The car is red.",
+   "The también se usa cuando algo es único o está claro por el contexto: the sun, the door, the manager.",
+   "Lo difícil no es cuándo ponerlo, sino cuándo NO ponerlo. El inglés lo omite en muchos casos donde el español lo exige.",
+   "Se omite al hablar en general: I like music, no I like the music. Y con comidas, idiomas, días, meses y países."
+  ],
+  "clave": "Para hablar en general, el inglés no pone artículo. Music, coffee, Mondays, Chile: todos van sin the."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Primera mención",
+    "formula": "I have a dog."
+   },
+   {
+    "etiqueta": "Ya conocido",
+    "formula": "The dog is very old."
+   },
+   {
+    "etiqueta": "Único o claro",
+    "formula": "Close the door. / The manager is here."
+   },
+   {
+    "etiqueta": "Sin artículo",
+    "formula": "I like music. · Coffee is good. · on Mondays"
+   }
+  ],
+  "notas": [
+   "Sin artículo: idiomas (I speak Spanish), comidas (I have lunch), días y meses, la mayoría de países y ciudades.",
+   "Con the: instrumentos (play the guitar), superlativos (the best), y algunos países como the United States.",
+   "The se pronuncia distinto según lo que sigue, pero se escribe siempre igual."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "There's a car outside. The car is blue.",
+   "es": "Hay un auto afuera. El auto es azul.",
+   "nota": "Primero a, luego the"
+  },
+  {
+   "en": "I like music, especially rock.",
+   "es": "Me gusta la música, sobre todo el rock.",
+   "nota": "En general: sin artículo"
+  },
+  {
+   "en": "Can you close the door, please?",
+   "es": "¿Puedes cerrar la puerta?",
+   "nota": "Ambos saben cuál"
+  },
+  {
+   "en": "I have lunch at one.",
+   "es": "Almuerzo a la una.",
+   "nota": "Comidas sin artículo"
+  },
+  {
+   "en": "She speaks English and French.",
+   "es": "Habla inglés y francés.",
+   "nota": "Idiomas sin artículo"
+  },
+  {
+   "en": "He plays the guitar very well.",
+   "es": "Toca la guitarra muy bien.",
+   "nota": "Instrumentos con the"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Poner the al hablar en general es el error más frecuente y el que más suena a traducción: The life is difficult delata de inmediato.",
+   "Los idiomas nunca llevan artículo. I speak the English está mal, es I speak English.",
+   "Los días tampoco: se dice on Monday, no on the Monday."
+  ],
+  "contrastes": [
+   {
+    "mal": "The life is difficult.",
+    "bien": "Life is difficult.",
+    "por_que": "Al hablar de algo en general, el inglés no usa artículo."
+   },
+   {
+    "mal": "I study the English.",
+    "bien": "I study English.",
+    "por_que": "Los idiomas van sin artículo."
+   },
+   {
+    "mal": "I go to the work at eight.",
+    "bien": "I go to work at eight.",
+    "por_que": "Work, home y school van sin artículo en estas expresiones."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "the",
+   "es": "el, la, los, las",
+   "nota": null
+  },
+  {
+   "en": "go to work",
+   "es": "ir al trabajo",
+   "nota": "Sin artículo"
+  },
+  {
+   "en": "go home",
+   "es": "ir a casa",
+   "nota": "Sin to ni artículo"
+  },
+  {
+   "en": "go to school",
+   "es": "ir al colegio",
+   "nota": "Sin artículo"
+  },
+  {
+   "en": "at home",
+   "es": "en casa",
+   "nota": null
+  },
+  {
+   "en": "in bed",
+   "es": "en la cama",
+   "nota": "Sin artículo"
+  },
+  {
+   "en": "life",
+   "es": "vida",
+   "nota": null
+  },
+  {
+   "en": "music",
+   "es": "música",
+   "nota": null
+  },
+  {
+   "en": "nature",
+   "es": "naturaleza",
+   "nota": null
+  },
+  {
+   "en": "outside / inside",
+   "es": "afuera / adentro",
+   "nota": null
+  },
+  {
+   "en": "close / open",
+   "es": "cerrar / abrir",
+   "nota": null
+  },
+  {
+   "en": "especially",
+   "es": "sobre todo",
+   "nota": null
+  },
+  {
+   "en": "guitar",
+   "es": "guitarra",
+   "nota": "play the guitar"
+  },
+  {
+   "en": "the best",
+   "es": "el mejor",
+   "nota": "Siempre con the"
+  },
+  {
+   "en": "the same",
+   "es": "lo mismo",
+   "nota": null
+  }
+ ]
+}

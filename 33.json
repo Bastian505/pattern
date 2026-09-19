@@ -1,0 +1,97 @@
+{
+ "numero": 33,
+ "bloque": 5,
+ "tipo": "checkpoint",
+ "titulo": "Repaso del bloque 5",
+ "puedes": "Hablar de lo que pasa ahora, de lo que sabes hacer, de lo que te gusta y pedir cosas con cortesía.",
+ "gramatica": "Present continuous, can, like + ing, would like e imperativo",
+ "concepto": {
+  "puntos": [
+   "Este bloque agregó una capa nueva: además de contar tu rutina, ahora puedes hablar del momento presente y de lo que quieres.",
+   "Apareció por primera vez la forma -ing, que se usa en dos lugares distintos: el present continuous y después de like, love y hate.",
+   "Y apareció el primer modal, can, que abre la puerta a los demás en el A2."
+  ],
+  "clave": "-ing con to be es lo que pasa ahora. -ing después de like es la actividad que te gusta."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Ahora",
+    "formula": "I'm working."
+   },
+   {
+    "etiqueta": "Habilidad",
+    "formula": "I can swim."
+   },
+   {
+    "etiqueta": "Gusto",
+    "formula": "I like swimming."
+   },
+   {
+    "etiqueta": "Pedido",
+    "formula": "I'd like to swim. · Let's swim."
+   }
+  ],
+  "notas": [
+   "Can y would like no cambian con la persona.",
+   "Después de can y de would like el verbo va distinto: can swim, pero would like to swim.",
+   "El imperativo es la única forma sin sujeto."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "I'm learning English because I need it for work.",
+   "es": "Estoy aprendiendo inglés porque lo necesito para el trabajo.",
+   "nota": "Unidad 27"
+  },
+  {
+   "en": "I usually cook at home, but tonight we're eating out.",
+   "es": "Normalmente cocino en casa, pero esta noche comemos fuera.",
+   "nota": "Unidad 28"
+  },
+  {
+   "en": "She can play the guitar really well.",
+   "es": "Ella toca la guitarra muy bien.",
+   "nota": "Unidad 29"
+  },
+  {
+   "en": "I love traveling but I hate flying.",
+   "es": "Me encanta viajar pero odio volar.",
+   "nota": "Unidad 30"
+  },
+  {
+   "en": "I'd like a table for two, please.",
+   "es": "Quisiera una mesa para dos.",
+   "nota": "Unidad 31"
+  },
+  {
+   "en": "Don't worry, let's talk tomorrow.",
+   "es": "No te preocupes, hablemos mañana.",
+   "nota": "Unidad 32"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Los tres errores que deben estar superados: olvidar el to be en el continuous, poner to después de can, y confundir I like con I'd like.",
+   "El siguiente bloque cambia de tiempo verbal por primera vez: entra el pasado. Conviene llegar con el presente firme."
+  ],
+  "contrastes": [
+   {
+    "mal": "I studying English now.",
+    "bien": "I'm studying English now.",
+    "por_que": "El continuous siempre necesita el to be."
+   },
+   {
+    "mal": "She can to cook very well.",
+    "bien": "She can cook very well.",
+    "por_que": "Después de un modal el verbo va sin to."
+   },
+   {
+    "mal": "I like a table for two.",
+    "bien": "I'd like a table for two.",
+    "por_que": "Para pedir algo se usa would like."
+   }
+  ]
+ },
+ "vocabulario": []
+}

@@ -1,0 +1,174 @@
+{
+ "numero": 17,
+ "bloque": 3,
+ "titulo": "Las palabras de pregunta",
+ "puedes": "Preguntar cualquier cosa: qué, dónde, cuándo, quién, por qué, cómo, cuánto y cuántos.",
+ "gramatica": "WH questions — what, where, when, who, why, how",
+ "concepto": {
+  "puntos": [
+   "Hasta ahora usaste preguntas sueltas como frases fijas: What's your name, Where are you from, How old are you. Todas siguen el mismo patrón y aquí se ve completo.",
+   "El patrón es siempre el mismo: la palabra de pregunta va primero y detrás va una pregunta normal, con to be o con do.",
+   "Estas preguntas piden información, no sí o no. Por eso no se responden con Yes o No.",
+   "How se combina con otras palabras para formar preguntas nuevas: how old, how much, how many, how often, how long."
+  ],
+  "clave": "Palabra de pregunta + la pregunta que ya sabías hacer. Nada más cambia."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Con to be",
+    "formula": "Where + are + you from?"
+   },
+   {
+    "etiqueta": "Con do / does",
+    "formula": "What + do + you do?"
+   },
+   {
+    "etiqueta": "Tercera persona",
+    "formula": "Where + does + she live?"
+   },
+   {
+    "etiqueta": "Excepción: who",
+    "formula": "Who lives here? (sin ayudante)"
+   }
+  ],
+  "notas": [
+   "What pregunta por cosas, who por personas, where por lugares, when por tiempo, why por motivo, how por manera.",
+   "Why se responde con because.",
+   "Cuando who es el sujeto de la frase, no lleva do: Who wants coffee?, no Who does want coffee?"
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "Where do you live?",
+   "es": "¿Dónde vives?",
+   "nota": null
+  },
+  {
+   "en": "What does she do on weekends?",
+   "es": "¿Qué hace ella los fines de semana?",
+   "nota": "El verbo sin s"
+  },
+  {
+   "en": "When does the class start?",
+   "es": "¿Cuándo empieza la clase?",
+   "nota": null
+  },
+  {
+   "en": "Why are you late? — Because the bus was slow.",
+   "es": "¿Por qué llegas tarde? — Porque el bus venía lento.",
+   "nota": "Why se responde con because"
+  },
+  {
+   "en": "How much is this? — It's twenty dollars.",
+   "es": "¿Cuánto cuesta esto? — Veinte dólares.",
+   "nota": "How much para precio"
+  },
+  {
+   "en": "How many brothers do you have?",
+   "es": "¿Cuántos hermanos tienes?",
+   "nota": "How many para contables"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "El error más común es olvidar el ayudante: Where you live? está mal, es Where do you live?",
+   "How much se usa con cosas que no se cuentan, como dinero, agua o tiempo. How many con cosas contables, como hermanos o libros.",
+   "What y which se parecen: what es abierto, which es elegir entre opciones concretas."
+  ],
+  "contrastes": [
+   {
+    "mal": "Where you work?",
+    "bien": "Where do you work?",
+    "por_que": "Falta el ayudante do."
+   },
+   {
+    "mal": "How many money do you have?",
+    "bien": "How much money do you have?",
+    "por_que": "El dinero no se cuenta en unidades: va con how much."
+   },
+   {
+    "mal": "What does he does?",
+    "bien": "What does he do?",
+    "por_que": "El primer does es el ayudante; el verbo va en forma base."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "what",
+   "es": "qué",
+   "nota": null
+  },
+  {
+   "en": "where",
+   "es": "dónde",
+   "nota": null
+  },
+  {
+   "en": "when",
+   "es": "cuándo",
+   "nota": null
+  },
+  {
+   "en": "who",
+   "es": "quién",
+   "nota": null
+  },
+  {
+   "en": "why",
+   "es": "por qué",
+   "nota": null
+  },
+  {
+   "en": "because",
+   "es": "porque",
+   "nota": "Responde a why"
+  },
+  {
+   "en": "how",
+   "es": "cómo",
+   "nota": null
+  },
+  {
+   "en": "how much",
+   "es": "cuánto",
+   "nota": "Cosas que no se cuentan"
+  },
+  {
+   "en": "how many",
+   "es": "cuántos",
+   "nota": "Cosas contables"
+  },
+  {
+   "en": "how often",
+   "es": "cada cuánto",
+   "nota": null
+  },
+  {
+   "en": "how long",
+   "es": "cuánto tiempo",
+   "nota": null
+  },
+  {
+   "en": "which",
+   "es": "cuál",
+   "nota": "Entre opciones"
+  },
+  {
+   "en": "whose",
+   "es": "de quién",
+   "nota": null
+  },
+  {
+   "en": "class",
+   "es": "clase",
+   "nota": null
+  },
+  {
+   "en": "dollar",
+   "es": "dólar",
+   "nota": null
+  }
+ ]
+}

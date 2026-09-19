@@ -1,0 +1,174 @@
+{
+ "numero": 16,
+ "bloque": 3,
+ "titulo": "Preguntar por rutinas",
+ "puedes": "Preguntarle a alguien qué hace, dónde vive, si le gusta algo, y responder con naturalidad.",
+ "gramatica": "Present simple — preguntas con do y does",
+ "concepto": {
+  "puntos": [
+   "Con to be la pregunta se hacía dando vuelta el orden. Con los demás verbos no se puede: hay que poner un ayudante adelante.",
+   "La fórmula es do o does, luego el sujeto, luego el verbo en su forma base.",
+   "Otra vez la s se traslada: se dice Does he work?, con el verbo limpio.",
+   "Las respuestas cortas repiten el ayudante, no el verbo: Yes, I do. No, he doesn't."
+  ],
+  "clave": "Do o does adelante, sujeto, y el verbo sin s."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "I / you / we / they",
+    "formula": "Do you work here?"
+   },
+   {
+    "etiqueta": "He / she / it",
+    "formula": "Does she work here?"
+   },
+   {
+    "etiqueta": "Respuesta corta",
+    "formula": "Yes, I do.  ·  No, she doesn't."
+   },
+   {
+    "etiqueta": "Con to be",
+    "formula": "Are you tired? (sin ayudante)"
+   }
+  ],
+  "notas": [
+   "Nunca respondas Yes, I work. La respuesta corta usa el ayudante: Yes, I do.",
+   "El verbo después de do o does va en forma base, siempre.",
+   "To be y can no usan ayudante: Are you...? Can you...?"
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "Do you live near here?",
+   "es": "¿Vives cerca de aquí?",
+   "nota": null
+  },
+  {
+   "en": "Does he work with you?",
+   "es": "¿Él trabaja contigo?",
+   "nota": "El verbo sin s"
+  },
+  {
+   "en": "Do you like your job? — Yes, I do.",
+   "es": "¿Te gusta tu trabajo? — Sí.",
+   "nota": "Respuesta corta"
+  },
+  {
+   "en": "Does your sister speak English? — No, she doesn't.",
+   "es": "¿Tu hermana habla inglés? — No.",
+   "nota": null
+  },
+  {
+   "en": "Do they have a car?",
+   "es": "¿Tienen auto?",
+   "nota": null
+  },
+  {
+   "en": "Are you ready?",
+   "es": "¿Estás listo?",
+   "nota": "To be no lleva do"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Preguntar sin el ayudante es el error más frecuente: You live here? se entiende, pero suena mal y es incorrecto por escrito.",
+   "Dejar la s en el verbo después de does también es muy común: Does she works? está mal.",
+   "No mezcles do con to be. Do you are tired? no existe: es Are you tired?"
+  ],
+  "contrastes": [
+   {
+    "mal": "Does she works in a bank?",
+    "bien": "Does she work in a bank?",
+    "por_que": "La s ya está en does."
+   },
+   {
+    "mal": "You have a car?",
+    "bien": "Do you have a car?",
+    "por_que": "Los verbos normales necesitan el ayudante para preguntar."
+   },
+   {
+    "mal": "Do you are a teacher?",
+    "bien": "Are you a teacher?",
+    "por_que": "To be pregunta solo, sin ayudante."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "Do you...?",
+   "es": "¿Tú...?",
+   "nota": null
+  },
+  {
+   "en": "Does he / she...?",
+   "es": "¿Él / ella...?",
+   "nota": null
+  },
+  {
+   "en": "Yes, I do. / No, I don't.",
+   "es": "Sí. / No.",
+   "nota": "Respuesta corta"
+  },
+  {
+   "en": "near",
+   "es": "cerca",
+   "nota": null
+  },
+  {
+   "en": "with",
+   "es": "con",
+   "nota": null
+  },
+  {
+   "en": "ready",
+   "es": "listo",
+   "nota": null
+  },
+  {
+   "en": "job",
+   "es": "trabajo, puesto",
+   "nota": null
+  },
+  {
+   "en": "drive",
+   "es": "manejar",
+   "nota": null
+  },
+  {
+   "en": "cook",
+   "es": "cocinar",
+   "nota": null
+  },
+  {
+   "en": "travel",
+   "es": "viajar",
+   "nota": null
+  },
+  {
+   "en": "play",
+   "es": "jugar, tocar",
+   "nota": null
+  },
+  {
+   "en": "listen to",
+   "es": "escuchar",
+   "nota": "Siempre con to"
+  },
+  {
+   "en": "look for",
+   "es": "buscar",
+   "nota": null
+  },
+  {
+   "en": "of course",
+   "es": "por supuesto",
+   "nota": null
+  },
+  {
+   "en": "sometimes",
+   "es": "a veces",
+   "nota": null
+  }
+ ]
+}

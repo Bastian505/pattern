@@ -1,0 +1,174 @@
+{
+ "numero": 8,
+ "bloque": 2,
+ "titulo": "Lo que es tuyo",
+ "puedes": "Decir de quién es algo y hablar de tus cosas y de las de otros.",
+ "gramatica": "Adjetivos posesivos y el genitivo 's",
+ "concepto": {
+  "puntos": [
+   "Hay dos maneras de indicar posesión: my book (adjetivo posesivo) y Ana's book (genitivo con apóstrofo).",
+   "El adjetivo posesivo va antes del sustantivo y no cambia con el plural: my book, my books.",
+   "El genitivo 's invierte el orden del español: el libro de Ana se dice Ana's book, primero el dueño.",
+   "Cuidado con la pareja más confusa del inglés: its es posesivo, it's es la contracción de it is."
+  ],
+  "clave": "Con 's, el dueño va primero: Ana's book, no book of Ana."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Posesivos",
+    "formula": "my, your, his, her, its, our, their"
+   },
+   {
+    "etiqueta": "Con nombre propio",
+    "formula": "Ana's car  ·  my brother's house"
+   },
+   {
+    "etiqueta": "Plural terminado en s",
+    "formula": "my parents' house (solo apóstrofo)"
+   },
+   {
+    "etiqueta": "Preguntar",
+    "formula": "Whose bag is this? — It's mine."
+   }
+  ],
+  "notas": [
+   "His es de él y her es de ella. No dependen del objeto, sino del dueño.",
+   "El posesivo nunca lleva s aunque el objeto sea plural: my books, no mys books.",
+   "Of se usa para cosas, no para personas: the door of the house, pero Ana's car."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "This is my phone.",
+   "es": "Este es mi teléfono.",
+   "nota": null
+  },
+  {
+   "en": "Her name is Laura and his name is Pedro.",
+   "es": "Ella se llama Laura y él se llama Pedro.",
+   "nota": "El posesivo sigue al dueño"
+  },
+  {
+   "en": "That's Carlos's car.",
+   "es": "Ese es el auto de Carlos.",
+   "nota": "El dueño va primero"
+  },
+  {
+   "en": "My parents' house is big.",
+   "es": "La casa de mis padres es grande.",
+   "nota": "Plural: solo apóstrofo"
+  },
+  {
+   "en": "Whose keys are these? — They're mine.",
+   "es": "¿De quién son estas llaves? — Son mías.",
+   "nota": null
+  },
+  {
+   "en": "The dog is in its house.",
+   "es": "El perro está en su casa.",
+   "nota": "Its sin apóstrofo"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Traducir literal el orden del español es el error más común: the car of Carlos no se dice, es Carlos's car.",
+   "His y her se eligen según quién posee, no según qué se posee. Her brother es el hermano de ella, aunque brother sea masculino.",
+   "It's significa it is. Si quieres decir su, sin apóstrofo: its."
+  ],
+  "contrastes": [
+   {
+    "mal": "The car of Carlos is new.",
+    "bien": "Carlos's car is new.",
+    "por_que": "El inglés pone al dueño primero con 's."
+   },
+   {
+    "mal": "Laura is my friend. His name is Laura.",
+    "bien": "Her name is Laura.",
+    "por_que": "El posesivo concuerda con el dueño: Laura es ella, entonces her."
+   },
+   {
+    "mal": "The dog is in it's house.",
+    "bien": "The dog is in its house.",
+    "por_que": "It's es it is. El posesivo no lleva apóstrofo."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "my / your",
+   "es": "mi / tu",
+   "nota": null
+  },
+  {
+   "en": "his / her",
+   "es": "su (de él) / su (de ella)",
+   "nota": null
+  },
+  {
+   "en": "our / their",
+   "es": "nuestro / de ellos",
+   "nota": null
+  },
+  {
+   "en": "its",
+   "es": "su (de una cosa)",
+   "nota": "Sin apóstrofo"
+  },
+  {
+   "en": "Whose?",
+   "es": "¿De quién?",
+   "nota": null
+  },
+  {
+   "en": "mine / yours",
+   "es": "mío / tuyo",
+   "nota": "Van solos, sin sustantivo"
+  },
+  {
+   "en": "phone",
+   "es": "teléfono",
+   "nota": null
+  },
+  {
+   "en": "keys",
+   "es": "llaves",
+   "nota": null
+  },
+  {
+   "en": "bag / backpack",
+   "es": "bolso / mochila",
+   "nota": null
+  },
+  {
+   "en": "wallet",
+   "es": "billetera",
+   "nota": null
+  },
+  {
+   "en": "laptop",
+   "es": "notebook",
+   "nota": null
+  },
+  {
+   "en": "car",
+   "es": "auto",
+   "nota": null
+  },
+  {
+   "en": "house / apartment",
+   "es": "casa / departamento",
+   "nota": "Americano; británico: flat"
+  },
+  {
+   "en": "watch",
+   "es": "reloj de pulsera",
+   "nota": null
+  },
+  {
+   "en": "glasses",
+   "es": "lentes",
+   "nota": "Siempre plural"
+  }
+ ]
+}

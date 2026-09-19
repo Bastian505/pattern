@@ -1,0 +1,174 @@
+{
+ "numero": 9,
+ "bloque": 2,
+ "titulo": "Esto y aquello",
+ "puedes": "Señalar cosas cercanas o lejanas y preguntar qué son.",
+ "gramatica": "This, that, these, those",
+ "concepto": {
+  "puntos": [
+   "El inglés distingue solo dos distancias: cerca y lejos. El español tiene tres (este, ese, aquel) y por eso sobra una.",
+   "This y these son para lo que está cerca; that y those para lo que está lejos.",
+   "This y that van con una sola cosa; these y those con varias.",
+   "También sirven para el tiempo y el teléfono: this morning, this week, o Hi, this is Ana al llamar."
+  ],
+  "clave": "Cerca: this y these. Lejos: that y those. Singular sin s, plural con s."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Cerca, singular",
+    "formula": "This is a book."
+   },
+   {
+    "etiqueta": "Cerca, plural",
+    "formula": "These are books."
+   },
+   {
+    "etiqueta": "Lejos, singular",
+    "formula": "That is a car."
+   },
+   {
+    "etiqueta": "Lejos, plural",
+    "formula": "Those are cars."
+   }
+  ],
+  "notas": [
+   "Con these y those el verbo va en plural: are, no is.",
+   "That's es la contracción de that is y se usa constantemente.",
+   "Para preguntar qué es algo: What's this? o What are these?"
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "What's this? — It's a charger.",
+   "es": "¿Qué es esto? — Es un cargador.",
+   "nota": null
+  },
+  {
+   "en": "These are my books.",
+   "es": "Estos son mis libros.",
+   "nota": "Plural, va are"
+  },
+  {
+   "en": "That building is very tall.",
+   "es": "Ese edificio es muy alto.",
+   "nota": "Delante del sustantivo"
+  },
+  {
+   "en": "Those people are my coworkers.",
+   "es": "Esas personas son mis colegas.",
+   "nota": null
+  },
+  {
+   "en": "Is this your bag? — Yes, it is.",
+   "es": "¿Esta es tu mochila? — Sí.",
+   "nota": null
+  },
+  {
+   "en": "Hi, this is Ana. Is Mark there?",
+   "es": "Hola, habla Ana. ¿Está Mark?",
+   "nota": "Al teléfono"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "El error más común es usar is con these o those: These is my books no existe, es These are my books.",
+   "No hay una palabra para aquel. Todo lo lejano es that, esté a tres metros o a tres kilómetros.",
+   "Al teléfono no se dice I am Ana, se dice this is Ana."
+  ],
+  "contrastes": [
+   {
+    "mal": "These is my keys.",
+    "bien": "These are my keys.",
+    "por_que": "These es plural y pide are."
+   },
+   {
+    "mal": "This are my friends.",
+    "bien": "These are my friends.",
+    "por_que": "This es singular; para varias personas va these."
+   },
+   {
+    "mal": "Hi, I am Ana. (por teléfono)",
+    "bien": "Hi, this is Ana.",
+    "por_que": "En una llamada el inglés usa this is para identificarse."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "this / that",
+   "es": "esto / eso",
+   "nota": "Singular"
+  },
+  {
+   "en": "these / those",
+   "es": "estos / esos",
+   "nota": "Plural"
+  },
+  {
+   "en": "What's this?",
+   "es": "¿Qué es esto?",
+   "nota": null
+  },
+  {
+   "en": "here / there",
+   "es": "aquí / allá",
+   "nota": null
+  },
+  {
+   "en": "thing",
+   "es": "cosa",
+   "nota": null
+  },
+  {
+   "en": "table / chair",
+   "es": "mesa / silla",
+   "nota": null
+  },
+  {
+   "en": "door / window",
+   "es": "puerta / ventana",
+   "nota": null
+  },
+  {
+   "en": "book",
+   "es": "libro",
+   "nota": null
+  },
+  {
+   "en": "charger",
+   "es": "cargador",
+   "nota": null
+  },
+  {
+   "en": "bottle",
+   "es": "botella",
+   "nota": null
+  },
+  {
+   "en": "coworker",
+   "es": "colega de trabajo",
+   "nota": null
+  },
+  {
+   "en": "building",
+   "es": "edificio",
+   "nota": null
+  },
+  {
+   "en": "people",
+   "es": "gente, personas",
+   "nota": "Plural de person"
+  },
+  {
+   "en": "near / far",
+   "es": "cerca / lejos",
+   "nota": null
+  },
+  {
+   "en": "over there",
+   "es": "allá",
+   "nota": null
+  }
+ ]
+}

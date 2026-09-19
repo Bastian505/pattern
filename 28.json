@@ -1,0 +1,174 @@
+{
+ "numero": 28,
+ "bloque": 5,
+ "titulo": "Rutina o ahora",
+ "puedes": "Elegir bien entre los dos presentes y no mezclarlos.",
+ "gramatica": "Present simple frente a present continuous",
+ "concepto": {
+  "puntos": [
+   "Este es el punto donde más se traba un hispanohablante, porque en español los dos se pueden decir igual: trabajo y estoy trabajando se usan casi indistintamente.",
+   "En inglés no: el present simple es para lo habitual y el continuous para lo que pasa ahora. Elegir mal cambia el significado.",
+   "I work in a bank dice a qué te dedicas. I'm working dice que en este instante estás trabajando.",
+   "Las palabras de tiempo te delatan cuál usar: always, usually y every day piden simple; now, right now y at the moment piden continuous."
+  ],
+  "clave": "¿Es tu costumbre o es este momento? Costumbre: simple. Momento: continuous."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Costumbre",
+    "formula": "I work from nine to six."
+   },
+   {
+    "etiqueta": "Ahora",
+    "formula": "I'm working on a report."
+   },
+   {
+    "etiqueta": "Señales de simple",
+    "formula": "always · usually · every day · on Mondays"
+   },
+   {
+    "etiqueta": "Señales de continuous",
+    "formula": "now · right now · at the moment · today"
+   }
+  ],
+  "notas": [
+   "Los verbos de estado (like, want, know, need, understand, have en el sentido de poseer) van en simple aunque hables del presente.",
+   "Have sí admite continuous cuando es una actividad: I'm having lunch.",
+   "En la pregunta cambia el ayudante: Do you work? frente a Are you working?"
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "I usually take the bus, but today I'm driving.",
+   "es": "Normalmente tomo el bus, pero hoy voy manejando.",
+   "nota": "Los dos en una frase"
+  },
+  {
+   "en": "She works at a school. Right now she's teaching.",
+   "es": "Trabaja en un colegio. Ahora está haciendo clases.",
+   "nota": null
+  },
+  {
+   "en": "What do you do? — I'm an engineer.",
+   "es": "¿A qué te dedicas? — Soy ingeniero.",
+   "nota": "Profesión: simple"
+  },
+  {
+   "en": "What are you doing? — I'm cooking.",
+   "es": "¿Qué estás haciendo? — Cocinando.",
+   "nota": "Momento: continuous"
+  },
+  {
+   "en": "I know the answer.",
+   "es": "Sé la respuesta.",
+   "nota": "Verbo de estado: siempre simple"
+  },
+  {
+   "en": "He's having lunch right now.",
+   "es": "Está almorzando ahora.",
+   "nota": "Have como actividad sí admite -ing"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Usar el continuous para hablar de tu rutina es el error más común: I'm working in a bank suena a que estás ahí en este instante, no a tu empleo.",
+   "Al revés también pasa: responder I work cuando te preguntan qué estás haciendo ahora.",
+   "Los verbos de estado no aceptan -ing por mucho que el momento sea presente."
+  ],
+  "contrastes": [
+   {
+    "mal": "I'm working in a bank since 2020.",
+    "bien": "I work in a bank.",
+    "por_que": "Tu empleo es una situación estable: va en present simple."
+   },
+   {
+    "mal": "What do you do right now?",
+    "bien": "What are you doing right now?",
+    "por_que": "Right now pide continuous."
+   },
+   {
+    "mal": "I'm knowing him well.",
+    "bien": "I know him well.",
+    "por_que": "Know es un estado, no una acción en curso."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "today",
+   "es": "hoy",
+   "nota": "Suele pedir continuous"
+  },
+  {
+   "en": "take the bus",
+   "es": "tomar el bus",
+   "nota": null
+  },
+  {
+   "en": "drive",
+   "es": "manejar",
+   "nota": null
+  },
+  {
+   "en": "teach",
+   "es": "enseñar, hacer clases",
+   "nota": null
+  },
+  {
+   "en": "answer",
+   "es": "respuesta",
+   "nota": null
+  },
+  {
+   "en": "report",
+   "es": "informe",
+   "nota": null
+  },
+  {
+   "en": "work on",
+   "es": "trabajar en algo",
+   "nota": null
+  },
+  {
+   "en": "have lunch",
+   "es": "almorzar",
+   "nota": "Admite having"
+  },
+  {
+   "en": "know",
+   "es": "saber, conocer",
+   "nota": "Nunca con -ing"
+  },
+  {
+   "en": "believe",
+   "es": "creer",
+   "nota": "Nunca con -ing"
+  },
+  {
+   "en": "seem",
+   "es": "parecer",
+   "nota": null
+  },
+  {
+   "en": "usually",
+   "es": "normalmente",
+   "nota": "Pide simple"
+  },
+  {
+   "en": "at the moment",
+   "es": "en este momento",
+   "nota": "Pide continuous"
+  },
+  {
+   "en": "these days",
+   "es": "últimamente",
+   "nota": null
+  },
+  {
+   "en": "as always",
+   "es": "como siempre",
+   "nota": null
+  }
+ ]
+}

@@ -1,0 +1,174 @@
+{
+ "numero": 25,
+ "bloque": 4,
+ "titulo": "Unir ideas",
+ "puedes": "Dejar de hablar en frases sueltas y encadenar ideas: sumar, contrastar, dar motivos y consecuencias.",
+ "gramatica": "Conectores: and, but, or, because, so",
+ "concepto": {
+  "puntos": [
+   "Hasta ahora podías decir frases cortas y correctas. Los conectores son lo que las convierte en conversación.",
+   "And suma, but contrasta, or da alternativas. Son los tres básicos y funcionan casi igual que en español.",
+   "Because da el motivo y so da la consecuencia. Son dos caras de lo mismo: I'm tired because I worked a lot / I worked a lot, so I'm tired.",
+   "Con un conector no se repite el sujeto si es el mismo: I work and I study se puede decir I work and study."
+  ],
+  "clave": "Because va antes del motivo; so va antes del resultado. Son opuestos, no sinónimos."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "and",
+    "formula": "I work and I study."
+   },
+   {
+    "etiqueta": "but",
+    "formula": "It's small but comfortable."
+   },
+   {
+    "etiqueta": "or",
+    "formula": "Coffee or tea?"
+   },
+   {
+    "etiqueta": "because / so",
+    "formula": "I'm tired because I work a lot. / I work a lot, so I'm tired."
+   }
+  ],
+  "notas": [
+   "En inglés se pone coma antes de so y de but cuando unen dos frases completas.",
+   "Because responde a why. So no.",
+   "En negativas, and se cambia por or: I don't drink coffee or tea."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "I have a brother and a sister.",
+   "es": "Tengo un hermano y una hermana.",
+   "nota": null
+  },
+  {
+   "en": "The apartment is small but very comfortable.",
+   "es": "El departamento es pequeño pero muy cómodo.",
+   "nota": null
+  },
+  {
+   "en": "Do you want coffee or tea?",
+   "es": "¿Quieres café o té?",
+   "nota": null
+  },
+  {
+   "en": "I'm learning English because I need it for work.",
+   "es": "Estoy aprendiendo inglés porque lo necesito para el trabajo.",
+   "nota": "Motivo"
+  },
+  {
+   "en": "It's late, so I'm going home.",
+   "es": "Es tarde, así que me voy a casa.",
+   "nota": "Consecuencia"
+  },
+  {
+   "en": "I don't smoke or drink.",
+   "es": "No fumo ni bebo.",
+   "nota": "En negativo: or"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Confundir because con so es el error más común, porque invierte el sentido de la frase.",
+   "En frases negativas el español usa ni; el inglés usa or, no and.",
+   "Because no puede quedar solo como frase en inglés escrito formal, aunque al hablar sí se usa así para responder."
+  ],
+  "contrastes": [
+   {
+    "mal": "I'm tired, so I worked a lot.",
+    "bien": "I'm tired because I worked a lot.",
+    "por_que": "El motivo va con because; so introduce el resultado."
+   },
+   {
+    "mal": "I don't have a car and a bike.",
+    "bien": "I don't have a car or a bike.",
+    "por_que": "En negativo, el inglés une con or."
+   },
+   {
+    "mal": "I like it, but is expensive.",
+    "bien": "I like it, but it's expensive.",
+    "por_que": "Después del conector la segunda frase necesita su propio sujeto."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "and",
+   "es": "y",
+   "nota": null
+  },
+  {
+   "en": "but",
+   "es": "pero",
+   "nota": null
+  },
+  {
+   "en": "or",
+   "es": "o, ni",
+   "nota": "Ni en negativas"
+  },
+  {
+   "en": "because",
+   "es": "porque",
+   "nota": "Motivo"
+  },
+  {
+   "en": "so",
+   "es": "así que",
+   "nota": "Consecuencia"
+  },
+  {
+   "en": "also / too",
+   "es": "también",
+   "nota": "Too va al final"
+  },
+  {
+   "en": "then",
+   "es": "entonces, después",
+   "nota": null
+  },
+  {
+   "en": "comfortable",
+   "es": "cómodo",
+   "nota": null
+  },
+  {
+   "en": "expensive / cheap",
+   "es": "caro / barato",
+   "nota": null
+  },
+  {
+   "en": "difficult / easy",
+   "es": "difícil / fácil",
+   "nota": null
+  },
+  {
+   "en": "learn",
+   "es": "aprender",
+   "nota": null
+  },
+  {
+   "en": "need",
+   "es": "necesitar",
+   "nota": null
+  },
+  {
+   "en": "tea",
+   "es": "té",
+   "nota": null
+  },
+  {
+   "en": "late",
+   "es": "tarde",
+   "nota": null
+  },
+  {
+   "en": "for work",
+   "es": "para el trabajo",
+   "nota": null
+  }
+ ]
+}

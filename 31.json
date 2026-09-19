@@ -1,0 +1,174 @@
+{
+ "numero": 31,
+ "bloque": 5,
+ "titulo": "Pedir y ofrecer",
+ "puedes": "Pedir algo en un restaurante o una tienda con cortesía, y ofrecerle algo a alguien.",
+ "gramatica": "Would like",
+ "concepto": {
+  "puntos": [
+   "Would like significa querer, dicho con cortesía. No es lo mismo que like: like es gustar en general, would like es querer algo ahora.",
+   "I like coffee habla de tu gusto. I'd like a coffee es un pedido concreto en este momento.",
+   "Casi siempre se contrae: I'd like, she'd like. Suena mucho más natural que la forma larga.",
+   "Después de would like el verbo va con to: I'd like to order. Es distinto de like + ing."
+  ],
+  "clave": "Like es gustar siempre. Would like es querer ahora, y es la forma educada de pedir."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Pedir algo",
+    "formula": "I'd like a coffee, please."
+   },
+   {
+    "etiqueta": "Con verbo",
+    "formula": "I'd like to order."
+   },
+   {
+    "etiqueta": "Ofrecer",
+    "formula": "Would you like some water?"
+   },
+   {
+    "etiqueta": "Responder",
+    "formula": "Yes, please. / No, thanks."
+   }
+  ],
+  "notas": [
+   "Would no cambia con la persona: I'd, you'd, he'd, todos igual.",
+   "Al ofrecer se usa some, no any: Would you like some coffee?",
+   "I want existe pero suena brusco al pedir. En un restaurante o tienda usa I'd like."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "I'd like a coffee, please.",
+   "es": "Quisiera un café, por favor.",
+   "nota": "Pedido cortés"
+  },
+  {
+   "en": "Would you like something to drink?",
+   "es": "¿Le gustaría algo de beber?",
+   "nota": "Ofrecimiento"
+  },
+  {
+   "en": "I'd like to make a reservation.",
+   "es": "Quisiera hacer una reserva.",
+   "nota": "Con to + verbo"
+  },
+  {
+   "en": "Would you like some dessert? — No, thanks.",
+   "es": "¿Quiere postre? — No, gracias.",
+   "nota": null
+  },
+  {
+   "en": "Can I have the check, please?",
+   "es": "¿Me trae la cuenta?",
+   "nota": "Americano: check"
+  },
+  {
+   "en": "How much is it? — That's fifteen dollars.",
+   "es": "¿Cuánto es? — Son quince dólares.",
+   "nota": null
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Confundir I like con I'd like es el error que más cambia el sentido: I like a coffee no es un pedido, suena raro.",
+   "Después de would like el verbo lleva to. Después de like lleva -ing. Son estructuras distintas.",
+   "En inglés americano la cuenta del restaurante es the check, no the bill."
+  ],
+  "contrastes": [
+   {
+    "mal": "I like a coffee, please.",
+    "bien": "I'd like a coffee, please.",
+    "por_que": "Para pedir algo ahora se usa would like."
+   },
+   {
+    "mal": "I'd like ordering.",
+    "bien": "I'd like to order.",
+    "por_que": "Would like va con to, no con -ing."
+   },
+   {
+    "mal": "I want the check.",
+    "bien": "Can I have the check, please?",
+    "por_que": "I want suena brusco; en atención al público se pide con can I have o I'd like."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "I'd like",
+   "es": "quisiera",
+   "nota": "Contracción de I would like"
+  },
+  {
+   "en": "Would you like...?",
+   "es": "¿Le gustaría...?",
+   "nota": null
+  },
+  {
+   "en": "Yes, please / No, thanks",
+   "es": "Sí, por favor / No, gracias",
+   "nota": null
+  },
+  {
+   "en": "order",
+   "es": "pedir, ordenar",
+   "nota": null
+  },
+  {
+   "en": "menu",
+   "es": "carta",
+   "nota": null
+  },
+  {
+   "en": "the check",
+   "es": "la cuenta",
+   "nota": "Americano"
+  },
+  {
+   "en": "dessert",
+   "es": "postre",
+   "nota": null
+  },
+  {
+   "en": "something to drink",
+   "es": "algo de beber",
+   "nota": null
+  },
+  {
+   "en": "reservation",
+   "es": "reserva",
+   "nota": null
+  },
+  {
+   "en": "table for two",
+   "es": "mesa para dos",
+   "nota": null
+  },
+  {
+   "en": "How much is it?",
+   "es": "¿Cuánto es?",
+   "nota": null
+  },
+  {
+   "en": "Here you are",
+   "es": "Aquí tiene",
+   "nota": "Al entregar algo"
+  },
+  {
+   "en": "That's all",
+   "es": "Eso es todo",
+   "nota": null
+  },
+  {
+   "en": "to go",
+   "es": "para llevar",
+   "nota": "Americano"
+  },
+  {
+   "en": "waiter",
+   "es": "mesero",
+   "nota": null
+  }
+ ]
+}

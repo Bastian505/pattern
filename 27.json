@@ -1,0 +1,174 @@
+{
+ "numero": 27,
+ "bloque": 5,
+ "titulo": "Qué está pasando",
+ "puedes": "Decir lo que estás haciendo en este momento y describir una escena.",
+ "gramatica": "Present continuous",
+ "concepto": {
+  "puntos": [
+   "El present continuous describe lo que ocurre ahora mismo, mientras hablas. Es el equivalente a estoy trabajando.",
+   "Se forma con dos piezas: el verbo to be, que ya dominas, más el verbo principal terminado en -ing.",
+   "El to be es el que cambia según la persona; el -ing no cambia nunca: I'm working, she's working, they're working.",
+   "También sirve para algo temporal aunque no pase justo ahora: I'm studying English these days."
+  ],
+  "clave": "To be + verbo con -ing. El to be lleva toda la información de quién y de tiempo."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Afirmativo",
+    "formula": "I'm working. · She's working."
+   },
+   {
+    "etiqueta": "Negativo",
+    "formula": "I'm not working. · He isn't working."
+   },
+   {
+    "etiqueta": "Pregunta",
+    "formula": "Are you working?"
+   },
+   {
+    "etiqueta": "Formar el -ing",
+    "formula": "work → working · write → writing · run → running"
+   }
+  ],
+  "notas": [
+   "Si el verbo termina en e muda, esa e se cae: make → making, live → living.",
+   "Si termina en consonante-vocal-consonante y es corto, se dobla la última: run → running, sit → sitting.",
+   "No lleva do ni does: el ayudante aquí es to be."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "I'm working right now.",
+   "es": "Estoy trabajando ahora mismo.",
+   "nota": null
+  },
+  {
+   "en": "She's cooking dinner.",
+   "es": "Ella está cocinando la cena.",
+   "nota": null
+  },
+  {
+   "en": "What are you doing? — Nothing much.",
+   "es": "¿Qué estás haciendo? — Nada, poco.",
+   "nota": null
+  },
+  {
+   "en": "They aren't listening.",
+   "es": "No están escuchando.",
+   "nota": null
+  },
+  {
+   "en": "It's raining outside.",
+   "es": "Está lloviendo afuera.",
+   "nota": null
+  },
+  {
+   "en": "I'm studying English these days.",
+   "es": "Estoy estudiando inglés estos días.",
+   "nota": "Temporal, no justo ahora"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Olvidar el to be es el error más frecuente: I working no significa nada. Siempre son dos piezas.",
+   "No uses do para negar o preguntar aquí. Es Are you working?, no Do you are working?",
+   "Hay verbos que casi nunca van en continuous porque no son acciones: like, want, need, know, understand. No se dice I'm wanting."
+  ],
+  "contrastes": [
+   {
+    "mal": "I working now.",
+    "bien": "I'm working now.",
+    "por_que": "Falta el to be, que es la mitad de la estructura."
+   },
+   {
+    "mal": "Do you are working?",
+    "bien": "Are you working?",
+    "por_que": "El ayudante ya es to be; no se agrega do."
+   },
+   {
+    "mal": "I'm wanting a coffee.",
+    "bien": "I want a coffee.",
+    "por_que": "Querer no es una acción en curso: va en present simple."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "right now",
+   "es": "ahora mismo",
+   "nota": null
+  },
+  {
+   "en": "at the moment",
+   "es": "en este momento",
+   "nota": null
+  },
+  {
+   "en": "these days",
+   "es": "estos días",
+   "nota": null
+  },
+  {
+   "en": "What are you doing?",
+   "es": "¿Qué estás haciendo?",
+   "nota": null
+  },
+  {
+   "en": "cook",
+   "es": "cocinar",
+   "nota": "cooking"
+  },
+  {
+   "en": "make",
+   "es": "hacer, preparar",
+   "nota": "making, sin la e"
+  },
+  {
+   "en": "run",
+   "es": "correr",
+   "nota": "running, doble n"
+  },
+  {
+   "en": "sit",
+   "es": "sentarse",
+   "nota": "sitting"
+  },
+  {
+   "en": "wait",
+   "es": "esperar",
+   "nota": null
+  },
+  {
+   "en": "talk",
+   "es": "hablar, conversar",
+   "nota": null
+  },
+  {
+   "en": "rain",
+   "es": "llover",
+   "nota": "It's raining"
+  },
+  {
+   "en": "look at",
+   "es": "mirar",
+   "nota": null
+  },
+  {
+   "en": "wear",
+   "es": "llevar puesto",
+   "nota": null
+  },
+  {
+   "en": "nothing much",
+   "es": "nada en especial",
+   "nota": null
+  },
+  {
+   "en": "still",
+   "es": "todavía",
+   "nota": null
+  }
+ ]
+}

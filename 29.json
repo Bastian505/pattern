@@ -1,0 +1,174 @@
+{
+ "numero": 29,
+ "bloque": 5,
+ "titulo": "Lo que sabes hacer",
+ "puedes": "Hablar de tus habilidades, pedir permiso y hacer peticiones con cortesía.",
+ "gramatica": "Can / can't",
+ "concepto": {
+  "puntos": [
+   "Can significa poder y saber hacer algo. Cubre las dos ideas que en español van separadas.",
+   "Es un verbo modal, y los modales tienen tres ventajas: no cambian con la persona, no llevan do para negar o preguntar, y van seguidos del verbo en forma base.",
+   "No lleva s en tercera persona: se dice he can, nunca he cans.",
+   "Después de can el verbo va desnudo, sin to: I can swim, no I can to swim."
+  ],
+  "clave": "Can no cambia nunca y el verbo que le sigue tampoco. Es el verbo más fácil del inglés."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Afirmativo",
+    "formula": "I can swim. · She can swim."
+   },
+   {
+    "etiqueta": "Negativo",
+    "formula": "I can't swim. (cannot)"
+   },
+   {
+    "etiqueta": "Pregunta",
+    "formula": "Can you swim?"
+   },
+   {
+    "etiqueta": "Respuesta corta",
+    "formula": "Yes, I can. / No, I can't."
+   }
+  ],
+  "notas": [
+   "Can't es la contracción de cannot, que se escribe en una sola palabra.",
+   "Sirve para pedir permiso (Can I come in?) y para pedir favores (Can you help me?).",
+   "Could es la versión más cortés de can en una petición: Could you help me?"
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "I can drive but I can't swim.",
+   "es": "Sé manejar pero no sé nadar.",
+   "nota": "Habilidad"
+  },
+  {
+   "en": "She can speak three languages.",
+   "es": "Ella habla tres idiomas.",
+   "nota": "Sin s en can"
+  },
+  {
+   "en": "Can you help me, please?",
+   "es": "¿Me puedes ayudar?",
+   "nota": "Petición"
+  },
+  {
+   "en": "Can I use your phone?",
+   "es": "¿Puedo usar tu teléfono?",
+   "nota": "Permiso"
+  },
+  {
+   "en": "Sorry, I can't come tonight.",
+   "es": "Perdón, no puedo ir esta noche.",
+   "nota": null
+  },
+  {
+   "en": "Could you repeat that, please?",
+   "es": "¿Podría repetir eso?",
+   "nota": "Más cortés"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Poner to después de can es un error muy común por calco del español: no es I can to help, es I can help.",
+   "Can nunca lleva s ni en tercera persona, porque los modales no se conjugan.",
+   "No mezcles can con do. Es Can you swim?, no Do you can swim?"
+  ],
+  "contrastes": [
+   {
+    "mal": "I can to speak English.",
+    "bien": "I can speak English.",
+    "por_que": "Después de un modal el verbo va sin to."
+   },
+   {
+    "mal": "He cans drive.",
+    "bien": "He can drive.",
+    "por_que": "Los modales no cambian con la persona."
+   },
+   {
+    "mal": "Do you can help me?",
+    "bien": "Can you help me?",
+    "por_que": "Can se pregunta solo, sin ayudante."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "can / can't",
+   "es": "poder, saber / no poder",
+   "nota": null
+  },
+  {
+   "en": "could",
+   "es": "podría",
+   "nota": "Más cortés"
+  },
+  {
+   "en": "swim",
+   "es": "nadar",
+   "nota": null
+  },
+  {
+   "en": "dance",
+   "es": "bailar",
+   "nota": null
+  },
+  {
+   "en": "sing",
+   "es": "cantar",
+   "nota": null
+  },
+  {
+   "en": "help",
+   "es": "ayudar",
+   "nota": null
+  },
+  {
+   "en": "use",
+   "es": "usar",
+   "nota": null
+  },
+  {
+   "en": "come in",
+   "es": "pasar, entrar",
+   "nota": null
+  },
+  {
+   "en": "tonight",
+   "es": "esta noche",
+   "nota": null
+  },
+  {
+   "en": "language",
+   "es": "idioma",
+   "nota": null
+  },
+  {
+   "en": "fix",
+   "es": "arreglar",
+   "nota": null
+  },
+  {
+   "en": "carry",
+   "es": "cargar, llevar",
+   "nota": null
+  },
+  {
+   "en": "Sure / Of course",
+   "es": "Claro / Por supuesto",
+   "nota": "Para aceptar"
+  },
+  {
+   "en": "Sorry, I can't",
+   "es": "Perdón, no puedo",
+   "nota": "Para declinar"
+  },
+  {
+   "en": "well",
+   "es": "bien",
+   "nota": "Adverbio de good"
+  }
+ ]
+}

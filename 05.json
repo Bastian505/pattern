@@ -1,0 +1,173 @@
+{
+ "numero": 5,
+ "bloque": 1,
+ "titulo": "Tu trabajo",
+ "puedes": "Decir en qué trabajas, preguntarle a otro a qué se dedica y hablar de dónde trabajas.",
+ "gramatica": "Artículos a / an y el artículo cero",
+ "concepto": {
+  "puntos": [
+   "En inglés, delante de una profesión en singular va siempre a o an. En español no: decimos soy ingeniero, ellos dicen I'm an engineer.",
+   "Se usa an cuando la palabra siguiente empieza con sonido de vocal, y a cuando empieza con sonido de consonante. Lo que manda es el sonido, no la letra.",
+   "En plural el artículo desaparece: We are engineers, sin nada delante.",
+   "A y an significan un o una, pero también sirven para decir a qué categoría pertenece algo."
+  ],
+  "clave": "Una profesión en singular nunca va sola: siempre lleva a o an delante."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Sonido de consonante",
+    "formula": "a teacher, a doctor, a nurse"
+   },
+   {
+    "etiqueta": "Sonido de vocal",
+    "formula": "an engineer, an artist, an office"
+   },
+   {
+    "etiqueta": "Plural",
+    "formula": "We are engineers. (sin artículo)"
+   },
+   {
+    "etiqueta": "Preguntar",
+    "formula": "What do you do?"
+   }
+  ],
+  "notas": [
+   "Cuidado con las trampas del sonido: se dice a university porque suena yu-, y an hour porque la h es muda.",
+   "What do you do? significa a qué te dedicas, no qué estás haciendo."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "What do you do?",
+   "es": "¿A qué te dedicas?",
+   "nota": "La pregunta estándar"
+  },
+  {
+   "en": "I'm an engineer.",
+   "es": "Soy ingeniero.",
+   "nota": "An por el sonido de vocal"
+  },
+  {
+   "en": "She's a doctor. She works in a hospital.",
+   "es": "Ella es doctora. Trabaja en un hospital.",
+   "nota": null
+  },
+  {
+   "en": "I work for a technology company.",
+   "es": "Trabajo para una empresa de tecnología.",
+   "nota": null
+  },
+  {
+   "en": "We're students.",
+   "es": "Somos estudiantes.",
+   "nota": "Plural, sin artículo"
+  },
+  {
+   "en": "I'm unemployed at the moment.",
+   "es": "Estoy sin trabajo por ahora.",
+   "nota": null
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Omitir el artículo en la profesión es el error más frecuente aquí, porque el español lo omite: I'm engineer suena mal de inmediato.",
+   "La elección entre a y an depende del sonido inicial, no de la letra escrita. Por eso a university y an hour.",
+   "Ojo con confundir What do you do? (tu profesión) con What are you doing? (qué haces ahora mismo)."
+  ],
+  "contrastes": [
+   {
+    "mal": "I'm engineer.",
+    "bien": "I'm an engineer.",
+    "por_que": "Falta el artículo, que en inglés es obligatorio en singular."
+   },
+   {
+    "mal": "I'm a engineer.",
+    "bien": "I'm an engineer.",
+    "por_que": "Engineer empieza con sonido de vocal, así que pide an."
+   },
+   {
+    "mal": "I work in a company of technology.",
+    "bien": "I work for a technology company.",
+    "por_que": "En inglés el adjetivo va antes del sustantivo: technology company, no company of technology."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "What do you do?",
+   "es": "¿A qué te dedicas?",
+   "nota": null
+  },
+  {
+   "en": "job / work",
+   "es": "trabajo",
+   "nota": "Job es el puesto, work la actividad"
+  },
+  {
+   "en": "engineer",
+   "es": "ingeniero",
+   "nota": "an engineer"
+  },
+  {
+   "en": "teacher",
+   "es": "profesor",
+   "nota": null
+  },
+  {
+   "en": "doctor / nurse",
+   "es": "médico / enfermero",
+   "nota": null
+  },
+  {
+   "en": "student",
+   "es": "estudiante",
+   "nota": null
+  },
+  {
+   "en": "manager",
+   "es": "jefe, gerente",
+   "nota": null
+  },
+  {
+   "en": "developer",
+   "es": "desarrollador",
+   "nota": null
+  },
+  {
+   "en": "driver",
+   "es": "conductor",
+   "nota": null
+  },
+  {
+   "en": "salesperson",
+   "es": "vendedor",
+   "nota": null
+  },
+  {
+   "en": "company",
+   "es": "empresa",
+   "nota": null
+  },
+  {
+   "en": "office",
+   "es": "oficina",
+   "nota": "an office"
+  },
+  {
+   "en": "I work for / I work in",
+   "es": "Trabajo para / en",
+   "nota": "For empresa, in lugar"
+  },
+  {
+   "en": "unemployed",
+   "es": "sin trabajo",
+   "nota": null
+  },
+  {
+   "en": "retired",
+   "es": "jubilado",
+   "nota": null
+  }
+ ]
+}

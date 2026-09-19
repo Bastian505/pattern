@@ -1,0 +1,174 @@
+{
+ "numero": 24,
+ "bloque": 4,
+ "titulo": "Cantidades",
+ "puedes": "Hablar de cuánto hay de algo, pedir comida y hacer una lista de compras.",
+ "gramatica": "Some, any, much, many, a lot of",
+ "concepto": {
+  "puntos": [
+   "El inglés divide los sustantivos en dos grupos: los que se cuentan (apples, chairs) y los que no (water, money, time).",
+   "Los que no se cuentan nunca van en plural ni llevan a: se dice water, no a water ni waters.",
+   "Some se usa en frases afirmativas; any en negativas y preguntas.",
+   "Much va con lo que no se cuenta, many con lo que sí. A lot of sirve para los dos y es lo más común al hablar."
+  ],
+  "clave": "¿Se puede contar uno, dos, tres? Entonces many. Si no, much. A lot of vale para ambos."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Afirmativo",
+    "formula": "I have some milk."
+   },
+   {
+    "etiqueta": "Negativo y pregunta",
+    "formula": "I don't have any milk. · Do you have any?"
+   },
+   {
+    "etiqueta": "No contables",
+    "formula": "much water · a little water"
+   },
+   {
+    "etiqueta": "Contables",
+    "formula": "many apples · a few apples"
+   }
+  ],
+  "notas": [
+   "No contables típicos: water, coffee, bread, rice, money, time, information, advice.",
+   "A little es para no contables, a few para contables.",
+   "Some se usa también en preguntas cuando ofreces algo: Would you like some coffee?"
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "There's some bread on the table.",
+   "es": "Hay pan sobre la mesa.",
+   "nota": "Afirmativo: some"
+  },
+  {
+   "en": "We don't have any sugar.",
+   "es": "No tenemos azúcar.",
+   "nota": "Negativo: any"
+  },
+  {
+   "en": "How many eggs do you need?",
+   "es": "¿Cuántos huevos necesitas?",
+   "nota": "Contable: many"
+  },
+  {
+   "en": "I don't drink much coffee.",
+   "es": "No tomo mucho café.",
+   "nota": "No contable: much"
+  },
+  {
+   "en": "She has a lot of friends here.",
+   "es": "Ella tiene muchos amigos aquí.",
+   "nota": "A lot of sirve siempre"
+  },
+  {
+   "en": "Can I have a little water, please?",
+   "es": "¿Me das un poco de agua?",
+   "nota": "A little: no contable"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Poner en plural lo que no se cuenta es un error frecuente: no existen waters ni informations ni advices.",
+   "En español decimos un café o un agua, pero en inglés hay que decir a cup of coffee o a glass of water.",
+   "Much casi no se usa en afirmativo. En vez de I have much money se dice I have a lot of money."
+  ],
+  "contrastes": [
+   {
+    "mal": "I need some informations.",
+    "bien": "I need some information.",
+    "por_que": "Information no se cuenta, así que no tiene plural."
+   },
+   {
+    "mal": "How much apples do you want?",
+    "bien": "How many apples do you want?",
+    "por_que": "Las manzanas se cuentan: va many."
+   },
+   {
+    "mal": "Can I have a water?",
+    "bien": "Can I have some water? / a glass of water",
+    "por_que": "El agua no se cuenta; se pide por cantidad o por envase."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "some / any",
+   "es": "algo de, algunos",
+   "nota": "Some afirmativo, any negativo"
+  },
+  {
+   "en": "much / many",
+   "es": "mucho / muchos",
+   "nota": null
+  },
+  {
+   "en": "a lot of",
+   "es": "mucho, muchos",
+   "nota": "Sirve para todo"
+  },
+  {
+   "en": "a little / a few",
+   "es": "un poco / unos pocos",
+   "nota": null
+  },
+  {
+   "en": "water",
+   "es": "agua",
+   "nota": "No contable"
+  },
+  {
+   "en": "bread",
+   "es": "pan",
+   "nota": "No contable"
+  },
+  {
+   "en": "rice",
+   "es": "arroz",
+   "nota": "No contable"
+  },
+  {
+   "en": "sugar / salt",
+   "es": "azúcar / sal",
+   "nota": "No contables"
+  },
+  {
+   "en": "milk",
+   "es": "leche",
+   "nota": "No contable"
+  },
+  {
+   "en": "egg / apple",
+   "es": "huevo / manzana",
+   "nota": "Contables"
+  },
+  {
+   "en": "chicken / meat",
+   "es": "pollo / carne",
+   "nota": null
+  },
+  {
+   "en": "a cup of",
+   "es": "una taza de",
+   "nota": null
+  },
+  {
+   "en": "a glass of",
+   "es": "un vaso de",
+   "nota": null
+  },
+  {
+   "en": "a bottle of",
+   "es": "una botella de",
+   "nota": null
+  },
+  {
+   "en": "information / advice",
+   "es": "información / consejo",
+   "nota": "Nunca en plural"
+  }
+ ]
+}

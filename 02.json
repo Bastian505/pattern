@@ -1,0 +1,158 @@
+{
+ "numero": 2,
+ "bloque": 1,
+ "titulo": "Decir tu nombre y deletrear",
+ "puedes": "Preguntar y decir cómo te llamas, y deletrear tu nombre en voz alta.",
+ "gramatica": "Verbo to be — preguntas",
+ "concepto": {
+  "puntos": [
+   "Para preguntar con to be no se agrega nada: se da vuelta el orden. You are → Are you?",
+   "Ese giro es la regla más útil del inglés básico y la vas a repetir en todo el nivel.",
+   "Las preguntas que empiezan con What, Where o How piden información; las que empiezan con el verbo se responden con sí o no.",
+   "Deletrear es parte normal de una conversación en inglés, porque la escritura y la pronunciación no coinciden."
+  ],
+  "clave": "Pregunta = verbo adelante. Afirmación = sujeto adelante."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Afirmación",
+    "formula": "You are Ana."
+   },
+   {
+    "etiqueta": "Pregunta sí/no",
+    "formula": "Are you Ana?"
+   },
+   {
+    "etiqueta": "Con palabra de pregunta",
+    "formula": "What + is + your name?"
+   },
+   {
+    "etiqueta": "Respuesta corta",
+    "formula": "Yes, I am. / No, I'm not."
+   }
+  ],
+  "notas": [
+   "En las respuestas cortas afirmativas no se contrae: se dice Yes, I am, nunca Yes, I'm.",
+   "What's es la contracción de What is, y es la forma normal de hablar."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "What's your name?",
+   "es": "¿Cómo te llamas?",
+   "nota": "Literal: cuál es tu nombre"
+  },
+  {
+   "en": "My name is Daniel. / I'm Daniel.",
+   "es": "Me llamo Daniel.",
+   "nota": "Las dos sirven"
+  },
+  {
+   "en": "Are you Carlos?",
+   "es": "¿Eres Carlos?",
+   "nota": null
+  },
+  {
+   "en": "Yes, I am. / No, I'm not.",
+   "es": "Sí. / No.",
+   "nota": "Respuesta corta"
+  },
+  {
+   "en": "How do you spell it?",
+   "es": "¿Cómo se escribe?",
+   "nota": null
+  },
+  {
+   "en": "D-A-N-I-E-L.",
+   "es": "De, a, ene, i, e, ele.",
+   "nota": "Letra por letra"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "No se dice How are you called ni How do you call yourself. El inglés pregunta What is your name.",
+   "Ojo con la letra que más confunde al hispanohablante: la E inglesa suena como nuestra i, y la I suena como ai.",
+   "Al deletrear en voz alta, las dobles se dicen double: Anna es A-double N-A."
+  ],
+  "contrastes": [
+   {
+    "mal": "How do you call?",
+    "bien": "What's your name?",
+    "por_que": "Traducción literal del español que en inglés no significa nada."
+   },
+   {
+    "mal": "Yes, I'm.",
+    "bien": "Yes, I am.",
+    "por_que": "La contracción no puede ir al final de la frase."
+   },
+   {
+    "mal": "My name is call Daniel.",
+    "bien": "My name is Daniel.",
+    "por_que": "Se mezclan dos formas. Elige una."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "What's your name?",
+   "es": "¿Cómo te llamas?",
+   "nota": null
+  },
+  {
+   "en": "My name is...",
+   "es": "Me llamo...",
+   "nota": null
+  },
+  {
+   "en": "first name",
+   "es": "nombre",
+   "nota": null
+  },
+  {
+   "en": "last name / surname",
+   "es": "apellido",
+   "nota": null
+  },
+  {
+   "en": "full name",
+   "es": "nombre completo",
+   "nota": null
+  },
+  {
+   "en": "How do you spell it?",
+   "es": "¿Cómo se escribe?",
+   "nota": null
+  },
+  {
+   "en": "letter",
+   "es": "letra",
+   "nota": null
+  },
+  {
+   "en": "double",
+   "es": "doble",
+   "nota": "Para letras repetidas"
+  },
+  {
+   "en": "Can you repeat, please?",
+   "es": "¿Puedes repetir?",
+   "nota": null
+  },
+  {
+   "en": "This is...",
+   "es": "Él/ella es...",
+   "nota": "Para presentar a otro"
+  },
+  {
+   "en": "Yes / No",
+   "es": "Sí / No",
+   "nota": null
+  },
+  {
+   "en": "Mr / Mrs / Ms",
+   "es": "Señor / Señora / Sra.",
+   "nota": "Ms no indica estado civil"
+  }
+ ]
+}

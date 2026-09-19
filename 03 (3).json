@@ -1,0 +1,232 @@
+{
+ "unidad": 3,
+ "criterios": [
+  "Niega con to be poniendo not después del verbo",
+  "Escribe países y nacionalidades con mayúscula",
+  "Pregunta el origen con Where are you from, con el from al final"
+ ],
+ "tandas": [
+  {
+   "id": "u3t1",
+   "tipo": "elegir",
+   "instruccion": "Elige la forma negativa correcta.",
+   "items": [
+    {
+     "prompt": "I ___ from Peru.",
+     "opciones": [
+      "am not",
+      "not am",
+      "no am"
+     ],
+     "respuesta": "am not",
+     "es": "No soy de Perú."
+    },
+    {
+     "prompt": "She ___ from Spain.",
+     "opciones": [
+      "isn't",
+      "aren't",
+      "amn't"
+     ],
+     "respuesta": "isn't",
+     "es": "Ella no es de España."
+    },
+    {
+     "prompt": "They ___ American.",
+     "opciones": [
+      "aren't",
+      "isn't",
+      "am not"
+     ],
+     "respuesta": "aren't",
+     "es": "Ellos no son estadounidenses."
+    },
+    {
+     "prompt": "We ___ Chilean.",
+     "opciones": [
+      "aren't",
+      "isn't",
+      "not are"
+     ],
+     "respuesta": "aren't",
+     "es": "No somos chilenos."
+    },
+    {
+     "prompt": "He ___ my brother.",
+     "opciones": [
+      "isn't",
+      "aren't",
+      "not is"
+     ],
+     "respuesta": "isn't",
+     "es": "Él no es mi hermano."
+    }
+   ]
+  },
+  {
+   "id": "u3t2",
+   "tipo": "completar",
+   "instruccion": "Completa con la nacionalidad.",
+   "items": [
+    {
+     "prompt": "She's from Colombia. She's ___.",
+     "respuesta": "Colombian",
+     "es": "Ella es de Colombia. Es colombiana."
+    },
+    {
+     "prompt": "He's from Brazil. He's ___.",
+     "respuesta": "Brazilian",
+     "es": "Él es de Brasil. Es brasileño."
+    },
+    {
+     "prompt": "I'm from Spain. I'm ___.",
+     "respuesta": "Spanish",
+     "es": "Soy de España. Soy español."
+    },
+    {
+     "prompt": "They're from China. They're ___.",
+     "respuesta": "Chinese",
+     "es": "Son de China. Son chinos."
+    },
+    {
+     "prompt": "She's from Argentina. She's ___.",
+     "respuesta": "Argentinian",
+     "es": "Ella es de Argentina. Es argentina."
+    }
+   ]
+  },
+  {
+   "id": "u3t3",
+   "tipo": "transformar",
+   "instruccion": "Convierte la frase en negativa.",
+   "items": [
+    {
+     "prompt": "I'm from Mexico.",
+     "respuesta": "I'm not from Mexico.",
+     "alternativas": [
+      "I am not from Mexico."
+     ],
+     "es": "Soy de México."
+    },
+    {
+     "prompt": "She's Argentinian.",
+     "respuesta": "She isn't Argentinian.",
+     "alternativas": [
+      "She's not Argentinian.",
+      "She is not Argentinian."
+     ],
+     "es": "Ella es argentina."
+    },
+    {
+     "prompt": "They're from here.",
+     "respuesta": "They aren't from here.",
+     "alternativas": [
+      "They're not from here.",
+      "They are not from here."
+     ],
+     "es": "Son de aquí."
+    },
+    {
+     "prompt": "He's a teacher.",
+     "respuesta": "He isn't a teacher.",
+     "alternativas": [
+      "He's not a teacher.",
+      "He is not a teacher."
+     ],
+     "es": "Él es profesor."
+    }
+   ]
+  },
+  {
+   "id": "u3t4",
+   "tipo": "ordenar",
+   "instruccion": "Ordena las palabras para formar la frase.",
+   "items": [
+    {
+     "palabras": [
+      "you",
+      "Where",
+      "from",
+      "are",
+      "?"
+     ],
+     "respuesta": "Where are you from?",
+     "es": "¿De dónde eres?"
+    },
+    {
+     "palabras": [
+      "Chile",
+      "I'm",
+      "from",
+      "."
+     ],
+     "respuesta": "I'm from Chile.",
+     "es": "Soy de Chile."
+    },
+    {
+     "palabras": [
+      "English",
+      "a",
+      "I",
+      "little",
+      "speak",
+      "."
+     ],
+     "respuesta": "I speak a little English.",
+     "es": "Hablo un poco de inglés."
+    }
+   ]
+  },
+  {
+   "id": "u3t5",
+   "tipo": "corregir",
+   "instruccion": "Cada frase tiene un error. Escríbela bien.",
+   "items": [
+    {
+     "mal": "I no am from Colombia.",
+     "respuesta": "I'm not from Colombia.",
+     "pista": "El not va después del verbo.",
+     "alternativas": [
+      "I am not from Colombia."
+     ],
+     "es": "No soy de Colombia."
+    },
+    {
+     "mal": "I am colombian.",
+     "respuesta": "I am Colombian.",
+     "pista": "Las nacionalidades van con mayúscula.",
+     "alternativas": [
+      "I'm Colombian."
+     ],
+     "es": "Soy colombiano."
+    },
+    {
+     "mal": "From where are you?",
+     "respuesta": "Where are you from?",
+     "pista": "El from va al final.",
+     "es": "¿De dónde eres?"
+    }
+   ]
+  },
+  {
+   "id": "u3t6",
+   "tipo": "traducir",
+   "ia": true,
+   "instruccion": "Escribe estas frases en inglés.",
+   "items": [
+    {
+     "es": "¿De dónde eres? — Soy de Chile.",
+     "referencia": "Where are you from? — I'm from Chile."
+    },
+    {
+     "es": "Ella no es de España, es de México.",
+     "referencia": "She isn't from Spain, she's from Mexico."
+    },
+    {
+     "es": "Hablo español y un poco de inglés.",
+     "referencia": "I speak Spanish and a little English."
+    }
+   ]
+  }
+ ]
+}

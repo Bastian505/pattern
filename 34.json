@@ -1,0 +1,174 @@
+{
+ "numero": 34,
+ "bloque": 6,
+ "titulo": "Dónde estuviste",
+ "puedes": "Decir dónde estabas, cómo estuvo algo y hablar del pasado con to be.",
+ "gramatica": "Was / were — pasado de to be",
+ "concepto": {
+  "puntos": [
+   "To be es el primer verbo que aprendiste y también el primero en pasado. Tiene solo dos formas: was y were.",
+   "Was va con I, he, she e it. Were va con you, we y they. Es la misma repartición que am/is/are, simplificada.",
+   "Igual que en presente, to be no necesita ayudante: se niega y se pregunta solo.",
+   "Sirve tanto para ser como para estar: I was tired, I was at home, It was great."
+  ],
+  "clave": "Was para I, he, she, it. Were para el resto. Sin ayudante para negar ni preguntar."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "I / he / she / it",
+    "formula": "I was at home."
+   },
+   {
+    "etiqueta": "You / we / they",
+    "formula": "They were at work."
+   },
+   {
+    "etiqueta": "Negativo",
+    "formula": "wasn't / weren't"
+   },
+   {
+    "etiqueta": "Pregunta",
+    "formula": "Were you there? · Was it good?"
+   }
+  ],
+  "notas": [
+   "There is y there are también tienen pasado: there was y there were.",
+   "Las palabras de tiempo pasado van al final: yesterday, last night, two days ago.",
+   "Ago significa hace, y siempre va después del periodo: three years ago."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "I was at home last night.",
+   "es": "Estuve en casa anoche.",
+   "nota": null
+  },
+  {
+   "en": "The movie was really good.",
+   "es": "La película estuvo muy buena.",
+   "nota": null
+  },
+  {
+   "en": "We were very tired after the trip.",
+   "es": "Estábamos muy cansados después del viaje.",
+   "nota": "Plural: were"
+  },
+  {
+   "en": "She wasn't at the meeting.",
+   "es": "Ella no estuvo en la reunión.",
+   "nota": null
+  },
+  {
+   "en": "Where were you yesterday?",
+   "es": "¿Dónde estabas ayer?",
+   "nota": null
+  },
+  {
+   "en": "There were a lot of people at the party.",
+   "es": "Había mucha gente en la fiesta.",
+   "nota": "There were"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Usar was con you es un error frecuente, porque you se siente singular. Pero siempre va were: you were.",
+   "No pongas did con to be. Es Were you tired?, no Did you were tired?",
+   "Ago va después del periodo y no lleva preposición: two days ago, no since two days."
+  ],
+  "contrastes": [
+   {
+    "mal": "You was at the office.",
+    "bien": "You were at the office.",
+    "por_que": "You siempre va con were, aunque se refiera a una sola persona."
+   },
+   {
+    "mal": "Did you were there?",
+    "bien": "Were you there?",
+    "por_que": "To be se pregunta solo, también en pasado."
+   },
+   {
+    "mal": "I was there since two days.",
+    "bien": "I was there two days ago.",
+    "por_que": "Para decir hace tanto tiempo se usa ago, al final."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "was / were",
+   "es": "era, estaba, fue, estuvo",
+   "nota": null
+  },
+  {
+   "en": "wasn't / weren't",
+   "es": "no era, no estaba",
+   "nota": null
+  },
+  {
+   "en": "yesterday",
+   "es": "ayer",
+   "nota": null
+  },
+  {
+   "en": "last night",
+   "es": "anoche",
+   "nota": null
+  },
+  {
+   "en": "last week / last year",
+   "es": "la semana / el año pasado",
+   "nota": null
+  },
+  {
+   "en": "two days ago",
+   "es": "hace dos días",
+   "nota": "Ago va al final"
+  },
+  {
+   "en": "there was / there were",
+   "es": "había",
+   "nota": null
+  },
+  {
+   "en": "trip",
+   "es": "viaje",
+   "nota": null
+  },
+  {
+   "en": "party",
+   "es": "fiesta",
+   "nota": null
+  },
+  {
+   "en": "movie",
+   "es": "película",
+   "nota": "Americano; británico: film"
+  },
+  {
+   "en": "great",
+   "es": "excelente",
+   "nota": null
+  },
+  {
+   "en": "terrible",
+   "es": "pésimo",
+   "nota": null
+  },
+  {
+   "en": "boring",
+   "es": "aburrido",
+   "nota": null
+  },
+  {
+   "en": "interesting",
+   "es": "interesante",
+   "nota": null
+  },
+  {
+   "en": "How was it?",
+   "es": "¿Cómo estuvo?",
+   "nota": null
+  }
+ ]
+}

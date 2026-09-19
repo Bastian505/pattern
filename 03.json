@@ -1,0 +1,173 @@
+{
+ "numero": 3,
+ "bloque": 1,
+ "titulo": "De dónde eres",
+ "puedes": "Decir de dónde eres, corregir a alguien que se equivoca y preguntar por el origen de otro.",
+ "gramatica": "Verbo to be — forma negativa",
+ "concepto": {
+  "puntos": [
+   "Para negar con to be solo se agrega not después del verbo. No aparece ninguna palabra nueva.",
+   "Casi siempre se contrae, y hay dos contracciones válidas para lo mismo: she's not y she isn't significan igual.",
+   "El país y la nacionalidad son palabras distintas: Chile es el lugar, Chilean es la persona o el adjetivo.",
+   "En inglés, países, nacionalidades e idiomas siempre se escriben con mayúscula, aunque vayan a mitad de frase."
+  ],
+  "clave": "Negar es solo meter not después de am, is o are."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "I",
+    "formula": "I'm not from Peru."
+   },
+   {
+    "etiqueta": "He / She / It",
+    "formula": "He isn't / He's not"
+   },
+   {
+    "etiqueta": "You / We / They",
+    "formula": "They aren't / They're not"
+   },
+   {
+    "etiqueta": "Preguntar origen",
+    "formula": "Where + are + you from?"
+   }
+  ],
+  "notas": [
+   "Con I no existe amn't: se dice I'm not y no hay alternativa.",
+   "Hay dos maneras de decir lo mismo: I'm from Chile o I'm Chilean."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "Where are you from?",
+   "es": "¿De dónde eres?",
+   "nota": "El from va al final"
+  },
+  {
+   "en": "I'm from Colombia. I'm Colombian.",
+   "es": "Soy de Colombia. Soy colombiano.",
+   "nota": "País y nacionalidad"
+  },
+  {
+   "en": "She isn't from Spain, she's from Mexico.",
+   "es": "Ella no es de España, es de México.",
+   "nota": null
+  },
+  {
+   "en": "They aren't American.",
+   "es": "Ellos no son estadounidenses.",
+   "nota": null
+  },
+  {
+   "en": "I speak Spanish and a little English.",
+   "es": "Hablo español y un poco de inglés.",
+   "nota": null
+  },
+  {
+   "en": "Are you from Peru? — No, I'm not.",
+   "es": "¿Eres de Perú? — No.",
+   "nota": null
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "No existe la doble negación del español. No digo nada se dice I don't say anything, nunca con dos negativos.",
+   "American en la práctica significa estadounidense, no americano en el sentido del continente.",
+   "Los idiomas y nacionalidades van con mayúscula siempre: I speak Spanish, no i speak spanish."
+  ],
+  "contrastes": [
+   {
+    "mal": "I no am from Colombia.",
+    "bien": "I'm not from Colombia.",
+    "por_que": "El not va después del verbo, no antes."
+   },
+   {
+    "mal": "I am colombian.",
+    "bien": "I am Colombian.",
+    "por_que": "Las nacionalidades llevan mayúscula en inglés."
+   },
+   {
+    "mal": "Where are you from Colombia?",
+    "bien": "Are you from Colombia?",
+    "por_que": "Where pide un lugar; no se puede mezclar con una pregunta de sí o no."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "Where are you from?",
+   "es": "¿De dónde eres?",
+   "nota": null
+  },
+  {
+   "en": "I'm from...",
+   "es": "Soy de...",
+   "nota": null
+  },
+  {
+   "en": "country",
+   "es": "país",
+   "nota": null
+  },
+  {
+   "en": "city",
+   "es": "ciudad",
+   "nota": null
+  },
+  {
+   "en": "Colombia / Colombian",
+   "es": "Colombia / colombiano",
+   "nota": null
+  },
+  {
+   "en": "Spain / Spanish",
+   "es": "España / español",
+   "nota": null
+  },
+  {
+   "en": "The United States / American",
+   "es": "Estados Unidos / estadounidense",
+   "nota": null
+  },
+  {
+   "en": "The United Kingdom / British",
+   "es": "Reino Unido / británico",
+   "nota": null
+  },
+  {
+   "en": "Brazil / Brazilian",
+   "es": "Brasil / brasileño",
+   "nota": null
+  },
+  {
+   "en": "Argentina / Argentinian",
+   "es": "Argentina / argentino",
+   "nota": null
+  },
+  {
+   "en": "China / Chinese",
+   "es": "China / chino",
+   "nota": null
+  },
+  {
+   "en": "language",
+   "es": "idioma",
+   "nota": null
+  },
+  {
+   "en": "I speak...",
+   "es": "Hablo...",
+   "nota": null
+  },
+  {
+   "en": "a little",
+   "es": "un poco",
+   "nota": null
+  },
+  {
+   "en": "here",
+   "es": "aquí",
+   "nota": null
+  }
+ ]
+}

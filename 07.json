@@ -1,0 +1,174 @@
+{
+ "numero": 7,
+ "bloque": 2,
+ "titulo": "Presentar a otros",
+ "puedes": "Presentar a tu familia y hablar de otras personas sin repetir sus nombres.",
+ "gramatica": "Pronombres personales (I, you, he, she, it, we, they)",
+ "concepto": {
+  "puntos": [
+   "Los pronombres reemplazan a una persona o cosa ya mencionada, para no repetir el nombre: Ana is my sister. She is a doctor.",
+   "En inglés el pronombre es obligatorio. El español lo omite porque el verbo indica quién habla; el inglés no tiene esa marca.",
+   "It se usa para cosas y animales. En español todo tiene género, en inglés solo las personas son he o she.",
+   "They sirve para varias personas y también para varias cosas, sin distinguir género."
+  ],
+  "clave": "El pronombre no se puede borrar: sin él, la frase en inglés queda incompleta."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Yo / tú, usted",
+    "formula": "I  /  you"
+   },
+   {
+    "etiqueta": "Él / ella / eso",
+    "formula": "he  /  she  /  it"
+   },
+   {
+    "etiqueta": "Nosotros / ellos",
+    "formula": "we  /  they"
+   },
+   {
+    "etiqueta": "Presentar",
+    "formula": "This is my sister, Ana."
+   }
+  ],
+  "notas": [
+   "I se escribe siempre con mayúscula, aunque vaya en medio de la frase.",
+   "You es tú, usted y ustedes: una sola palabra para todo.",
+   "Para presentar a alguien se usa this is, no he is."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "This is my brother. He's a student.",
+   "es": "Este es mi hermano. Es estudiante.",
+   "nota": "Presentar y luego pronombre"
+  },
+  {
+   "en": "Ana and Luis are my parents. They're from Mexico.",
+   "es": "Ana y Luis son mis padres. Son de México.",
+   "nota": null
+  },
+  {
+   "en": "I have a dog. It's very small.",
+   "es": "Tengo un perro. Es muy pequeño.",
+   "nota": "Animal = it"
+  },
+  {
+   "en": "We're friends.",
+   "es": "Somos amigos.",
+   "nota": null
+  },
+  {
+   "en": "She's my aunt and he's my uncle.",
+   "es": "Ella es mi tía y él es mi tío.",
+   "nota": null
+  },
+  {
+   "en": "My mom is a nurse. She works at night.",
+   "es": "Mi mamá es enfermera. Trabaja de noche.",
+   "nota": "Mom en inglés americano"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Omitir el pronombre es el error más típico del hispanohablante: Is my brother no significa es mi hermano, significa ¿es mi hermano?",
+   "No uses he o she para objetos por traducir el género del español. La mesa no es she, es it.",
+   "I siempre en mayúscula. Escribir i en minúscula es una falta llamativa en inglés escrito."
+  ],
+  "contrastes": [
+   {
+    "mal": "Is my brother. Is a student.",
+    "bien": "This is my brother. He's a student.",
+    "por_que": "Sin sujeto, la frase en inglés se lee como pregunta."
+   },
+   {
+    "mal": "The table is new. She is big.",
+    "bien": "The table is new. It's big.",
+    "por_que": "Los objetos son it, sin importar el género que tengan en español."
+   },
+   {
+    "mal": "My parents, they is teachers.",
+    "bien": "My parents are teachers.",
+    "por_que": "No se repite el sujeto, y con plural va are."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "family",
+   "es": "familia",
+   "nota": null
+  },
+  {
+   "en": "parents",
+   "es": "padres",
+   "nota": "Siempre plural"
+  },
+  {
+   "en": "mom / dad",
+   "es": "mamá / papá",
+   "nota": "Americano; británico: mum"
+  },
+  {
+   "en": "brother / sister",
+   "es": "hermano / hermana",
+   "nota": null
+  },
+  {
+   "en": "son / daughter",
+   "es": "hijo / hija",
+   "nota": null
+  },
+  {
+   "en": "husband / wife",
+   "es": "esposo / esposa",
+   "nota": null
+  },
+  {
+   "en": "grandfather / grandmother",
+   "es": "abuelo / abuela",
+   "nota": null
+  },
+  {
+   "en": "uncle / aunt",
+   "es": "tío / tía",
+   "nota": null
+  },
+  {
+   "en": "cousin",
+   "es": "primo o prima",
+   "nota": "Sirve para los dos"
+  },
+  {
+   "en": "friend",
+   "es": "amigo",
+   "nota": null
+  },
+  {
+   "en": "neighbor",
+   "es": "vecino",
+   "nota": "Americano; británico: neighbour"
+  },
+  {
+   "en": "boyfriend / girlfriend",
+   "es": "novio / novia",
+   "nota": null
+  },
+  {
+   "en": "This is...",
+   "es": "Te presento a...",
+   "nota": "Para presentar"
+  },
+  {
+   "en": "married / single",
+   "es": "casado / soltero",
+   "nota": null
+  },
+  {
+   "en": "children / kids",
+   "es": "hijos, niños",
+   "nota": "Plural irregular de child"
+  }
+ ]
+}

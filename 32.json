@@ -1,0 +1,174 @@
+{
+ "numero": 32,
+ "bloque": 5,
+ "titulo": "Dar instrucciones",
+ "puedes": "Dar una orden, una indicación o un consejo directo, y entender carteles e instrucciones.",
+ "gramatica": "Imperativo",
+ "concepto": {
+  "puntos": [
+   "El imperativo es la forma más simple del inglés: el verbo solo, sin sujeto y sin nada más. Open the door.",
+   "Es la única estructura donde el sujeto sí se omite, porque se entiende que le hablas a quien tienes delante.",
+   "Para prohibir se usa don't delante del verbo: Don't worry.",
+   "Sirve para órdenes, pero también para instrucciones, indicaciones de camino, recetas, carteles y consejos."
+  ],
+  "clave": "Verbo solo, sin sujeto. Y con don't delante para lo contrario."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Afirmativo",
+    "formula": "Come here. · Open the window."
+   },
+   {
+    "etiqueta": "Negativo",
+    "formula": "Don't worry. · Don't touch that."
+   },
+   {
+    "etiqueta": "Incluyéndote",
+    "formula": "Let's go. · Let's eat."
+   },
+   {
+    "etiqueta": "Más suave",
+    "formula": "Please sit down. · Sit down, please."
+   }
+  ],
+  "notas": [
+   "Let's es la contracción de let us y sirve para proponer algo en conjunto.",
+   "Agregar please lo vuelve una petición en vez de una orden.",
+   "El imperativo no es descortés por sí mismo: se usa constantemente en instrucciones y señales."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "Turn left at the corner.",
+   "es": "Dobla a la izquierda en la esquina.",
+   "nota": "Indicación"
+  },
+  {
+   "en": "Don't worry, it's fine.",
+   "es": "No te preocupes, está bien.",
+   "nota": null
+  },
+  {
+   "en": "Please have a seat.",
+   "es": "Tome asiento, por favor.",
+   "nota": "Con please"
+  },
+  {
+   "en": "Let's go home, it's late.",
+   "es": "Vámonos a casa, es tarde.",
+   "nota": "Incluye al que habla"
+  },
+  {
+   "en": "Add the salt and mix well.",
+   "es": "Agrega la sal y mezcla bien.",
+   "nota": "Receta"
+  },
+  {
+   "en": "Don't forget your keys.",
+   "es": "No olvides las llaves.",
+   "nota": null
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Poner el sujeto es el error más típico: You open the door no es una orden, es una afirmación.",
+   "Para prohibir se usa don't, nunca no solo: es Don't smoke, no No smoke.",
+   "Let's siempre va seguido del verbo en forma base: Let's go, no Let's to go."
+  ],
+  "contrastes": [
+   {
+    "mal": "You come here.",
+    "bien": "Come here.",
+    "por_que": "El imperativo es la única forma sin sujeto."
+   },
+   {
+    "mal": "No touch that.",
+    "bien": "Don't touch that.",
+    "por_que": "Para prohibir se usa don't delante del verbo."
+   },
+   {
+    "mal": "Let's to go.",
+    "bien": "Let's go.",
+    "por_que": "Después de let's el verbo va en forma base, sin to."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "come here",
+   "es": "ven acá",
+   "nota": null
+  },
+  {
+   "en": "sit down / stand up",
+   "es": "siéntate / levántate",
+   "nota": null
+  },
+  {
+   "en": "Don't worry",
+   "es": "No te preocupes",
+   "nota": null
+  },
+  {
+   "en": "Let's...",
+   "es": "Vamos a...",
+   "nota": "Propuesta conjunta"
+  },
+  {
+   "en": "wait a minute",
+   "es": "espera un momento",
+   "nota": null
+  },
+  {
+   "en": "hurry up",
+   "es": "apúrate",
+   "nota": null
+  },
+  {
+   "en": "be careful",
+   "es": "ten cuidado",
+   "nota": null
+  },
+  {
+   "en": "look",
+   "es": "mira",
+   "nota": null
+  },
+  {
+   "en": "add",
+   "es": "agregar",
+   "nota": null
+  },
+  {
+   "en": "mix",
+   "es": "mezclar",
+   "nota": null
+  },
+  {
+   "en": "push / pull",
+   "es": "empujar / tirar",
+   "nota": "En puertas"
+  },
+  {
+   "en": "Do not enter",
+   "es": "No entrar",
+   "nota": "En carteles va la forma larga"
+  },
+  {
+   "en": "have a seat",
+   "es": "tome asiento",
+   "nota": null
+  },
+  {
+   "en": "call me",
+   "es": "llámame",
+   "nota": null
+  },
+  {
+   "en": "take care",
+   "es": "cuídate",
+   "nota": "Al despedirse"
+  }
+ ]
+}

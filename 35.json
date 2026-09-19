@@ -1,0 +1,174 @@
+{
+ "numero": 35,
+ "bloque": 6,
+ "titulo": "Qué hiciste",
+ "puedes": "Contar lo que hiciste ayer, el fin de semana o en tus vacaciones.",
+ "gramatica": "Past simple — verbos regulares",
+ "concepto": {
+  "puntos": [
+   "El pasado de los verbos regulares se forma agregando -ed al final. Work se convierte en worked.",
+   "La gran ventaja es que no cambia con la persona: I worked, she worked, they worked. No hay s ni excepciones.",
+   "Después del present simple, esto se siente un alivio: en pasado todos se comportan igual.",
+   "La terminación -ed se escribe siempre igual pero se pronuncia de tres formas distintas, según el sonido anterior."
+  ],
+  "clave": "Una sola forma para todas las personas. El pasado regular no se conjuga."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Regla general",
+    "formula": "work → worked · talk → talked"
+   },
+   {
+    "etiqueta": "Termina en e",
+    "formula": "like → liked · live → lived"
+   },
+   {
+    "etiqueta": "Consonante + y",
+    "formula": "study → studied · try → tried"
+   },
+   {
+    "etiqueta": "Verbo corto cvc",
+    "formula": "stop → stopped · plan → planned"
+   }
+  ],
+  "notas": [
+   "La pronunciación de -ed tiene tres versiones: /t/ en worked, /d/ en played y /id/ en wanted.",
+   "Solo suena como sílaba aparte cuando el verbo termina en t o d: wanted, needed.",
+   "Las palabras de tiempo pasado suelen ir al final de la frase."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "I worked from home yesterday.",
+   "es": "Ayer trabajé desde la casa.",
+   "nota": null
+  },
+  {
+   "en": "She studied English for two years.",
+   "es": "Ella estudió inglés por dos años.",
+   "nota": "Study pasa a studied"
+  },
+  {
+   "en": "We watched a movie last night.",
+   "es": "Vimos una película anoche.",
+   "nota": null
+  },
+  {
+   "en": "They arrived late.",
+   "es": "Llegaron tarde.",
+   "nota": null
+  },
+  {
+   "en": "He called me this morning.",
+   "es": "Me llamó esta mañana.",
+   "nota": null
+  },
+  {
+   "en": "I needed more time.",
+   "es": "Necesitaba más tiempo.",
+   "nota": "Aquí -ed suena como sílaba"
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "No agregues s en tercera persona. Ese hábito viene del presente y aquí no aplica: she worked, no she workeds.",
+   "El pasado simple sirve para acciones terminadas. Si la acción sigue abierta, en el A2 verás otra forma.",
+   "Ojo con los verbos que terminan en y: si antes hay consonante, la y pasa a ied."
+  ],
+  "contrastes": [
+   {
+    "mal": "She worked yesterday and he workeds too.",
+    "bien": "She worked yesterday and he worked too.",
+    "por_que": "El pasado no lleva marca de tercera persona."
+   },
+   {
+    "mal": "I studyed English.",
+    "bien": "I studied English.",
+    "por_que": "Consonante más y: la y se convierte en ied."
+   },
+   {
+    "mal": "I stoped the car.",
+    "bien": "I stopped the car.",
+    "por_que": "En verbos cortos de consonante-vocal-consonante se dobla la última letra."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "worked",
+   "es": "trabajé, trabajó",
+   "nota": null
+  },
+  {
+   "en": "studied",
+   "es": "estudié",
+   "nota": null
+  },
+  {
+   "en": "watched",
+   "es": "vi (televisión)",
+   "nota": null
+  },
+  {
+   "en": "played",
+   "es": "jugué, toqué",
+   "nota": null
+  },
+  {
+   "en": "called",
+   "es": "llamé",
+   "nota": null
+  },
+  {
+   "en": "arrived",
+   "es": "llegué",
+   "nota": null
+  },
+  {
+   "en": "started / finished",
+   "es": "empecé / terminé",
+   "nota": null
+  },
+  {
+   "en": "liked",
+   "es": "me gustó",
+   "nota": null
+  },
+  {
+   "en": "wanted",
+   "es": "quise, quería",
+   "nota": "-ed suena aparte"
+  },
+  {
+   "en": "needed",
+   "es": "necesité",
+   "nota": "-ed suena aparte"
+  },
+  {
+   "en": "asked",
+   "es": "pregunté",
+   "nota": null
+  },
+  {
+   "en": "helped",
+   "es": "ayudé",
+   "nota": null
+  },
+  {
+   "en": "stopped",
+   "es": "paré",
+   "nota": "Doble p"
+  },
+  {
+   "en": "traveled",
+   "es": "viajé",
+   "nota": "Americano con una l"
+  },
+  {
+   "en": "last weekend",
+   "es": "el fin de semana pasado",
+   "nota": null
+  }
+ ]
+}

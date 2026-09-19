@@ -1,0 +1,174 @@
+{
+ "numero": 11,
+ "bloque": 2,
+ "titulo": "Describir personas",
+ "puedes": "Describir cómo es alguien físicamente y de carácter, y preguntar por alguien que no conoces.",
+ "gramatica": "Adjetivos con to be y orden del adjetivo",
+ "concepto": {
+  "puntos": [
+   "El adjetivo en inglés va antes del sustantivo, al revés del español: a tall man, no a man tall.",
+   "El adjetivo no cambia nunca: ni por género ni por número. Tall sirve para un hombre, una mujer o veinte personas.",
+   "Para describir se usa to be: She is tall. Pero para el pelo y los ojos se usa have: She has brown eyes.",
+   "Very, really y a little van delante del adjetivo para graduar la intensidad."
+  ],
+  "clave": "El adjetivo va antes del sustantivo y nunca cambia de forma."
+ },
+ "estructura": {
+  "filas": [
+   {
+    "etiqueta": "Con to be",
+    "formula": "She is tall."
+   },
+   {
+    "etiqueta": "Antes del sustantivo",
+    "formula": "She is a tall woman."
+   },
+   {
+    "etiqueta": "Pelo y ojos",
+    "formula": "He has short hair and blue eyes."
+   },
+   {
+    "etiqueta": "Preguntar",
+    "formula": "What does he look like?"
+   }
+  ],
+  "notas": [
+   "What does he look like? pregunta por el físico; What is he like? pregunta por el carácter.",
+   "Hair casi siempre va en singular: my hair is short, no my hairs are short.",
+   "Intensificadores: very tall, really nice, a little shy."
+  ]
+ },
+ "ejemplos": [
+  {
+   "en": "My sister is tall and thin.",
+   "es": "Mi hermana es alta y delgada.",
+   "nota": "El adjetivo no cambia"
+  },
+  {
+   "en": "He's a very friendly guy.",
+   "es": "Es un tipo muy amable.",
+   "nota": "Adjetivo antes del sustantivo"
+  },
+  {
+   "en": "She has long dark hair.",
+   "es": "Ella tiene el pelo largo y oscuro.",
+   "nota": "Pelo y ojos van con have"
+  },
+  {
+   "en": "What does your boss look like?",
+   "es": "¿Cómo es tu jefe físicamente?",
+   "nota": null
+  },
+  {
+   "en": "What is she like? — She's kind but a little shy.",
+   "es": "¿Cómo es ella? — Es amable pero un poco tímida.",
+   "nota": "Carácter"
+  },
+  {
+   "en": "They're young. They're twenty-two.",
+   "es": "Son jóvenes. Tienen veintidós.",
+   "nota": null
+  }
+ ],
+ "ojo": {
+  "puntos": [
+   "Poner el adjetivo después del sustantivo es el error más audible: a house big suena inmediatamente mal.",
+   "No pongas s al adjetivo en plural. Son they are tall, no they are talls.",
+   "Para el pelo y los ojos se usa have, no to be. She is brown eyes no significa nada."
+  ],
+  "contrastes": [
+   {
+    "mal": "She is a woman tall.",
+    "bien": "She is a tall woman.",
+    "por_que": "En inglés el adjetivo va antes del sustantivo."
+   },
+   {
+    "mal": "My friends are tolerants and nices.",
+    "bien": "My friends are tolerant and nice.",
+    "por_que": "Los adjetivos no tienen plural en inglés."
+   },
+   {
+    "mal": "She is blue eyes.",
+    "bien": "She has blue eyes.",
+    "por_que": "Los rasgos se poseen: van con have, no con to be."
+   }
+  ]
+ },
+ "vocabulario": [
+  {
+   "en": "tall / short",
+   "es": "alto / bajo",
+   "nota": null
+  },
+  {
+   "en": "thin / heavy",
+   "es": "delgado / gordo",
+   "nota": "Heavy es más cortés que fat"
+  },
+  {
+   "en": "young / old",
+   "es": "joven / mayor",
+   "nota": null
+  },
+  {
+   "en": "hair",
+   "es": "pelo",
+   "nota": "Casi siempre singular"
+  },
+  {
+   "en": "long / short hair",
+   "es": "pelo largo / corto",
+   "nota": null
+  },
+  {
+   "en": "dark / blond",
+   "es": "oscuro / rubio",
+   "nota": null
+  },
+  {
+   "en": "eyes",
+   "es": "ojos",
+   "nota": null
+  },
+  {
+   "en": "beard",
+   "es": "barba",
+   "nota": null
+  },
+  {
+   "en": "friendly / kind",
+   "es": "amable",
+   "nota": null
+  },
+  {
+   "en": "shy",
+   "es": "tímido",
+   "nota": null
+  },
+  {
+   "en": "funny",
+   "es": "divertido",
+   "nota": null
+  },
+  {
+   "en": "smart",
+   "es": "inteligente",
+   "nota": "Americano; británico: clever"
+  },
+  {
+   "en": "quiet",
+   "es": "callado",
+   "nota": null
+  },
+  {
+   "en": "very / really / a little",
+   "es": "muy / realmente / un poco",
+   "nota": "Delante del adjetivo"
+  },
+  {
+   "en": "What does he look like?",
+   "es": "¿Cómo es él?",
+   "nota": "Físico"
+  }
+ ]
+}
