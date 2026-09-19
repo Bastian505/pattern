@@ -13,12 +13,64 @@
    "tipo": "elegir",
    "instruccion": "Repaso: elige la forma correcta.",
    "items": [
-    {"prompt": "___ from Colombia.", "opciones": ["I'm", "I am not", "Am"], "respuesta": "I'm"},
-    {"prompt": "She ___ a nurse.", "opciones": ["is", "are", "am"], "respuesta": "is"},
-    {"prompt": "I'm ___ architect.", "opciones": ["an", "a"], "respuesta": "an"},
-    {"prompt": "They ___ students.", "opciones": ["are", "is", "am"], "respuesta": "are"},
-    {"prompt": "___ twenty-eight years old.", "opciones": ["I'm", "I have"], "respuesta": "I'm"},
-    {"prompt": "___ you from Peru?", "opciones": ["Are", "Do", "Is"], "respuesta": "Are"}
+    {
+     "prompt": "___ from Colombia.",
+     "opciones": [
+      "I'm",
+      "I am not",
+      "Am"
+     ],
+     "respuesta": "I'm",
+     "es": "Soy de Colombia."
+    },
+    {
+     "prompt": "She ___ a nurse.",
+     "opciones": [
+      "is",
+      "are",
+      "am"
+     ],
+     "respuesta": "is",
+     "es": "Ella es enfermera."
+    },
+    {
+     "prompt": "I'm ___ architect.",
+     "opciones": [
+      "an",
+      "a"
+     ],
+     "respuesta": "an",
+     "es": "Soy arquitecto."
+    },
+    {
+     "prompt": "They ___ students.",
+     "opciones": [
+      "are",
+      "is",
+      "am"
+     ],
+     "respuesta": "are",
+     "es": "Son estudiantes."
+    },
+    {
+     "prompt": "___ twenty-eight years old.",
+     "opciones": [
+      "I'm",
+      "I have"
+     ],
+     "respuesta": "I'm",
+     "es": "Tengo veintiocho años."
+    },
+    {
+     "prompt": "___ you from Peru?",
+     "opciones": [
+      "Are",
+      "Do",
+      "Is"
+     ],
+     "respuesta": "Are",
+     "es": "¿Eres de Perú?"
+    }
    ]
   },
   {
@@ -26,10 +78,33 @@
    "tipo": "transformar",
    "instruccion": "Convierte en pregunta y en negativa.",
    "items": [
-    {"prompt": "Pregunta: She is a teacher.", "respuesta": "Is she a teacher?"},
-    {"prompt": "Negativa: I'm from Peru.", "respuesta": "I'm not from Peru.", "alternativas": ["I am not from Peru."]},
-    {"prompt": "Pregunta: They are your parents.", "respuesta": "Are they your parents?"},
-    {"prompt": "Negativa: He is a student.", "respuesta": "He isn't a student.", "alternativas": ["He's not a student.", "He is not a student."]}
+    {
+     "prompt": "Pregunta: She is a teacher.",
+     "respuesta": "Is she a teacher?",
+     "es": "Ella es profesora."
+    },
+    {
+     "prompt": "Negativa: I'm from Peru.",
+     "respuesta": "I'm not from Peru.",
+     "alternativas": [
+      "I am not from Peru."
+     ],
+     "es": "Soy de Perú."
+    },
+    {
+     "prompt": "Pregunta: They are your parents.",
+     "respuesta": "Are they your parents?",
+     "es": "Ellos son tus padres."
+    },
+    {
+     "prompt": "Negativa: He is a student.",
+     "respuesta": "He isn't a student.",
+     "alternativas": [
+      "He's not a student.",
+      "He is not a student."
+     ],
+     "es": "Él es estudiante."
+    }
    ]
   },
   {
@@ -37,10 +112,47 @@
    "tipo": "ordenar",
    "instruccion": "Arma la presentación completa, frase por frase.",
    "items": [
-    {"palabras": ["Daniel", "Hi,", "I'm", "."], "respuesta": "Hi, I'm Daniel."},
-    {"palabras": ["Colombia", "I'm", "from", "."], "respuesta": "I'm from Colombia."},
-    {"palabras": ["old", "years", "I'm", "twenty-eight", "."], "respuesta": "I'm twenty-eight years old."},
-    {"palabras": ["a", "I'm", "teacher", "."], "respuesta": "I'm a teacher."}
+    {
+     "palabras": [
+      "Daniel",
+      "Hi,",
+      "I'm",
+      "."
+     ],
+     "respuesta": "Hi, I'm Daniel.",
+     "es": "Hola, soy Daniel."
+    },
+    {
+     "palabras": [
+      "Colombia",
+      "I'm",
+      "from",
+      "."
+     ],
+     "respuesta": "I'm from Colombia.",
+     "es": "Soy de Colombia."
+    },
+    {
+     "palabras": [
+      "old",
+      "years",
+      "I'm",
+      "twenty-eight",
+      "."
+     ],
+     "respuesta": "I'm twenty-eight years old.",
+     "es": "Tengo veintiocho años."
+    },
+    {
+     "palabras": [
+      "a",
+      "I'm",
+      "teacher",
+      "."
+     ],
+     "respuesta": "I'm a teacher.",
+     "es": "Soy profesor."
+    }
    ]
   },
   {
@@ -48,9 +160,28 @@
    "tipo": "corregir",
    "instruccion": "Los tres errores que hay que tener superados.",
    "items": [
-    {"mal": "I have 28 years.", "respuesta": "I'm 28.", "pista": "La edad va con to be.", "alternativas": ["I am 28.", "I'm twenty-eight."]},
-    {"mal": "I'm engineer.", "respuesta": "I'm an engineer.", "pista": "Profesión en singular lleva artículo."},
-    {"mal": "Fine, thanks.", "respuesta": "I'm fine, thanks.", "pista": "El sujeto y el verbo no se omiten."}
+    {
+     "mal": "I have 28 years.",
+     "respuesta": "I'm 28.",
+     "pista": "La edad va con to be.",
+     "alternativas": [
+      "I am 28.",
+      "I'm twenty-eight."
+     ],
+     "es": "Tengo 28 años."
+    },
+    {
+     "mal": "I'm engineer.",
+     "respuesta": "I'm an engineer.",
+     "pista": "Profesión en singular lleva artículo.",
+     "es": "Soy ingeniero."
+    },
+    {
+     "mal": "Fine, thanks.",
+     "respuesta": "I'm fine, thanks.",
+     "pista": "El sujeto y el verbo no se omiten.",
+     "es": "Estoy bien, gracias."
+    }
    ]
   },
   {
@@ -59,10 +190,22 @@
    "ia": true,
    "instruccion": "Preséntate completo. Escribe cada frase en inglés.",
    "items": [
-    {"es": "Hola, me llamo Laura. Mucho gusto.", "referencia": "Hi, my name is Laura. Nice to meet you."},
-    {"es": "Soy de Colombia, pero no soy de Bogotá.", "referencia": "I'm from Colombia, but I'm not from Bogota."},
-    {"es": "Tengo veintiocho años y soy enfermera.", "referencia": "I'm twenty-eight years old and I'm a nurse."},
-    {"es": "¿Y tú? ¿Eres estudiante?", "referencia": "And you? Are you a student?"}
+    {
+     "es": "Hola, me llamo Laura. Mucho gusto.",
+     "referencia": "Hi, my name is Laura. Nice to meet you."
+    },
+    {
+     "es": "Soy de Colombia, pero no soy de Bogotá.",
+     "referencia": "I'm from Colombia, but I'm not from Bogota."
+    },
+    {
+     "es": "Tengo veintiocho años y soy enfermera.",
+     "referencia": "I'm twenty-eight years old and I'm a nurse."
+    },
+    {
+     "es": "¿Y tú? ¿Eres estudiante?",
+     "referencia": "And you? Are you a student?"
+    }
    ]
   }
  ]

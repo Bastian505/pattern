@@ -1,174 +1,211 @@
 {
- "numero": 4,
- "bloque": 1,
- "titulo": "Tu edad y tus datos",
- "puedes": "Decir tu edad, dar tu número de teléfono y tu correo, y entender cifras cuando te las dicen.",
- "gramatica": "Números del 1 al 100 y to be para la edad",
- "concepto": {
-  "puntos": [
-   "La edad en inglés se dice con to be, no con tener. Se dice literalmente yo soy 25.",
-   "Los números del 13 al 19 terminan en -teen, y las decenas en -ty. La diferencia es sutil al oído pero cambia todo.",
-   "Los teléfonos se dicen dígito por dígito, no en miles ni centenas.",
-   "El cero tiene varios nombres según el contexto: zero, oh en teléfonos, nought en británico."
-  ],
-  "clave": "Para la edad, el inglés usa ser en vez de tener: I am 25."
- },
- "estructura": {
-  "filas": [
-   {
-    "etiqueta": "Decir la edad",
-    "formula": "I am 25. / I'm 25 years old."
-   },
-   {
-    "etiqueta": "Preguntar la edad",
-    "formula": "How old are you?"
-   },
-   {
-    "etiqueta": "Otra persona",
-    "formula": "She is 30. / My brother is 12."
-   },
-   {
-    "etiqueta": "Números compuestos",
-    "formula": "twenty-five, forty-two (con guion)"
-   }
-  ],
-  "notas": [
-   "Years old es opcional: I'm 25 ya está completo.",
-   "Del 21 al 99 los números compuestos se escriben con guion.",
-   "Una dirección de correo se lee: nombre + at + dominio + dot + com."
-  ]
- },
- "ejemplos": [
-  {
-   "en": "How old are you? — I'm thirty-two.",
-   "es": "¿Cuántos años tienes? — Tengo treinta y dos.",
-   "nota": null
-  },
-  {
-   "en": "My sister is fifteen years old.",
-   "es": "Mi hermana tiene quince años.",
-   "nota": null
-  },
-  {
-   "en": "What's your phone number?",
-   "es": "¿Cuál es tu número de teléfono?",
-   "nota": null
-  },
-  {
-   "en": "It's nine-five-two, four-four-one.",
-   "es": "Es nueve cinco dos, cuatro cuatro uno.",
-   "nota": "Dígito por dígito"
-  },
-  {
-   "en": "My email is bastian at gmail dot com.",
-   "es": "Mi correo es bastian arroba gmail punto com.",
-   "nota": null
-  },
-  {
-   "en": "Sorry, can you repeat that more slowly?",
-   "es": "Perdón, ¿puedes repetirlo más lento?",
-   "nota": "Frase de rescate"
-  }
+ "unidad": 4,
+ "criterios": [
+  "Dice la edad con to be, nunca con have",
+  "Pregunta la edad con How old are you",
+  "Distingue los números terminados en -teen de los terminados en -ty"
  ],
- "ojo": {
-  "puntos": [
-   "El error más frecuente y más delatador: decir I have 25 years. En inglés no se tiene edad, se es.",
-   "Thirteen y thirty suenan parecido. La clave está en dónde cae la fuerza: thirTEEN al final, THIRty al principio.",
-   "El signo @ se lee at y el punto se lee dot. No se deletrean."
-  ],
-  "contrastes": [
-   {
-    "mal": "I have 25 years.",
-    "bien": "I'm 25.",
-    "por_que": "Calco directo del español. Es el error más común de todos."
-   },
-   {
-    "mal": "I have 25 years old.",
-    "bien": "I'm 25 years old.",
-    "por_que": "Mismo problema: el verbo correcto es to be."
-   },
-   {
-    "mal": "How many years do you have?",
-    "bien": "How old are you?",
-    "por_que": "La pregunta en inglés es cuán viejo eres, no cuántos años tienes."
-   }
-  ]
- },
- "vocabulario": [
+ "tandas": [
   {
-   "en": "How old are you?",
-   "es": "¿Cuántos años tienes?",
-   "nota": null
+   "id": "u4t1",
+   "tipo": "elegir",
+   "instruccion": "Elige la forma correcta.",
+   "items": [
+    {
+     "prompt": "Tengo veinticinco años.",
+     "opciones": [
+      "I'm twenty-five.",
+      "I have twenty-five years."
+     ],
+     "respuesta": "I'm twenty-five."
+    },
+    {
+     "prompt": "¿Cuántos años tienes?",
+     "opciones": [
+      "How old are you?",
+      "How many years do you have?"
+     ],
+     "respuesta": "How old are you?"
+    },
+    {
+     "prompt": "Mi hermana tiene quince años.",
+     "opciones": [
+      "My sister is fifteen.",
+      "My sister has fifteen years."
+     ],
+     "respuesta": "My sister is fifteen."
+    },
+    {
+     "prompt": "Él tiene treinta años.",
+     "opciones": [
+      "He is thirty.",
+      "He has thirty."
+     ],
+     "respuesta": "He is thirty."
+    }
+   ]
   },
   {
-   "en": "years old",
-   "es": "años de edad",
-   "nota": "Opcional"
+   "id": "u4t2",
+   "tipo": "elegir",
+   "instruccion": "¿Qué número escuchas escrito?",
+   "items": [
+    {
+     "prompt": "13",
+     "opciones": [
+      "thirteen",
+      "thirty"
+     ],
+     "respuesta": "thirteen"
+    },
+    {
+     "prompt": "40",
+     "opciones": [
+      "fourteen",
+      "forty"
+     ],
+     "respuesta": "forty"
+    },
+    {
+     "prompt": "15",
+     "opciones": [
+      "fifteen",
+      "fifty"
+     ],
+     "respuesta": "fifteen"
+    },
+    {
+     "prompt": "80",
+     "opciones": [
+      "eighteen",
+      "eighty"
+     ],
+     "respuesta": "eighty"
+    },
+    {
+     "prompt": "19",
+     "opciones": [
+      "nineteen",
+      "ninety"
+     ],
+     "respuesta": "nineteen"
+    }
+   ]
   },
   {
-   "en": "one, two, three, four, five",
-   "es": "1 a 5",
-   "nota": null
+   "id": "u4t3",
+   "tipo": "completar",
+   "instruccion": "Escribe el número en palabras.",
+   "items": [
+    {
+     "prompt": "22 = twenty-___",
+     "respuesta": "two"
+    },
+    {
+     "prompt": "31 = ___-one",
+     "respuesta": "thirty"
+    },
+    {
+     "prompt": "50 = ___",
+     "respuesta": "fifty"
+    },
+    {
+     "prompt": "100 = one ___",
+     "respuesta": "hundred"
+    }
+   ]
   },
   {
-   "en": "six, seven, eight, nine, ten",
-   "es": "6 a 10",
-   "nota": null
+   "id": "u4t4",
+   "tipo": "ordenar",
+   "instruccion": "Ordena las palabras para formar la frase.",
+   "items": [
+    {
+     "palabras": [
+      "are",
+      "old",
+      "How",
+      "you",
+      "?"
+     ],
+     "respuesta": "How old are you?",
+     "es": "¿Cuántos años tienes?"
+    },
+    {
+     "palabras": [
+      "years",
+      "I'm",
+      "old",
+      "thirty",
+      "."
+     ],
+     "respuesta": "I'm thirty years old.",
+     "es": "Tengo treinta años."
+    },
+    {
+     "palabras": [
+      "number",
+      "your",
+      "What's",
+      "phone",
+      "?"
+     ],
+     "respuesta": "What's your phone number?",
+     "es": "¿Cuál es tu número de teléfono?"
+    }
+   ]
   },
   {
-   "en": "eleven, twelve, thirteen",
-   "es": "11, 12, 13",
-   "nota": null
+   "id": "u4t5",
+   "tipo": "corregir",
+   "instruccion": "Cada frase tiene un error. Escríbela bien.",
+   "items": [
+    {
+     "mal": "I have 25 years.",
+     "respuesta": "I'm 25.",
+     "pista": "La edad va con to be.",
+     "alternativas": [
+      "I am 25.",
+      "I'm twenty-five."
+     ],
+     "es": "Tengo 25 años."
+    },
+    {
+     "mal": "I have 25 years old.",
+     "respuesta": "I'm 25 years old.",
+     "pista": "El verbo correcto es to be.",
+     "alternativas": [
+      "I am 25 years old."
+     ],
+     "es": "Tengo 25 años."
+    },
+    {
+     "mal": "How many years do you have?",
+     "respuesta": "How old are you?",
+     "pista": "En inglés se pregunta cuán viejo eres.",
+     "es": "¿Cuántos años tienes?"
+    }
+   ]
   },
   {
-   "en": "fifteen, eighteen, twenty",
-   "es": "15, 18, 20",
-   "nota": null
-  },
-  {
-   "en": "thirty, forty, fifty",
-   "es": "30, 40, 50",
-   "nota": null
-  },
-  {
-   "en": "sixty, seventy, eighty, ninety",
-   "es": "60 a 90",
-   "nota": null
-  },
-  {
-   "en": "one hundred",
-   "es": "cien",
-   "nota": null
-  },
-  {
-   "en": "phone number",
-   "es": "número de teléfono",
-   "nota": null
-  },
-  {
-   "en": "email address",
-   "es": "correo electrónico",
-   "nota": null
-  },
-  {
-   "en": "at / dot",
-   "es": "arroba / punto",
-   "nota": "Para leer un correo"
-  },
-  {
-   "en": "birthday",
-   "es": "cumpleaños",
-   "nota": null
-  },
-  {
-   "en": "Can you repeat that?",
-   "es": "¿Puedes repetir?",
-   "nota": null
-  },
-  {
-   "en": "slowly",
-   "es": "despacio",
-   "nota": null
+   "id": "u4t6",
+   "tipo": "traducir",
+   "ia": true,
+   "instruccion": "Escribe estas frases en inglés.",
+   "items": [
+    {
+     "es": "¿Cuántos años tienes? — Tengo treinta y dos.",
+     "referencia": "How old are you? — I'm thirty-two."
+    },
+    {
+     "es": "Mi hermano tiene dieciocho años.",
+     "referencia": "My brother is eighteen years old."
+    },
+    {
+     "es": "Perdón, ¿puedes repetirlo más lento?",
+     "referencia": "Sorry, can you repeat that more slowly?"
+    }
+   ]
   }
  ]
 }

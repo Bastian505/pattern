@@ -11,12 +11,66 @@
    "tipo": "elegir",
    "instruccion": "Elige la forma correcta de to be.",
    "items": [
-    {"prompt": "Hello! I ___ Daniel.", "opciones": ["am", "is", "are"], "respuesta": "am"},
-    {"prompt": "She ___ my friend.", "opciones": ["am", "is", "are"], "respuesta": "is"},
-    {"prompt": "We ___ here.", "opciones": ["am", "is", "are"], "respuesta": "are"},
-    {"prompt": "You ___ very kind.", "opciones": ["am", "is", "are"], "respuesta": "are"},
-    {"prompt": "He ___ my brother.", "opciones": ["am", "is", "are"], "respuesta": "is"},
-    {"prompt": "They ___ my parents.", "opciones": ["am", "is", "are"], "respuesta": "are"}
+    {
+     "prompt": "Hello! I ___ Daniel.",
+     "opciones": [
+      "am",
+      "is",
+      "are"
+     ],
+     "respuesta": "am",
+     "es": "¡Hola! Soy Daniel."
+    },
+    {
+     "prompt": "She ___ my friend.",
+     "opciones": [
+      "am",
+      "is",
+      "are"
+     ],
+     "respuesta": "is",
+     "es": "Ella es mi amiga."
+    },
+    {
+     "prompt": "We ___ here.",
+     "opciones": [
+      "am",
+      "is",
+      "are"
+     ],
+     "respuesta": "are",
+     "es": "Estamos aquí."
+    },
+    {
+     "prompt": "You ___ very kind.",
+     "opciones": [
+      "am",
+      "is",
+      "are"
+     ],
+     "respuesta": "are",
+     "es": "Eres muy amable."
+    },
+    {
+     "prompt": "He ___ my brother.",
+     "opciones": [
+      "am",
+      "is",
+      "are"
+     ],
+     "respuesta": "is",
+     "es": "Él es mi hermano."
+    },
+    {
+     "prompt": "They ___ my parents.",
+     "opciones": [
+      "am",
+      "is",
+      "are"
+     ],
+     "respuesta": "are",
+     "es": "Ellos son mis padres."
+    }
    ]
   },
   {
@@ -24,21 +78,85 @@
    "tipo": "elegir",
    "instruccion": "¿Qué saludo corresponde?",
    "items": [
-    {"prompt": "Llegas a una reunión a las 8 de la noche.", "opciones": ["Good evening", "Good night"], "respuesta": "Good evening"},
-    {"prompt": "Te vas de la fiesta y te despides.", "opciones": ["Good evening", "Good night"], "respuesta": "Good night"},
-    {"prompt": "Saludas a las 10 de la mañana.", "opciones": ["Good morning", "Good afternoon"], "respuesta": "Good morning"},
-    {"prompt": "Conoces a alguien por primera vez.", "opciones": ["Nice to meet you", "See you later"], "respuesta": "Nice to meet you"}
+    {
+     "prompt": "Llegas a una reunión a las 8 de la noche.",
+     "opciones": [
+      "Good evening",
+      "Good night"
+     ],
+     "respuesta": "Good evening"
+    },
+    {
+     "prompt": "Te vas de la fiesta y te despides.",
+     "opciones": [
+      "Good evening",
+      "Good night"
+     ],
+     "respuesta": "Good night"
+    },
+    {
+     "prompt": "Saludas a las 10 de la mañana.",
+     "opciones": [
+      "Good morning",
+      "Good afternoon"
+     ],
+     "respuesta": "Good morning"
+    },
+    {
+     "prompt": "Conoces a alguien por primera vez.",
+     "opciones": [
+      "Nice to meet you",
+      "See you later"
+     ],
+     "respuesta": "Nice to meet you"
+    }
    ]
   },
   {
    "id": "u1t3",
    "tipo": "completar",
-   "instruccion": "Completa con la contracción: I'm, you're, he's, she's o we're.",
+   "instruccion": "Completa con la contracción correcta. La traducción te dice de quién se habla.",
    "items": [
-    {"prompt": "___ fine, thanks.", "respuesta": "I'm", "alternativas": ["I am"]},
-    {"prompt": "___ my sister.", "respuesta": "She's", "alternativas": ["She is"]},
-    {"prompt": "___ here.", "respuesta": "We're", "alternativas": ["We are"]},
-    {"prompt": "___ a teacher.", "respuesta": "He's", "alternativas": ["He is"]}
+    {
+     "prompt": "___ fine, thanks.",
+     "es": "Estoy bien, gracias.",
+     "respuesta": "I'm",
+     "alternativas": [
+      "I am"
+     ]
+    },
+    {
+     "prompt": "___ my sister.",
+     "es": "Ella es mi hermana.",
+     "respuesta": "She's",
+     "alternativas": [
+      "She is"
+     ]
+    },
+    {
+     "prompt": "___ here.",
+     "es": "Estamos aquí.",
+     "respuesta": "We're",
+     "alternativas": [
+      "We are"
+     ]
+    },
+    {
+     "prompt": "___ a teacher.",
+     "es": "Él es profesor.",
+     "respuesta": "He's",
+     "alternativas": [
+      "He is"
+     ]
+    },
+    {
+     "prompt": "___ my parents.",
+     "es": "Ellos son mis padres.",
+     "respuesta": "They're",
+     "alternativas": [
+      "They are"
+     ]
+    }
    ]
   },
   {
@@ -46,10 +164,47 @@
    "tipo": "ordenar",
    "instruccion": "Ordena las palabras para formar la frase.",
    "items": [
-    {"palabras": ["are", "How", "you", "?"], "respuesta": "How are you?"},
-    {"palabras": ["meet", "to", "Nice", "you", "."], "respuesta": "Nice to meet you."},
-    {"palabras": ["fine,", "I'm", "thanks", "."], "respuesta": "I'm fine, thanks."},
-    {"palabras": ["my", "She's", "friend", "."], "respuesta": "She's my friend."}
+    {
+     "palabras": [
+      "are",
+      "How",
+      "you",
+      "?"
+     ],
+     "respuesta": "How are you?",
+     "es": "¿Cómo estás?"
+    },
+    {
+     "palabras": [
+      "meet",
+      "to",
+      "Nice",
+      "you",
+      "."
+     ],
+     "respuesta": "Nice to meet you.",
+     "es": "Mucho gusto."
+    },
+    {
+     "palabras": [
+      "fine,",
+      "I'm",
+      "thanks",
+      "."
+     ],
+     "respuesta": "I'm fine, thanks.",
+     "es": "Estoy bien, gracias."
+    },
+    {
+     "palabras": [
+      "my",
+      "She's",
+      "friend",
+      "."
+     ],
+     "respuesta": "She's my friend.",
+     "es": "Ella es mi amiga."
+    }
    ]
   },
   {
@@ -57,9 +212,30 @@
    "tipo": "corregir",
    "instruccion": "Cada frase tiene un error. Escríbela bien.",
    "items": [
-    {"mal": "Fine, thanks.", "respuesta": "I'm fine, thanks.", "pista": "Falta el sujeto y el verbo."},
-    {"mal": "Am Daniel.", "respuesta": "I'm Daniel.", "pista": "El sujeto nunca se omite.", "alternativas": ["I am Daniel."]},
-    {"mal": "We is here.", "respuesta": "We're here.", "pista": "We va con are.", "alternativas": ["We are here."]}
+    {
+     "mal": "Fine, thanks.",
+     "respuesta": "I'm fine, thanks.",
+     "pista": "Falta el sujeto y el verbo.",
+     "es": "Estoy bien, gracias."
+    },
+    {
+     "mal": "Am Daniel.",
+     "respuesta": "I'm Daniel.",
+     "pista": "El sujeto nunca se omite.",
+     "alternativas": [
+      "I am Daniel."
+     ],
+     "es": "Soy Daniel."
+    },
+    {
+     "mal": "We is here.",
+     "respuesta": "We're here.",
+     "pista": "We va con are.",
+     "alternativas": [
+      "We are here."
+     ],
+     "es": "Estamos aquí."
+    }
    ]
   },
   {
@@ -68,9 +244,18 @@
    "ia": true,
    "instruccion": "Escribe estas frases en inglés.",
    "items": [
-    {"es": "Hola, soy Ana. Mucho gusto.", "referencia": "Hi, I'm Ana. Nice to meet you."},
-    {"es": "Buenos días. ¿Cómo estás?", "referencia": "Good morning. How are you?"},
-    {"es": "Estoy bien, gracias. ¿Y tú?", "referencia": "I'm fine, thanks. And you?"}
+    {
+     "es": "Hola, soy Ana. Mucho gusto.",
+     "referencia": "Hi, I'm Ana. Nice to meet you."
+    },
+    {
+     "es": "Buenos días. ¿Cómo estás?",
+     "referencia": "Good morning. How are you?"
+    },
+    {
+     "es": "Estoy bien, gracias. ¿Y tú?",
+     "referencia": "I'm fine, thanks. And you?"
+    }
    ]
   }
  ]

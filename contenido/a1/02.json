@@ -1,158 +1,208 @@
 {
- "numero": 2,
- "bloque": 1,
- "titulo": "Decir tu nombre y deletrear",
- "puedes": "Preguntar y decir cómo te llamas, y deletrear tu nombre en voz alta.",
- "gramatica": "Verbo to be — preguntas",
- "concepto": {
-  "puntos": [
-   "Para preguntar con to be no se agrega nada: se da vuelta el orden. You are → Are you?",
-   "Ese giro es la regla más útil del inglés básico y la vas a repetir en todo el nivel.",
-   "Las preguntas que empiezan con What, Where o How piden información; las que empiezan con el verbo se responden con sí o no.",
-   "Deletrear es parte normal de una conversación en inglés, porque la escritura y la pronunciación no coinciden."
-  ],
-  "clave": "Pregunta = verbo adelante. Afirmación = sujeto adelante."
- },
- "estructura": {
-  "filas": [
-   {
-    "etiqueta": "Afirmación",
-    "formula": "You are Ana."
-   },
-   {
-    "etiqueta": "Pregunta sí/no",
-    "formula": "Are you Ana?"
-   },
-   {
-    "etiqueta": "Con palabra de pregunta",
-    "formula": "What + is + your name?"
-   },
-   {
-    "etiqueta": "Respuesta corta",
-    "formula": "Yes, I am. / No, I'm not."
-   }
-  ],
-  "notas": [
-   "En las respuestas cortas afirmativas no se contrae: se dice Yes, I am, nunca Yes, I'm.",
-   "What's es la contracción de What is, y es la forma normal de hablar."
-  ]
- },
- "ejemplos": [
-  {
-   "en": "What's your name?",
-   "es": "¿Cómo te llamas?",
-   "nota": "Literal: cuál es tu nombre"
-  },
-  {
-   "en": "My name is Daniel. / I'm Daniel.",
-   "es": "Me llamo Daniel.",
-   "nota": "Las dos sirven"
-  },
-  {
-   "en": "Are you Carlos?",
-   "es": "¿Eres Carlos?",
-   "nota": null
-  },
-  {
-   "en": "Yes, I am. / No, I'm not.",
-   "es": "Sí. / No.",
-   "nota": "Respuesta corta"
-  },
-  {
-   "en": "How do you spell it?",
-   "es": "¿Cómo se escribe?",
-   "nota": null
-  },
-  {
-   "en": "D-A-N-I-E-L.",
-   "es": "De, a, ene, i, e, ele.",
-   "nota": "Letra por letra"
-  }
+ "unidad": 2,
+ "criterios": [
+  "Forma preguntas con to be invirtiendo el orden (Are you...?)",
+  "Usa What's your name en vez de calcos del español",
+  "No contrae la respuesta corta afirmativa: Yes, I am"
  ],
- "ojo": {
-  "puntos": [
-   "No se dice How are you called ni How do you call yourself. El inglés pregunta What is your name.",
-   "Ojo con la letra que más confunde al hispanohablante: la E inglesa suena como nuestra i, y la I suena como ai.",
-   "Al deletrear en voz alta, las dobles se dicen double: Anna es A-double N-A."
-  ],
-  "contrastes": [
-   {
-    "mal": "How do you call?",
-    "bien": "What's your name?",
-    "por_que": "Traducción literal del español que en inglés no significa nada."
-   },
-   {
-    "mal": "Yes, I'm.",
-    "bien": "Yes, I am.",
-    "por_que": "La contracción no puede ir al final de la frase."
-   },
-   {
-    "mal": "My name is call Daniel.",
-    "bien": "My name is Daniel.",
-    "por_que": "Se mezclan dos formas. Elige una."
-   }
-  ]
- },
- "vocabulario": [
+ "tandas": [
   {
-   "en": "What's your name?",
-   "es": "¿Cómo te llamas?",
-   "nota": null
+   "id": "u2t1",
+   "tipo": "elegir",
+   "instruccion": "Elige la pregunta correcta en inglés.",
+   "items": [
+    {
+     "prompt": "¿Cómo te llamas?",
+     "opciones": [
+      "What's your name?",
+      "How do you call?"
+     ],
+     "respuesta": "What's your name?"
+    },
+    {
+     "prompt": "¿Eres Carlos?",
+     "opciones": [
+      "Are you Carlos?",
+      "You are Carlos?"
+     ],
+     "respuesta": "Are you Carlos?"
+    },
+    {
+     "prompt": "¿Cómo se escribe?",
+     "opciones": [
+      "How do you spell it?",
+      "How is written?"
+     ],
+     "respuesta": "How do you spell it?"
+    },
+    {
+     "prompt": "¿Es ella tu hermana?",
+     "opciones": [
+      "Is she your sister?",
+      "She is your sister?"
+     ],
+     "respuesta": "Is she your sister?"
+    },
+    {
+     "prompt": "¿Son ellos tus padres?",
+     "opciones": [
+      "Are they your parents?",
+      "They are your parents?"
+     ],
+     "respuesta": "Are they your parents?"
+    }
+   ]
   },
   {
-   "en": "My name is...",
-   "es": "Me llamo...",
-   "nota": null
+   "id": "u2t2",
+   "tipo": "transformar",
+   "instruccion": "Convierte la afirmación en pregunta.",
+   "items": [
+    {
+     "prompt": "You are Ana.",
+     "respuesta": "Are you Ana?",
+     "es": "Eres Ana."
+    },
+    {
+     "prompt": "He is a student.",
+     "respuesta": "Is he a student?",
+     "es": "Él es estudiante."
+    },
+    {
+     "prompt": "They are here.",
+     "respuesta": "Are they here?",
+     "es": "Ellos están aquí."
+    },
+    {
+     "prompt": "She is your friend.",
+     "respuesta": "Is she your friend?",
+     "es": "Ella es tu amiga."
+    },
+    {
+     "prompt": "It is your bag.",
+     "respuesta": "Is it your bag?",
+     "es": "Es tu bolso."
+    }
+   ]
   },
   {
-   "en": "first name",
-   "es": "nombre",
-   "nota": null
+   "id": "u2t3",
+   "tipo": "completar",
+   "instruccion": "Completa la respuesta corta.",
+   "items": [
+    {
+     "prompt": "Are you Daniel? — Yes, ___.",
+     "respuesta": "I am",
+     "es": "¿Eres Daniel? — Sí."
+    },
+    {
+     "prompt": "Is she your sister? — No, ___.",
+     "respuesta": "she isn't",
+     "alternativas": [
+      "she's not",
+      "she is not"
+     ],
+     "es": "¿Es ella tu hermana? — No."
+    },
+    {
+     "prompt": "Are they students? — Yes, ___.",
+     "respuesta": "they are",
+     "es": "¿Son estudiantes? — Sí."
+    },
+    {
+     "prompt": "Is he your brother? — Yes, ___.",
+     "respuesta": "he is",
+     "es": "¿Es él tu hermano? — Sí."
+    }
+   ]
   },
   {
-   "en": "last name / surname",
-   "es": "apellido",
-   "nota": null
+   "id": "u2t4",
+   "tipo": "ordenar",
+   "instruccion": "Ordena las palabras para formar la pregunta.",
+   "items": [
+    {
+     "palabras": [
+      "name",
+      "your",
+      "What's",
+      "?"
+     ],
+     "respuesta": "What's your name?",
+     "es": "¿Cómo te llamas?"
+    },
+    {
+     "palabras": [
+      "spell",
+      "you",
+      "How",
+      "do",
+      "it",
+      "?"
+     ],
+     "respuesta": "How do you spell it?",
+     "es": "¿Cómo se escribe?"
+    },
+    {
+     "palabras": [
+      "my",
+      "sister",
+      "This",
+      "is",
+      "."
+     ],
+     "respuesta": "This is my sister.",
+     "es": "Esta es mi hermana."
+    }
+   ]
   },
   {
-   "en": "full name",
-   "es": "nombre completo",
-   "nota": null
+   "id": "u2t5",
+   "tipo": "corregir",
+   "instruccion": "Cada frase tiene un error. Escríbela bien.",
+   "items": [
+    {
+     "mal": "How do you call?",
+     "respuesta": "What's your name?",
+     "pista": "El inglés pregunta cuál es tu nombre.",
+     "alternativas": [
+      "What is your name?"
+     ],
+     "es": "¿Cómo te llamas?"
+    },
+    {
+     "mal": "Yes, I'm.",
+     "respuesta": "Yes, I am.",
+     "pista": "La contracción no puede ir al final.",
+     "es": "Sí, lo soy."
+    },
+    {
+     "mal": "My name is call Ana.",
+     "respuesta": "My name is Ana.",
+     "pista": "Se mezclan dos formas. Elige una.",
+     "es": "Me llamo Ana."
+    }
+   ]
   },
   {
-   "en": "How do you spell it?",
-   "es": "¿Cómo se escribe?",
-   "nota": null
-  },
-  {
-   "en": "letter",
-   "es": "letra",
-   "nota": null
-  },
-  {
-   "en": "double",
-   "es": "doble",
-   "nota": "Para letras repetidas"
-  },
-  {
-   "en": "Can you repeat, please?",
-   "es": "¿Puedes repetir?",
-   "nota": null
-  },
-  {
-   "en": "This is...",
-   "es": "Él/ella es...",
-   "nota": "Para presentar a otro"
-  },
-  {
-   "en": "Yes / No",
-   "es": "Sí / No",
-   "nota": null
-  },
-  {
-   "en": "Mr / Mrs / Ms",
-   "es": "Señor / Señora / Sra.",
-   "nota": "Ms no indica estado civil"
+   "id": "u2t6",
+   "tipo": "traducir",
+   "ia": true,
+   "instruccion": "Escribe estas frases en inglés.",
+   "items": [
+    {
+     "es": "¿Cómo te llamas? ¿Cómo se escribe?",
+     "referencia": "What's your name? How do you spell it?"
+    },
+    {
+     "es": "¿Eres tú Laura? — No.",
+     "referencia": "Are you Laura? — No, I'm not."
+    },
+    {
+     "es": "Me llamo Pedro. Mucho gusto.",
+     "referencia": "My name is Pedro. Nice to meet you."
+    }
+   ]
   }
  ]
 }

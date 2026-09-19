@@ -17,7 +17,8 @@
       "a",
       "an"
      ],
-     "respuesta": "an"
+     "respuesta": "an",
+     "es": "Soy ingeniero."
     },
     {
      "prompt": "She's ___ teacher.",
@@ -25,7 +26,8 @@
       "a",
       "an"
      ],
-     "respuesta": "a"
+     "respuesta": "a",
+     "es": "Ella es profesora."
     },
     {
      "prompt": "He's ___ artist.",
@@ -33,7 +35,8 @@
       "a",
       "an"
      ],
-     "respuesta": "an"
+     "respuesta": "an",
+     "es": "Él es artista."
     },
     {
      "prompt": "I work in ___ office.",
@@ -41,7 +44,8 @@
       "a",
       "an"
      ],
-     "respuesta": "an"
+     "respuesta": "an",
+     "es": "Trabajo en una oficina."
     },
     {
      "prompt": "She's ___ doctor.",
@@ -49,7 +53,8 @@
       "a",
       "an"
      ],
-     "respuesta": "a"
+     "respuesta": "a",
+     "es": "Ella es doctora."
     },
     {
      "prompt": "He's ___ university student.",
@@ -57,7 +62,8 @@
       "a",
       "an"
      ],
-     "respuesta": "a"
+     "respuesta": "a",
+     "es": "Él es universitario."
     }
    ]
   },
@@ -73,7 +79,8 @@
       "an",
       "nada"
      ],
-     "respuesta": "nada"
+     "respuesta": "nada",
+     "es": "Somos estudiantes."
     },
     {
      "prompt": "I'm ___ developer.",
@@ -82,7 +89,8 @@
       "an",
       "nada"
      ],
-     "respuesta": "a"
+     "respuesta": "a",
+     "es": "Soy desarrollador."
     },
     {
      "prompt": "They are ___ nurses.",
@@ -91,7 +99,8 @@
       "an",
       "nada"
      ],
-     "respuesta": "nada"
+     "respuesta": "nada",
+     "es": "Son enfermeros."
     },
     {
      "prompt": "She's ___ manager.",
@@ -100,7 +109,8 @@
       "an",
       "nada"
      ],
-     "respuesta": "a"
+     "respuesta": "a",
+     "es": "Ella es jefa."
     },
     {
      "prompt": "He's ___ architect.",
@@ -109,7 +119,8 @@
       "an",
       "nada"
      ],
-     "respuesta": "an"
+     "respuesta": "an",
+     "es": "Él es arquitecto."
     }
    ]
   },
@@ -126,7 +137,8 @@
       "do",
       "?"
      ],
-     "respuesta": "What do you do?"
+     "respuesta": "What do you do?",
+     "es": "¿A qué te dedicas?"
     },
     {
      "palabras": [
@@ -135,7 +147,8 @@
       "engineer",
       "."
      ],
-     "respuesta": "I'm an engineer."
+     "respuesta": "I'm an engineer.",
+     "es": "Soy ingeniero."
     },
     {
      "palabras": [
@@ -147,7 +160,8 @@
       "technology",
       "."
      ],
-     "respuesta": "I work for a technology company."
+     "respuesta": "I work for a technology company.",
+     "es": "Trabajo para una empresa de tecnología."
     },
     {
      "palabras": [
@@ -158,7 +172,8 @@
       "a",
       "."
      ],
-     "respuesta": "She works in a hospital."
+     "respuesta": "She works in a hospital.",
+     "es": "Ella trabaja en un hospital."
     }
    ]
   },
@@ -170,12 +185,14 @@
     {
      "mal": "I'm engineer.",
      "respuesta": "I'm an engineer.",
-     "pista": "Falta el artículo."
+     "pista": "Falta el artículo.",
+     "es": "Soy ingeniero."
     },
     {
      "mal": "I'm a engineer.",
      "respuesta": "I'm an engineer.",
-     "pista": "Empieza con sonido de vocal."
+     "pista": "Empieza con sonido de vocal.",
+     "es": "Soy ingeniero."
     },
     {
      "mal": "I work in a company of technology.",
@@ -183,7 +200,8 @@
      "pista": "El adjetivo va antes del sustantivo.",
      "alternativas": [
       "I work in a technology company."
-     ]
+     ],
+     "es": "Trabajo para una empresa de tecnología."
     }
    ]
   },

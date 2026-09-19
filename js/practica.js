@@ -89,12 +89,35 @@ export async function armarSesion(opciones){
     else if(r.proxima && r.proxima <= h) vencidos.push(x);
   });
 
-  // los vencidos van mezclados; los nuevos, en el orden en que fueron escritos
   vencidos.sort(() => Math.random() - 0.5);
   const tope = o.tope || 20;
-  const items = vencidos.concat(nuevos).slice(0, tope);
+  const items = vencidos.concat(repartir(nuevos)).slice(0, tope);
 
   return {items, vencidos: vencidos.length, nuevos: nuevos.length};
+}
+
+/**
+ * Reparte los ítems nuevos tomando uno de cada tanda por ronda.
+ * Sin esto la tanda se llena con los primeros ejercicios de la primera unidad
+ * y nunca se llega a los de traducir, que están al final de cada archivo.
+ */
+function repartir(items){
+  const colas = new Map();
+  items.forEach(x => {
+    const k = x.unidad + ":" + x.tanda;
+    if(!colas.has(k)) colas.set(k, []);
+    colas.get(k).push(x);
+  });
+
+  const fuera = [];
+  let quedan = true;
+  while(quedan){
+    quedan = false;
+    for(const cola of colas.values()){
+      if(cola.length){ fuera.push(cola.shift()); quedan = true; }
+    }
+  }
+  return fuera;
 }
 
 /* Cuenta lo pendiente sin armar la sesión entera (para el panel). */
@@ -126,6 +149,7 @@ export function correrSesion(destino, sesion, opciones){
   const o = opciones || {};
   let i = 0, aciertos = 0, fallos = 0;
   const fallados = [];
+  const hechos = [];   // {clave, dado, bien, correcta, nota} para poder volver atrás
 
   function pintar(){
     if(i >= sesion.items.length) return final();
@@ -137,19 +161,22 @@ export function correrSesion(destino, sesion, opciones){
 
     let cuerpo = "";
 
+    // la traducción va siempre visible: resuelve el vocabulario y la ambigüedad
+    const trad = it.es ? '<p class="traduccion">' + esc(it.es) + '</p>' : "";
+
     if(x.tipo === "elegir"){
-      cuerpo = '<p class="enunciado">' + esc(it.prompt) + '</p><div class="opciones">' +
+      cuerpo = '<p class="enunciado">' + esc(it.prompt) + '</p>' + trad + '<div class="opciones">' +
         it.opciones.map(op => '<button class="opcion" data-v="' + esc(op) + '">' +
           esc(op) + '</button>').join("") + '</div>';
     }
     else if(x.tipo === "ordenar"){
-      cuerpo = '<div class="armado" id="armado"></div>' +
+      cuerpo = trad + '<div class="armado" id="armado"></div>' +
         '<div class="fichas">' + it.palabras.map((p, k) =>
           '<button class="ficha" data-k="' + k + '">' + esc(p) + '</button>').join("") +
         '</div><button class="btn sec chico" id="borrar">Borrar</button>';
     }
     else if(x.tipo === "corregir"){
-      cuerpo = '<div class="mal-frase">' + esc(it.mal) + '</div>' +
+      cuerpo = '<div class="mal-frase">' + esc(it.mal) + '</div>' + trad +
         (it.pista ? '<p class="pista">' + esc(it.pista) + '</p>' : '') +
         '<input class="respuesta" id="resp" autocomplete="off" autocapitalize="off" ' +
         'spellcheck="false" placeholder="Escríbela bien">';
@@ -160,7 +187,7 @@ export function correrSesion(destino, sesion, opciones){
         'spellcheck="false" placeholder="En inglés">';
     }
     else { // completar, transformar
-      cuerpo = '<p class="enunciado">' + esc(it.prompt) + '</p>' +
+      cuerpo = '<p class="enunciado">' + esc(it.prompt) + '</p>' + trad +
         '<input class="respuesta" id="resp" autocomplete="off" autocapitalize="off" ' +
         'spellcheck="false" placeholder="Tu respuesta">';
     }
@@ -180,12 +207,37 @@ export function correrSesion(destino, sesion, opciones){
           '<div class="veredicto" hidden></div>' +
         '</div>' +
         '<div class="acciones-ej">' +
+          (i > 0 ? '<button class="btn sec" id="atras">\u2190 Anterior</button>' : "") +
           '<button class="btn" id="revisar">Revisar</button>' +
           '<button class="btn sec" id="saltar">Saltar</button>' +
         '</div>' +
       '</div>';
 
     engancharEntrada(x);
+
+    // si ya lo respondiste antes, se muestra tal como quedó
+    const previo = hechos[i];
+    if(previo) repintarResuelto(x, previo);
+  }
+
+  /* Vuelve a dejar un ítem ya respondido en su estado final. */
+  function repintarResuelto(x, h){
+    if(x.tipo === "elegir"){
+      destino.querySelectorAll(".opcion").forEach(b => {
+        if(normalizar(b.dataset.v) === normalizar(h.dado)) b.classList.add(h.bien ? "ok" : "mal");
+        if(!h.bien && normalizar(b.dataset.v) === normalizar(x.item.respuesta)) b.classList.add("ok");
+      });
+    } else if(x.tipo === "ordenar"){
+      const armado = destino.querySelector("#armado");
+      if(armado) armado.innerHTML = '<span>' + esc(h.dado) + '</span>';
+      destino.querySelectorAll(".ficha").forEach(f => f.classList.add("usada"));
+      const bb = destino.querySelector("#borrar");
+      if(bb) bb.disabled = true;
+    } else {
+      const inp = destino.querySelector("#resp");
+      if(inp){ inp.value = h.dado; inp.classList.add(h.bien ? "ok" : "mal"); inp.disabled = true; }
+    }
+    pintarVeredicto(x, h.bien, h.correcta, h.nota, true);
   }
 
   /* --- interacción de cada tipo --- */
@@ -238,10 +290,17 @@ export function correrSesion(destino, sesion, opciones){
       repintar();
     }
 
+    const ba = destino.querySelector("#atras");
+    if(ba) ba.onclick = () => { i--; pintar(); };
+
     destino.querySelector("#revisar").onclick = () => revisar(x);
     destino.querySelector("#saltar").onclick = () => {
-      programar(x.clave, "ejercicio", false);
-      fallos++; fallados.push(x);
+      if(!hechos[i]){
+        programar(x.clave, "ejercicio", false);
+        fallos++; fallados.push(x);
+        hechos[i] = {dado: "", bien: false,
+                     correcta: x.item.respuesta || x.item.referencia, nota: "Lo saltaste."};
+      }
       i++; pintar();
     };
   }
@@ -311,9 +370,42 @@ export function correrSesion(destino, sesion, opciones){
     }
   }
 
+  function pintarVeredicto(x, bien, correcta, nota, revisitado){
+    const v = destino.querySelector(".veredicto");
+    v.hidden = false;
+    v.className = "veredicto " + (bien ? "ok" : "mal");
+    v.innerHTML = '<b>' + (bien ? "Correcto" : "No es esa") + '</b>' +
+      (!bien && correcta ? '<div class="correcta">' + esc(correcta) + '</div>' : "") +
+      (nota ? '<div class="nota-ia">' + esc(nota) + '</div>' : "");
+
+    const acc = destino.querySelector(".acciones-ej");
+    acc.innerHTML =
+      (i > 0 ? '<button class="btn sec" id="atras">\u2190 Anterior</button>' : "") +
+      '<button class="btn" id="seguir">' +
+      (i + 1 >= sesion.items.length ? "Ver resultado" : "Siguiente") + '</button>';
+
+    const ba = destino.querySelector("#atras");
+    if(ba) ba.onclick = () => { i--; pintar(); };
+
+    const seguir = destino.querySelector("#seguir");
+    if(!revisitado) seguir.focus();
+    seguir.onclick = () => { i++; pintar(); };
+
+    document.onkeydown = e => {
+      if(e.key === "Enter" && destino.querySelector("#seguir")){
+        e.preventDefault();
+        destino.querySelector("#seguir").click();
+      }
+    };
+  }
+
   function resolver(x, bien, correcta, dado, nota){
-    programar(x.clave, "ejercicio", bien);
-    if(bien) aciertos++; else { fallos++; fallados.push(x); }
+    // solo cuenta la primera vez: volver atrás no vuelve a puntuar
+    if(!hechos[i]){
+      programar(x.clave, "ejercicio", bien);
+      if(bien) aciertos++; else { fallos++; fallados.push(x); }
+      hechos[i] = {dado, bien, correcta, nota};
+    }
 
     // marcar visualmente lo elegido
     if(x.tipo === "elegir"){
@@ -328,25 +420,7 @@ export function correrSesion(destino, sesion, opciones){
     const inp = destino.querySelector("#resp");
     if(inp){ inp.classList.add(bien ? "ok" : "mal"); inp.disabled = true; }
 
-    const v = destino.querySelector(".veredicto");
-    v.hidden = false;
-    v.className = "veredicto " + (bien ? "ok" : "mal");
-    v.innerHTML = '<b>' + (bien ? "Correcto" : "No es esa") + '</b>' +
-      (!bien && correcta ? '<div class="correcta">' + esc(correcta) + '</div>' : "") +
-      (nota ? '<div class="nota-ia">' + esc(nota) + '</div>' : "");
-
-    const acc = destino.querySelector(".acciones-ej");
-    acc.innerHTML = '<button class="btn" id="seguir">' +
-      (i + 1 >= sesion.items.length ? "Ver resultado" : "Siguiente") + '</button>';
-    const seguir = destino.querySelector("#seguir");
-    seguir.focus();
-    seguir.onclick = () => { i++; pintar(); };
-    document.onkeydown = e => {
-      if(e.key === "Enter" && destino.querySelector("#seguir")){
-        e.preventDefault();
-        destino.querySelector("#seguir").click();
-      }
-    };
+    pintarVeredicto(x, bien, correcta, nota, false);
   }
 
   /* --- final --- */
