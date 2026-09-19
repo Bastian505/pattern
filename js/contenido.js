@@ -25,11 +25,30 @@ export async function cargarUnidad(numero){
   return u;
 }
 
+const cacheEj = new Map();
+
+/* Los ejercicios de una unidad viven en su propio archivo y solo se
+   bajan cuando se va a practicar esa unidad. */
+export async function cargarEjercicios(numero){
+  if(cacheEj.has(numero)) return cacheEj.get(numero);
+  const meta = indice.unidades.find(u => u.numero === numero);
+  if(!meta || !meta.ejercicios) return null;
+  const r = await fetch(RUTA + "ejercicios/" + meta.archivo, {cache: "no-cache"});
+  if(!r.ok) return null;
+  const e = await r.json();
+  cacheEj.set(numero, e);
+  return e;
+}
+
 export function nombreBloque(n){
   const b = (indice.bloques || []).find(x => x.numero === n);
   return b ? b.titulo : "";
 }
 
-/* Clave de progreso de una unidad leída. Cuando existan ejercicios,
-   cada uno tendrá la suya y esta pasará a ser solo el resumen. */
+/* Clave de progreso de una unidad leída: activa sus ejercicios. */
 export function claveUnidad(n){ return "a1:u" + n + ":leida"; }
+
+/* Clave de un ítem suelto, para el repaso espaciado. */
+export function claveItem(unidad, tanda, i){
+  return "a1:u" + unidad + ":" + tanda + ":" + i;
+}

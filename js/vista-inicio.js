@@ -1,9 +1,9 @@
 // js/vista-inicio.js
-// Paneles de las secciones que todavía no tienen motor propio:
-// Ejercicios, Mi vocabulario y Conversar.
+// Paneles de las secciones: Ejercicios (con su portada), Mi vocabulario y Conversar.
 
 import { estado } from "./datos.js";
-import { claveUnidad, nombreBloque } from "./contenido.js";
+import { claveUnidad } from "./contenido.js";
+import { contarPendientes } from "./practica.js";
 
 const esc = t => String(t == null ? "" : t)
   .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -25,7 +25,6 @@ export function avanceNivel(temario){
   return {porBloque, estudiadas, conEjercicios, total: temario.unidades.length};
 }
 
-/* La siguiente unidad sin estudiar, o null si están todas. */
 export function siguienteUnidad(temario){
   return temario.unidades.find(u => {
     const r = estado.progreso[claveUnidad(u.numero)];
@@ -33,54 +32,77 @@ export function siguienteUnidad(temario){
   }) || null;
 }
 
-/* ---------------- Ejercicios ---------------- */
-export function panelEjercicios(destino, temario, opciones){
+/* ---------------- Ejercicios: la portada de práctica ---------------- */
+export async function panelEjercicios(destino, temario, opciones){
   const o = opciones || {};
-  const a = avanceNivel(temario);
+  destino.innerHTML = '<p class="cargando">Preparando la práctica...</p>';
+
+  const p = await contarPendientes();
   const listas = temario.unidades.filter(u =>
     u.ejercicios && (estado.progreso[claveUnidad(u.numero)] || {}).ok);
   const esperando = temario.unidades.filter(u =>
     u.ejercicios && !(estado.progreso[claveUnidad(u.numero)] || {}).ok);
+  const hayQuePracticar = p.vencidos + p.nuevos;
 
   let h = '<div class="panel"><h2>Ejercicios</h2>' +
-    '<p class="intro">Aquí se practica. Una unidad entra al pool cuando la marcas como ' +
-    'estudiada, y desde entonces vuelve sola cada cierto tiempo para que no se te olvide.</p>';
+    '<p class="intro">Una unidad entra al pool cuando la marcas como estudiada. ' +
+    'Desde ahí vuelve sola cada cierto tiempo, cada vez más espaciada.</p>';
 
   h += '<div class="resumen-avance">' +
-    '<div class="dato"><div class="v">' + listas.length + '</div><div class="k">unidades listas para practicar</div></div>' +
-    '<div class="dato"><div class="v">' + a.conEjercicios + '</div><div class="k">unidades con ejercicios escritos</div></div>' +
-    '<div class="dato"><div class="v">0</div><div class="k">pendientes de repaso hoy</div></div>' +
+    '<div class="dato"><div class="v">' + p.vencidos + '</div><div class="k">para repasar hoy</div></div>' +
+    '<div class="dato"><div class="v">' + p.nuevos + '</div><div class="k">sin hacer todavía</div></div>' +
+    '<div class="dato"><div class="v">' + listas.length + '</div><div class="k">unidades activas</div></div>' +
     '</div>';
 
-  if(listas.length){
-    h += '<div class="proximo"><div class="et">Listo para practicar</div>' +
-      '<h3>' + listas.length + (listas.length === 1 ? ' unidad marcada' : ' unidades marcadas') + '</h3>' +
-      '<p>' + listas.map(u => esc(u.numero + ". " + u.titulo)).join(" · ") + '</p></div>';
+  if(hayQuePracticar){
+    const cuantos = Math.min(20, hayQuePracticar);
+    h += '<div class="proximo"><div class="et">' +
+      (p.vencidos ? "Toca repasar" : "Listo para empezar") + '</div>' +
+      '<h3>' + cuantos + (cuantos === 1 ? " ejercicio" : " ejercicios") + ' en esta tanda</h3>' +
+      '<p>' + (p.vencidos
+        ? "Empieza por lo que ya hiciste y toca repasar, y sigue con lo nuevo."
+        : "Van en orden, de lo más simple a escribir tus propias frases.") + '</p>' +
+      '<button class="btn" id="practicar">Practicar</button></div>';
+  } else if(listas.length){
+    h += '<div class="proximo"><div class="et">Al día</div>' +
+      '<h3>Nada pendiente por ahora</h3>' +
+      '<p>Terminaste todo lo disponible. Vuelve mañana para el repaso, ' +
+      'o marca otra unidad como estudiada para sumar ejercicios.</p></div>';
   } else if(esperando.length){
     h += '<div class="proximo"><div class="et">Falta un paso</div>' +
       '<h3>Marca una unidad como estudiada</h3>' +
-      '<p>Los ejercicios de las unidades ' +
-      esperando.map(u => u.numero).join(", ") +
+      '<p>Los ejercicios de las unidades ' + esperando.map(u => u.numero).join(", ") +
       ' ya están escritos, pero no entran al pool hasta que leas la unidad y la marques.</p>' +
       '<button class="btn" id="ir-unidades">Ir a las unidades</button></div>';
   }
 
-  h += '<div class="pronto"><h3>Lo que falta para que esta sección funcione</h3><ul>' +
-    '<li><b>El motor de ejercicios</b>: corregir, avanzar por la tanda y guardar el resultado.</li>' +
-    '<li><b>Los ejercicios de las otras 36 unidades</b>: hoy están escritos los del bloque 1.</li>' +
-    '<li><b>El bloqueo por bloque</b>: no abrir el siguiente hasta aprobar el anterior.</li>' +
-    '</ul></div></div>';
+  if(listas.length){
+    h += '<h3 class="sub-lista">O practica una unidad en concreto</h3><div class="unidades-ej">' +
+      listas.map(u => '<button class="chip-unidad" data-n="' + u.numero + '">' +
+        '<b>' + u.numero + '</b> ' + esc(u.titulo) + '</button>').join("") + '</div>';
+  }
 
+  if(temario.unidades.filter(u => u.ejercicios).length < temario.unidades.length){
+    h += '<p class="aviso-obra">Por ahora hay ejercicios escritos para las unidades 1 a 6. ' +
+      'Las demás tienen la ficha completa, pero todavía no su práctica.</p>';
+  }
+
+  h += '</div>';
   destino.innerHTML = h;
-  const b = destino.querySelector("#ir-unidades");
-  if(b) b.onclick = () => o.irA && o.irA("unidades");
+
+  const bp = destino.querySelector("#practicar");
+  if(bp) bp.onclick = () => o.alPracticar && o.alPracticar();
+
+  const bu = destino.querySelector("#ir-unidades");
+  if(bu) bu.onclick = () => o.irA && o.irA("unidades");
+
+  destino.querySelectorAll(".chip-unidad").forEach(b => {
+    b.onclick = () => o.alPracticar && o.alPracticar(+b.dataset.n);
+  });
 }
 
 /* ---------------- Mi vocabulario ---------------- */
 export function panelVocabulario(destino, temario){
-  let palabras = 0;
-  temario.unidades.forEach(u => { palabras += (u.vocabulario_n || 0); });
-
   let h = '<div class="panel"><h2>Mi vocabulario</h2>' +
     '<p class="intro">Todo el vocabulario del nivel en un solo lugar, más las palabras y ' +
     'expresiones que agregues tú. De aquí salen las tarjetas de repaso.</p>';

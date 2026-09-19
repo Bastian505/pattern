@@ -100,8 +100,8 @@ main{padding:40px 44px 100px;max-width:1000px}
   .formula, .pares, .contraste{grid-template-columns:1fr}
 }
 @media (max-width:860px){
-  #marco{grid-template-columns:1fr}
-  #movil{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 18px;border-bottom:1px solid var(--borde);position:sticky;top:0;background:var(--blanco);z-index:30}
+  #marco{grid-template-columns:1fr;grid-template-rows:auto 1fr}
+  #movil{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 18px;border-bottom:1px solid var(--borde);position:sticky;top:0;background:var(--blanco);z-index:30;align-self:start}
   #movil .t{font-size:16px;font-weight:600;letter-spacing:-.02em}
   #movil button{background:var(--nieve);border:1px solid var(--borde);border-radius:999px;padding:6px 15px;font-size:13.5px}
   #lado{position:fixed;inset:0 auto 0 0;width:84%;max-width:320px;z-index:40;transform:translateX(-102%);transition:transform .22s ease;max-height:none}
@@ -234,6 +234,107 @@ main{padding:40px 44px 100px;max-width:1000px}
     background:none;border:0;font-size:24px;line-height:1;padding:0 6px 3px;
     color:var(--tinta);
   }
-  #movil .t{flex:1;text-align:center}
+  #movil .t{flex:1;text-align:left;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .panel h2{font-size:24px}
 }
+
+/* ---------- práctica ---------- */
+.practica{max-width:620px}
+.barra-sesion{height:3px;background:var(--borde);border-radius:2px;overflow:hidden;margin-bottom:22px}
+.barra-sesion i{display:block;height:100%;background:var(--celeste);transition:width .25s ease}
+
+.cabeza-item{display:flex;justify-content:space-between;gap:12px;margin-bottom:14px;font-size:12.5px}
+.cabeza-item .paso{color:var(--tinta);font-weight:600;font-variant-numeric:tabular-nums}
+.cabeza-item .origen-item{color:var(--tinta-suave);text-align:right;min-width:0}
+
+.tarjeta-ej{background:var(--nieve);border-radius:16px;padding:24px 26px}
+.tipo-ej{
+  font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--celeste);margin-bottom:8px;
+}
+.instr{margin:0 0 18px;font-size:13.5px;color:var(--tinta-suave)}
+.enunciado{
+  font-family:var(--lectura);font-size:22px;line-height:1.45;margin:0 0 18px;
+}
+.enunciado.es{font-family:var(--ui);font-size:18px}
+
+.opciones{display:flex;flex-wrap:wrap;gap:8px}
+.opciones .opcion{
+  background:var(--blanco);border:1px solid var(--borde-fuerte);border-radius:999px;
+  padding:9px 18px;font-family:var(--lectura);font-size:17px;
+}
+.opciones .opcion:hover{border-color:var(--celeste)}
+.opciones .opcion.elegida{border-color:var(--celeste);background:var(--celeste-tenue)}
+.opciones .opcion.ok{border-color:var(--agua);background:var(--agua-tenue);color:var(--agua)}
+.opciones .opcion.mal{border-color:var(--coral);background:var(--coral-tenue);color:var(--coral)}
+
+.respuesta{
+  width:100%;border:1px solid var(--borde-fuerte);border-radius:10px;background:var(--blanco);
+  font-family:var(--lectura);font-size:19px;padding:12px 14px;outline:none;color:inherit;
+}
+.respuesta:focus{border-color:var(--celeste);background:var(--celeste-tenue)}
+.respuesta.ok{border-color:var(--agua);background:var(--agua-tenue);color:var(--agua)}
+.respuesta.mal{border-color:var(--coral);background:var(--coral-tenue);color:var(--coral)}
+.respuesta:disabled{opacity:1}
+
+.mal-frase{
+  font-family:var(--lectura);font-size:20px;color:var(--coral);
+  background:var(--coral-tenue);border-radius:10px;padding:12px 15px;margin-bottom:10px;
+}
+.mal-frase::before{content:"\2715  ";font-family:var(--ui);font-size:12px}
+.pista{margin:0 0 14px;font-size:13px;color:var(--tinta-suave)}
+
+.armado{
+  min-height:52px;background:var(--blanco);border:1px dashed var(--borde-fuerte);
+  border-radius:10px;padding:12px 14px;margin-bottom:14px;
+  display:flex;flex-wrap:wrap;gap:7px;align-items:center;
+}
+.armado span{font-family:var(--lectura);font-size:18px}
+.armado .vacio-armado{color:var(--tinta-suave);font-family:var(--ui);font-size:13.5px}
+.fichas{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px}
+.fichas .ficha{
+  background:var(--blanco);border:1px solid var(--borde-fuerte);border-radius:8px;
+  padding:8px 14px;font-family:var(--lectura);font-size:17px;
+}
+.fichas .ficha:hover{border-color:var(--celeste)}
+.fichas .ficha.usada{opacity:.3;pointer-events:none}
+.btn.chico{padding:6px 14px;font-size:13px}
+
+.veredicto{margin-top:18px;padding:14px 16px;border-radius:10px;font-size:14px}
+.veredicto.neutro{background:var(--blanco);color:var(--tinta-suave)}
+.veredicto.ok{background:var(--agua-tenue);color:var(--agua)}
+.veredicto.mal{background:var(--coral-tenue);color:var(--coral)}
+.veredicto b{font-size:14.5px}
+.veredicto .correcta{
+  font-family:var(--lectura);font-size:19px;color:var(--tinta);margin-top:7px;
+}
+.veredicto .nota-ia{margin-top:9px;font-size:13.5px;color:var(--tinta-suave);line-height:1.5}
+
+.acciones-ej{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+
+.final{text-align:left}
+.marcador{
+  background:var(--nieve);border-radius:16px;padding:32px 28px;margin-bottom:18px;
+}
+.marcador .v{font-size:46px;font-weight:600;letter-spacing:-.03em;line-height:1}
+.marcador .v span{font-size:24px;color:var(--tinta-suave);font-weight:400}
+.marcador .k{margin-top:8px;font-size:14.5px;color:var(--tinta-suave)}
+.repaso-sug{font-size:14px;color:var(--tinta-suave);margin:0 0 4px;line-height:1.55}
+
+@media (max-width:860px){
+  .tarjeta-ej{padding:20px}
+  .enunciado{font-size:20px}
+  .cabeza-item .origen-item{font-size:12px}
+  .acciones-ej .btn{flex:1}
+}
+
+.sub-lista{font-size:14px;font-weight:600;margin:30px 0 12px}
+.unidades-ej{display:flex;flex-wrap:wrap;gap:7px}
+.chip-unidad{
+  background:var(--blanco);border:1px solid var(--borde);border-radius:999px;
+  padding:8px 15px;font-size:13.5px;
+}
+.chip-unidad:hover{border-color:var(--celeste)}
+.chip-unidad b{color:var(--tinta-suave);font-weight:600;margin-right:4px;font-variant-numeric:tabular-nums}
+.aviso-obra{margin-top:26px;font-size:13px;color:var(--tinta-suave);line-height:1.55}
+.armado span.pegada{margin-left:-7px}

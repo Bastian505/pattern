@@ -11,23 +11,106 @@
    "tipo": "elegir",
    "instruccion": "Elige entre a y an.",
    "items": [
-    {"prompt": "I'm ___ engineer.", "opciones": ["a", "an"], "respuesta": "an"},
-    {"prompt": "She's ___ teacher.", "opciones": ["a", "an"], "respuesta": "a"},
-    {"prompt": "He's ___ artist.", "opciones": ["a", "an"], "respuesta": "an"},
-    {"prompt": "I work in ___ office.", "opciones": ["a", "an"], "respuesta": "an"},
-    {"prompt": "She's ___ doctor.", "opciones": ["a", "an"], "respuesta": "a"},
-    {"prompt": "He's ___ university student.", "opciones": ["a", "an"], "respuesta": "a"}
+    {
+     "prompt": "I'm ___ engineer.",
+     "opciones": [
+      "a",
+      "an"
+     ],
+     "respuesta": "an"
+    },
+    {
+     "prompt": "She's ___ teacher.",
+     "opciones": [
+      "a",
+      "an"
+     ],
+     "respuesta": "a"
+    },
+    {
+     "prompt": "He's ___ artist.",
+     "opciones": [
+      "a",
+      "an"
+     ],
+     "respuesta": "an"
+    },
+    {
+     "prompt": "I work in ___ office.",
+     "opciones": [
+      "a",
+      "an"
+     ],
+     "respuesta": "an"
+    },
+    {
+     "prompt": "She's ___ doctor.",
+     "opciones": [
+      "a",
+      "an"
+     ],
+     "respuesta": "a"
+    },
+    {
+     "prompt": "He's ___ university student.",
+     "opciones": [
+      "a",
+      "an"
+     ],
+     "respuesta": "a"
+    }
    ]
   },
   {
    "id": "u5t2",
-   "tipo": "completar",
-   "instruccion": "Completa con a, an, o deja vacío si no lleva artículo.",
+   "tipo": "elegir",
+   "instruccion": "Elige el artículo. \"Nada\" significa que en inglés no lleva artículo.",
    "items": [
-    {"prompt": "We are ___ students.", "respuesta": "-", "alternativas": ["", "nada", "ninguno"]},
-    {"prompt": "I'm ___ developer.", "respuesta": "a"},
-    {"prompt": "They are ___ nurses.", "respuesta": "-", "alternativas": ["", "nada", "ninguno"]},
-    {"prompt": "She's ___ manager.", "respuesta": "a"}
+    {
+     "prompt": "We are ___ students.",
+     "opciones": [
+      "a",
+      "an",
+      "nada"
+     ],
+     "respuesta": "nada"
+    },
+    {
+     "prompt": "I'm ___ developer.",
+     "opciones": [
+      "a",
+      "an",
+      "nada"
+     ],
+     "respuesta": "a"
+    },
+    {
+     "prompt": "They are ___ nurses.",
+     "opciones": [
+      "a",
+      "an",
+      "nada"
+     ],
+     "respuesta": "nada"
+    },
+    {
+     "prompt": "She's ___ manager.",
+     "opciones": [
+      "a",
+      "an",
+      "nada"
+     ],
+     "respuesta": "a"
+    },
+    {
+     "prompt": "He's ___ architect.",
+     "opciones": [
+      "a",
+      "an",
+      "nada"
+     ],
+     "respuesta": "an"
+    }
    ]
   },
   {
@@ -35,10 +118,48 @@
    "tipo": "ordenar",
    "instruccion": "Ordena las palabras para formar la frase.",
    "items": [
-    {"palabras": ["do", "you", "What", "do", "?"], "respuesta": "What do you do?"},
-    {"palabras": ["an", "I'm", "engineer", "."], "respuesta": "I'm an engineer."},
-    {"palabras": ["for", "I", "company", "work", "a", "technology", "."], "respuesta": "I work for a technology company."},
-    {"palabras": ["in", "works", "She", "hospital", "a", "."], "respuesta": "She works in a hospital."}
+    {
+     "palabras": [
+      "do",
+      "you",
+      "What",
+      "do",
+      "?"
+     ],
+     "respuesta": "What do you do?"
+    },
+    {
+     "palabras": [
+      "an",
+      "I'm",
+      "engineer",
+      "."
+     ],
+     "respuesta": "I'm an engineer."
+    },
+    {
+     "palabras": [
+      "for",
+      "I",
+      "company",
+      "work",
+      "a",
+      "technology",
+      "."
+     ],
+     "respuesta": "I work for a technology company."
+    },
+    {
+     "palabras": [
+      "in",
+      "works",
+      "She",
+      "hospital",
+      "a",
+      "."
+     ],
+     "respuesta": "She works in a hospital."
+    }
    ]
   },
   {
@@ -46,9 +167,24 @@
    "tipo": "corregir",
    "instruccion": "Cada frase tiene un error. Escríbela bien.",
    "items": [
-    {"mal": "I'm engineer.", "respuesta": "I'm an engineer.", "pista": "Falta el artículo."},
-    {"mal": "I'm a engineer.", "respuesta": "I'm an engineer.", "pista": "Empieza con sonido de vocal."},
-    {"mal": "I work in a company of technology.", "respuesta": "I work for a technology company.", "pista": "El adjetivo va antes del sustantivo.", "alternativas": ["I work in a technology company."]}
+    {
+     "mal": "I'm engineer.",
+     "respuesta": "I'm an engineer.",
+     "pista": "Falta el artículo."
+    },
+    {
+     "mal": "I'm a engineer.",
+     "respuesta": "I'm an engineer.",
+     "pista": "Empieza con sonido de vocal."
+    },
+    {
+     "mal": "I work in a company of technology.",
+     "respuesta": "I work for a technology company.",
+     "pista": "El adjetivo va antes del sustantivo.",
+     "alternativas": [
+      "I work in a technology company."
+     ]
+    }
    ]
   },
   {
@@ -57,9 +193,18 @@
    "ia": true,
    "instruccion": "Escribe estas frases en inglés.",
    "items": [
-    {"es": "¿A qué te dedicas? — Soy profesor.", "referencia": "What do you do? — I'm a teacher."},
-    {"es": "Ella es doctora y trabaja en un hospital.", "referencia": "She's a doctor and she works in a hospital."},
-    {"es": "Somos estudiantes.", "referencia": "We're students."}
+    {
+     "es": "¿A qué te dedicas? — Soy profesor.",
+     "referencia": "What do you do? — I'm a teacher."
+    },
+    {
+     "es": "Ella es doctora y trabaja en un hospital.",
+     "referencia": "She's a doctor and she works in a hospital."
+    },
+    {
+     "es": "Somos estudiantes.",
+     "referencia": "We're students."
+    }
    ]
   }
  ]

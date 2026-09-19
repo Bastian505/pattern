@@ -7,6 +7,7 @@ import {
 import { cargarIndice, cargarUnidad, nombreBloque, claveUnidad } from "./contenido.js";
 import { pintarUnidad } from "./vista-unidad.js";
 import { panelEjercicios, panelVocabulario, panelConversar, avanceNivel } from "./vista-inicio.js";
+import { armarSesion, correrSesion } from "./practica.js";
 
 const $ = s => document.querySelector(s);
 const esc = t => String(t == null ? "" : t)
@@ -185,6 +186,7 @@ function pintarMenu(){
 
 /* ================= secciones ================= */
 function mostrarSeccion(id, mantener){
+  document.onkeydown = null;
   seccion = id;
   localStorage.setItem("pattern-seccion", id);
   pintarMenu();
@@ -197,10 +199,36 @@ function mostrarSeccion(id, mantener){
   $("#titulo-movil").textContent = meta ? meta.titulo : "Pattern";
   window.scrollTo(0, 0);
 
-  const ops = {irA: mostrarSeccion};
-  if(id === "ejercicios")  panelEjercicios(salida, temario, ops);
+  if(id === "ejercicios"){
+    panelEjercicios(salida, temario, {
+      irA: mostrarSeccion,
+      alPracticar: unidad => practicar(unidad)
+    });
+  }
   else if(id === "vocabulario") panelVocabulario(salida, temario);
   else if(id === "conversar")   panelConversar(salida, temario);
+}
+
+/* ================= sesión de práctica ================= */
+async function practicar(unidad){
+  const salida = $("#salida");
+  salida.innerHTML = '<p class="cargando">Armando la tanda...</p>';
+  $("#titulo-movil").textContent = "Practicando";
+  window.scrollTo(0, 0);
+
+  let sesion;
+  try { sesion = await armarSesion(unidad ? {unidad} : {tope: 20}); }
+  catch(e){ salida.innerHTML = '<p class="cargando">No se pudieron cargar los ejercicios.</p>'; return; }
+
+  if(!sesion.items.length){
+    mostrarSeccion("ejercicios");
+    return;
+  }
+
+  correrSesion(salida, sesion, {
+    alRepetir: () => practicar(unidad),
+    alSalir: () => { document.onkeydown = null; mostrarSeccion("ejercicios"); }
+  });
 }
 
 /* ================= una unidad ================= */
