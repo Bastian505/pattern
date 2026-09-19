@@ -141,3 +141,99 @@ main{padding:40px 44px 100px;max-width:1000px}
 .cierre .btn.hecho{background:var(--agua)}
 
 .cargando{color:var(--tinta-suave);font-size:14px;padding:40px 0}
+
+/* ---------- menú de secciones ---------- */
+#secciones{padding:0 12px 14px;border-bottom:1px solid var(--borde);margin-bottom:10px}
+#secciones button{
+  display:flex;align-items:center;gap:11px;width:100%;text-align:left;
+  background:none;border:0;border-radius:10px;padding:10px 12px;margin-bottom:2px;
+}
+#secciones button:hover{background:var(--blanco)}
+#secciones button.on{background:var(--tinta);color:var(--blanco)}
+#secciones button .ico{
+  width:26px;height:26px;border-radius:8px;flex-shrink:0;
+  display:grid;place-items:center;font-size:13px;background:var(--blanco);
+}
+#secciones button.on .ico{background:rgba(255,255,255,.18)}
+#secciones button .tx{display:flex;flex-direction:column;line-height:1.25;min-width:0}
+#secciones button .tx b{font-size:14px;font-weight:600}
+#secciones button .tx span{font-size:11.5px;color:var(--tinta-suave)}
+#secciones button.on .tx span{color:rgba(255,255,255,.65)}
+#secciones button .marca-estado{
+  margin-left:auto;font-size:10px;padding:2px 7px;border-radius:999px;
+  background:var(--ambar-tenue,#FBF2DF);color:var(--ambar,#B07B1E);flex-shrink:0;
+}
+#secciones button.on .marca-estado{background:rgba(255,255,255,.2);color:var(--blanco)}
+
+#lado .sec-lista{
+  display:block;font-size:11px;color:var(--tinta-suave);letter-spacing:.07em;
+  text-transform:uppercase;padding:6px 20px 8px;
+}
+
+/* ---------- panel de sección ---------- */
+.panel{max-width:760px}
+.panel h2{font-size:30px;font-weight:600;letter-spacing:-.03em;margin:0 0 8px;line-height:1.15}
+.panel .intro{color:var(--tinta-suave);font-size:15px;margin:0 0 28px;max-width:60ch}
+
+.tarjetas{display:grid;gap:12px}
+.tarjeta-sec{
+  background:var(--nieve);border-radius:14px;padding:18px 20px;
+  display:flex;gap:16px;align-items:flex-start;
+}
+.tarjeta-sec .n{
+  width:34px;height:34px;border-radius:10px;background:var(--blanco);
+  display:grid;place-items:center;flex-shrink:0;font-size:14px;font-weight:600;
+}
+.tarjeta-sec .cuerpo{min-width:0;flex:1}
+.tarjeta-sec h3{margin:0 0 4px;font-size:15px;font-weight:600}
+.tarjeta-sec p{margin:0;font-size:13.5px;color:var(--tinta-suave)}
+.tarjeta-sec .btn{margin-top:12px}
+
+.resumen-avance{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1px;
+  background:var(--borde);border-radius:12px;overflow:hidden;margin-bottom:28px;
+}
+.dato{background:var(--blanco);padding:16px 18px}
+.dato .v{font-size:26px;font-weight:600;letter-spacing:-.02em;line-height:1}
+.dato .k{font-size:12px;color:var(--tinta-suave);margin-top:5px}
+
+.bloque-fila{
+  display:flex;align-items:center;gap:14px;padding:13px 0;
+  border-bottom:1px solid var(--borde);
+}
+.bloque-fila:last-child{border-bottom:0}
+.bloque-fila .nb{
+  width:28px;height:28px;border-radius:8px;background:var(--nieve);
+  display:grid;place-items:center;font-size:12.5px;flex-shrink:0;
+}
+.bloque-fila .info{flex:1;min-width:0}
+.bloque-fila .info b{display:block;font-size:14.5px;font-weight:600}
+.bloque-fila .info span{font-size:12.5px;color:var(--tinta-suave)}
+.bloque-fila .barra{width:74px;height:4px;background:var(--borde);border-radius:2px;flex-shrink:0;overflow:hidden}
+.bloque-fila .barra i{display:block;height:100%;background:var(--agua)}
+.bloque-fila.cerrado .nb{background:var(--agua-tenue);color:var(--agua)}
+
+.proximo{
+  background:var(--celeste-tenue);border-radius:14px;padding:20px 22px;margin-bottom:24px;
+}
+.proximo .et{font-size:12px;color:var(--celeste);font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+.proximo h3{margin:7px 0 4px;font-size:19px;font-weight:600;letter-spacing:-.02em}
+.proximo p{margin:0 0 15px;font-size:13.5px;color:var(--tinta-suave)}
+
+.pronto{
+  background:var(--nieve);border-radius:14px;padding:22px 24px;
+}
+.pronto h3{margin:0 0 10px;font-size:15px;font-weight:600}
+.pronto ul{margin:0;padding-left:19px}
+.pronto li{font-size:14px;margin-bottom:8px;color:var(--tinta-suave)}
+.pronto li:last-child{margin-bottom:0}
+.pronto li b{color:var(--tinta);font-weight:600}
+
+@media (max-width:860px){
+  #movil #volver{
+    background:none;border:0;font-size:24px;line-height:1;padding:0 6px 3px;
+    color:var(--tinta);
+  }
+  #movil .t{flex:1;text-align:center}
+  .panel h2{font-size:24px}
+}

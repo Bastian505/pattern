@@ -1,18 +1,22 @@
 // js/app.js
-// Arranque, sesión, menú lateral y navegación entre unidades.
+// Arranque, sesión, menú principal y navegación entre secciones.
 
 import {
   estado, iniciarSupabase, cargarLocal, bajar, subirTodo, alSincronizar
 } from "./datos.js";
-import { cargarIndice, cargarUnidad, nombreBloque, claveUnidad, indice } from "./contenido.js";
+import { cargarIndice, cargarUnidad, nombreBloque, claveUnidad } from "./contenido.js";
 import { pintarUnidad } from "./vista-unidad.js";
+import { panelEjercicios, panelVocabulario, panelConversar, avanceNivel } from "./vista-inicio.js";
 
 const $ = s => document.querySelector(s);
 const esc = t => String(t == null ? "" : t)
   .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
+const ICONOS = {unidades: "◆", ejercicios: "✎", vocabulario: "❋", conversar: "◗"};
+
 let temario = null;
-let actual = 1;       // número de unidad
+let seccion = "unidades";
+let actual = 1;
 let apartado = 1;
 let arrancada = false;
 
@@ -76,7 +80,8 @@ $("#velo").onclick = cerrar;
   cargarLocal();
   try { temario = await cargarIndice(); }
   catch(e){
-    $("#portada-texto").textContent = "No se pudo cargar el temario. Revisa que la carpeta contenido esté publicada.";
+    $("#portada-texto").textContent =
+      "No se pudo cargar el temario. Revisa que la carpeta contenido esté publicada.";
     return;
   }
 
@@ -96,7 +101,13 @@ $("#velo").onclick = cerrar;
       arrancar();
     }
   } else {
-    $("#portada-texto").textContent = "Sin conexión a la base: el progreso se guardará solo en este navegador.";
+    // sin base: no hay nada que pedir, se entra directo en modo local
+    $("#portada-texto").textContent =
+      "Sin conexión a la base: el progreso se guarda solo en este navegador.";
+    ["email", "clave", "btn-entrar", "btn-crear"].forEach(id => {
+      const e = $("#" + id); if(e) e.hidden = true;
+    });
+    $("#btn-sin-cuenta").textContent = "Entrar";
   }
 })();
 
@@ -106,7 +117,7 @@ async function arrancar(){
 
   $("#portada").hidden = true;
   $("#marco").hidden = false;
-  $("#sub-nivel").textContent = temario.nombre + " \u00b7 " + temario.variante;
+  $("#sub-nivel").textContent = temario.nombre + " · " + temario.variante;
   $("#quien").textContent = estado.usuario ? estado.usuario.email : "sin cuenta, solo este navegador";
   $("#btn-salir").hidden = !estado.usuario;
 
@@ -115,45 +126,90 @@ async function arrancar(){
   document.addEventListener("visibilitychange", async () => {
     if(document.visibilityState === "visible" && estado.usuario){
       await bajar();
-      pintarLista();
-      mostrar(actual);
+      pintarMenu();
+      mostrarSeccion(seccion, true);
     }
   });
 
   const guardada = parseInt(localStorage.getItem("pattern-ultima") || "1", 10);
   actual = temario.unidades.some(u => u.numero === guardada) ? guardada : temario.unidades[0].numero;
-  pintarLista();
-  mostrar(actual);
+  seccion = localStorage.getItem("pattern-seccion") || "unidades";
+  if(!temario.secciones.some(s => s.id === seccion)) seccion = "unidades";
+
+  pintarMenu();
+  mostrarSeccion(seccion);
 }
 
-/* ================= menú de unidades ================= */
-function pintarLista(){
-  let h = "", bl = null, hechas = 0;
+/* ================= menú principal ================= */
+function pintarMenu(){
+  const a = avanceNivel(temario);
+
+  $("#secciones").innerHTML = temario.secciones.map(s => {
+    const marca = s.estado === "pendiente" ? '<span class="marca-estado">pronto</span>'
+                : s.estado === "parcial"   ? '<span class="marca-estado">en obra</span>' : "";
+    return '<button data-s="' + s.id + '" class="' + (s.id === seccion ? "on" : "") + '">' +
+      '<span class="ico">' + (ICONOS[s.id] || "•") + '</span>' +
+      '<span class="tx"><b>' + esc(s.titulo) + '</b><span>' + esc(s.sub) + '</span></span>' +
+      marca + '</button>';
+  }).join("");
+
+  document.querySelectorAll("#secciones button").forEach(b => {
+    b.onclick = () => { cerrar(); mostrarSeccion(b.dataset.s); };
+  });
+
+  // la lista de unidades solo acompaña a la sección Unidades
+  if(seccion !== "unidades"){
+    $("#lista").innerHTML = "";
+    return;
+  }
+
+  let h = '<span class="sec-lista">Unidades · ' + a.estudiadas + " de " + a.total + '</span>';
+  let bl = null;
   temario.unidades.forEach(u => {
     if(u.bloque !== bl){
       bl = u.bloque;
-      h += '<span class="sep">Bloque ' + bl + ' \u00b7 ' + esc(nombreBloque(bl)) + '</span>';
+      h += '<span class="sep">Bloque ' + bl + ' · ' + esc(nombreBloque(bl)) + '</span>';
     }
     const r = estado.progreso[claveUnidad(u.numero)];
-    if(r && r.ok) hechas++;
     h += '<button class="' + (u.numero === actual ? "on " : "") +
          (u.tipo === "checkpoint" ? "chk " : "") + (r && r.ok ? "hecha" : "") +
          '" data-n="' + u.numero + '"><span class="n">' + u.numero + '</span>' +
          esc(u.titulo) + '</button>';
   });
   $("#lista").innerHTML = h;
-  $("#avance").textContent = hechas + " de " + temario.unidades.length + " unidades estudiadas";
 
   document.querySelectorAll("#lista button").forEach(b => {
     b.onclick = () => { cerrar(); mostrar(+b.dataset.n); };
   });
 }
 
-/* ================= mostrar una unidad ================= */
+/* ================= secciones ================= */
+function mostrarSeccion(id, mantener){
+  seccion = id;
+  localStorage.setItem("pattern-seccion", id);
+  pintarMenu();
+
+  const salida = $("#salida");
+  const meta = temario.secciones.find(s => s.id === id);
+
+  if(id === "unidades"){ mostrar(actual, mantener); return; }
+
+  $("#titulo-movil").textContent = meta ? meta.titulo : "Pattern";
+  window.scrollTo(0, 0);
+
+  const ops = {irA: mostrarSeccion};
+  if(id === "ejercicios")  panelEjercicios(salida, temario, ops);
+  else if(id === "vocabulario") panelVocabulario(salida, temario);
+  else if(id === "conversar")   panelConversar(salida, temario);
+}
+
+/* ================= una unidad ================= */
 async function mostrar(n, mantenerApartado){
   actual = n;
+  seccion = "unidades";
   if(!mantenerApartado) apartado = 1;
   localStorage.setItem("pattern-ultima", n);
+  localStorage.setItem("pattern-seccion", "unidades");
 
   const salida = $("#salida");
   const meta = temario.unidades.find(u => u.numero === n);
@@ -167,14 +223,15 @@ async function mostrar(n, mantenerApartado){
   const idx = temario.unidades.findIndex(x => x.numero === n);
   pintarUnidad(salida, u, {
     apartado,
+    tieneEjercicios: !!(meta && meta.ejercicios),
     hayAnterior: idx > 0,
     haySiguiente: idx < temario.unidades.length - 1,
     alCambiarApartado: k => { apartado = k; mostrar(n, true); },
-    alMarcar: () => { pintarLista(); mostrar(n, true); },
+    alMarcar: () => { pintarMenu(); mostrar(n, true); },
     alNavegar: paso => {
       const sig = temario.unidades[idx + paso];
-      if(sig){ pintarLista(); mostrar(sig.numero); window.scrollTo(0, 0); }
+      if(sig){ mostrar(sig.numero); window.scrollTo(0, 0); }
     }
   });
-  pintarLista();
+  pintarMenu();
 }

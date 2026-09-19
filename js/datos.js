@@ -18,9 +18,16 @@ export function alSincronizar(fn){ avisar = fn; }
 
 export async function iniciarSupabase(){
   if(!SUPABASE_URL || !SUPABASE_ANON) return null;
-  const { createClient } = await import("https://esm.sh/@supabase/supabase-js@2");
-  estado.sb = createClient(SUPABASE_URL, SUPABASE_ANON);
-  return estado.sb;
+  try {
+    const { createClient } = await import("https://esm.sh/@supabase/supabase-js@2");
+    estado.sb = createClient(SUPABASE_URL, SUPABASE_ANON);
+    return estado.sb;
+  } catch(e){
+    // Sin red o con el CDN caído la app sigue funcionando contra el navegador.
+    console.warn("Supabase no disponible, se trabaja solo en local:", e);
+    estado.sb = null;
+    return null;
+  }
 }
 
 /* ---------------- almacenamiento local ---------------- */

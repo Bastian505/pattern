@@ -1,0 +1,76 @@
+{
+ "unidad": 2,
+ "criterios": [
+  "Forma preguntas con to be invirtiendo el orden (Are you...?)",
+  "Usa What's your name en vez de calcos del español",
+  "No contrae la respuesta corta afirmativa: Yes, I am"
+ ],
+ "tandas": [
+  {
+   "id": "u2t1",
+   "tipo": "elegir",
+   "instruccion": "Elige la pregunta correcta en inglés.",
+   "items": [
+    {"prompt": "¿Cómo te llamas?", "opciones": ["What's your name?", "How do you call?"], "respuesta": "What's your name?"},
+    {"prompt": "¿Eres Carlos?", "opciones": ["Are you Carlos?", "You are Carlos?"], "respuesta": "Are you Carlos?"},
+    {"prompt": "¿Cómo se escribe?", "opciones": ["How do you spell it?", "How is written?"], "respuesta": "How do you spell it?"},
+    {"prompt": "¿Es ella tu hermana?", "opciones": ["Is she your sister?", "She is your sister?"], "respuesta": "Is she your sister?"},
+    {"prompt": "¿Son ellos tus padres?", "opciones": ["Are they your parents?", "They are your parents?"], "respuesta": "Are they your parents?"}
+   ]
+  },
+  {
+   "id": "u2t2",
+   "tipo": "transformar",
+   "instruccion": "Convierte la afirmación en pregunta.",
+   "items": [
+    {"prompt": "You are Ana.", "respuesta": "Are you Ana?"},
+    {"prompt": "He is a student.", "respuesta": "Is he a student?"},
+    {"prompt": "They are here.", "respuesta": "Are they here?"},
+    {"prompt": "She is your friend.", "respuesta": "Is she your friend?"},
+    {"prompt": "It is your bag.", "respuesta": "Is it your bag?"}
+   ]
+  },
+  {
+   "id": "u2t3",
+   "tipo": "completar",
+   "instruccion": "Completa la respuesta corta.",
+   "items": [
+    {"prompt": "Are you Daniel? — Yes, ___.", "respuesta": "I am"},
+    {"prompt": "Is she your sister? — No, ___.", "respuesta": "she isn't", "alternativas": ["she's not", "she is not"]},
+    {"prompt": "Are they students? — Yes, ___.", "respuesta": "they are"},
+    {"prompt": "Is he your brother? — Yes, ___.", "respuesta": "he is"}
+   ]
+  },
+  {
+   "id": "u2t4",
+   "tipo": "ordenar",
+   "instruccion": "Ordena las palabras para formar la pregunta.",
+   "items": [
+    {"palabras": ["name", "your", "What's", "?"], "respuesta": "What's your name?"},
+    {"palabras": ["spell", "you", "How", "do", "it", "?"], "respuesta": "How do you spell it?"},
+    {"palabras": ["my", "sister", "This", "is", "."], "respuesta": "This is my sister."}
+   ]
+  },
+  {
+   "id": "u2t5",
+   "tipo": "corregir",
+   "instruccion": "Cada frase tiene un error. Escríbela bien.",
+   "items": [
+    {"mal": "How do you call?", "respuesta": "What's your name?", "pista": "El inglés pregunta cuál es tu nombre.", "alternativas": ["What is your name?"]},
+    {"mal": "Yes, I'm.", "respuesta": "Yes, I am.", "pista": "La contracción no puede ir al final."},
+    {"mal": "My name is call Ana.", "respuesta": "My name is Ana.", "pista": "Se mezclan dos formas. Elige una."}
+   ]
+  },
+  {
+   "id": "u2t6",
+   "tipo": "traducir",
+   "ia": true,
+   "instruccion": "Escribe estas frases en inglés.",
+   "items": [
+    {"es": "¿Cómo te llamas? ¿Cómo se escribe?", "referencia": "What's your name? How do you spell it?"},
+    {"es": "¿Eres tú Laura? — No.", "referencia": "Are you Laura? — No, I'm not."},
+    {"es": "Me llamo Pedro. Mucho gusto.", "referencia": "My name is Pedro. Nice to meet you."}
+   ]
+  }
+ ]
+}

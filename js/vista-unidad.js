@@ -75,9 +75,13 @@ export function pintarUnidad(destino, u, opciones){
 
   const r = estado.progreso[claveUnidad(u.numero)];
   const hecha = r && r.ok;
-  h += '<div class="cierre"><p>' +
-    (hecha ? "Ya marcaste esta unidad como estudiada."
-           : "Cuando la tengas clara, márcala. Los ejercicios llegan en la próxima versión.") +
+  const conEj = o.tieneEjercicios;
+  const texto = hecha
+    ? (conEj ? "Marcada como estudiada: sus ejercicios ya entraron al pool de práctica."
+             : "Ya marcaste esta unidad como estudiada.")
+    : (conEj ? "Cuando la tengas clara, márcala: sus ejercicios entran al pool de práctica."
+             : "Cuando la tengas clara, márcala. Sus ejercicios todavía no están escritos.");
+  h += '<div class="cierre"><p>' + texto +
     '</p><button class="btn' + (hecha ? " hecho" : "") + '" id="marcar">' +
     (hecha ? "Estudiada \u2713" : "Marcar como estudiada") + '</button></div>';
 
